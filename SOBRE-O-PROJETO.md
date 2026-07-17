@@ -44,6 +44,9 @@ Obrigado a cada pessoa que baixou, reportou bug, mandou time, traduziu, particip
 ou só deixou um "funcionou" no botão de feedback. Foi de estudo pra algo real por causa de
 vocês. 💜
 
+> Provei um ponto: **um player motivado, com a ajuda dos amigos, é capaz de fazer coisas bem
+> legais no joguinho.** Obrigado a todos!
+
 — **prestrelo**
 
 ---
@@ -91,5 +94,8 @@ violating the license.
 Thank you to everyone who downloaded it, reported a bug, sent a team, translated, joined an
 event or just tapped "it worked" on the feedback button. It went from study project to
 something real because of you. 💜
+
+> I proved a point: **a motivated player, with a little help from friends, can build really
+> cool things in this game.** Thank you all!
 
 — **prestrelo**
