@@ -1,0 +1,991 @@
+{
+  "version": 2,
+  "generated": "2026-07-04",
+  "source": "SISTEMA-COOLDOWN-CATALOGO.md (pesquisa com fontes oficiais do PokeMMO)",
+  "_comment": "Catálogo-semente (defaults) do sistema de CD/alarme #33. O estado do usuário (personagens + marcações 'done') fica na persistência local (UserDefaults/prefs/JSON), não aqui. Uma tarefa de batalha usa 'hours'; uma de berry usa o 'tier' (ver berryTiers). Bilíngue via name.{pt,en}. Tempos com confidence!='alta' pedem confirmação in-game (ver o .md).",
+  "battleTasks": [
+    {
+      "id": "e4_kanto",
+      "icon": "region:kanto",
+      "group": "elite4",
+      "category": "liga",
+      "name": {
+        "pt": "Elite 4 — Kanto",
+        "en": "Elite 4 — Kanto"
+      },
+      "hours": 6,
+      "color": "#f59e0b",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "e4_johto",
+      "icon": "region:johto",
+      "group": "elite4",
+      "category": "liga",
+      "name": {
+        "pt": "Elite 4 — Johto",
+        "en": "Elite 4 — Johto"
+      },
+      "hours": 6,
+      "color": "#f59e0b",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "e4_hoenn",
+      "icon": "region:hoenn",
+      "group": "elite4",
+      "category": "liga",
+      "name": {
+        "pt": "Elite 4 — Hoenn",
+        "en": "Elite 4 — Hoenn"
+      },
+      "hours": 6,
+      "color": "#f59e0b",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "e4_sinnoh",
+      "icon": "region:sinnoh",
+      "group": "elite4",
+      "category": "liga",
+      "name": {
+        "pt": "Elite 4 — Sinnoh",
+        "en": "Elite 4 — Sinnoh"
+      },
+      "hours": 6,
+      "color": "#f59e0b",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "e4_unova",
+      "icon": "region:unova",
+      "group": "elite4",
+      "category": "liga",
+      "name": {
+        "pt": "Elite 4 — Unova",
+        "en": "Elite 4 — Unova"
+      },
+      "hours": 6,
+      "color": "#f59e0b",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "gym_rerun",
+      "icon": "item:gym",
+      "category": "ginasio",
+      "name": {
+        "pt": "Rebatalha de Ginásio",
+        "en": "Gym Leader Rematch"
+      },
+      "hours": 18,
+      "color": "#22c55e",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "red",
+      "icon": "trainer:red",
+      "category": "boss",
+      "name": {
+        "pt": "Red",
+        "en": "Red"
+      },
+      "hours": 168,
+      "color": "#a855f7",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": true,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "cynthia_morimoto",
+      "icon": "trainer:cynthia",
+      "category": "boss",
+      "name": {
+        "pt": "Cynthia & Morimoto",
+        "en": "Cynthia & Morimoto"
+      },
+      "hours": 20,
+      "color": "#38bdf8",
+      "confidence": "usuario",
+      "note": "20h definido pelo usuário (rota que ele faz). No jogo são 2 batalhas: Morimoto ~24h/dia, Cynthia sazonal.",
+      "type": "cooldown",
+      "defaultOn": true,
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "rota_farm",
+      "icon": "trainer:morimoto",
+      "category": "rota",
+      "name": {
+        "pt": "Farm de Treinadores",
+        "en": "Trainer Farm"
+      },
+      "hours": 6,
+      "color": "#2a75bb",
+      "confidence": "usuario",
+      "note": "Farm de treinadores (rota). CD de 6h definido pelo usuário.",
+      "type": "cooldown",
+      "defaultOn": true,
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    }
+  ],
+  "optionalTasks": [
+    {
+      "id": "apricorn",
+      "icon": "sf:leaf.fill",
+      "category": "colheita",
+      "name": {
+        "pt": "Colher Apricorns",
+        "en": "Harvest Apricorns"
+      },
+      "hours": 6,
+      "color": "#eab308",
+      "confidence": "alta",
+      "type": "cooldown",
+      "defaultOn": false,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "hooh",
+      "icon": "sprite:hooh",
+      "category": "boss",
+      "name": {
+        "pt": "Ho-Oh (boss semanal)",
+        "en": "Ho-Oh (weekly boss)"
+      },
+      "hours": 168,
+      "color": "#f97316",
+      "confidence": "media",
+      "type": "cooldown",
+      "defaultOn": false,
+      "note": "",
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    },
+    {
+      "id": "heatran",
+      "icon": "sprite:heatran",
+      "category": "boss",
+      "name": {
+        "pt": "Raid Heatran",
+        "en": "Heatran raid"
+      },
+      "hours": 2160,
+      "color": "#dc2626",
+      "confidence": "media",
+      "note": "~3 meses (trimestral)",
+      "type": "cooldown",
+      "defaultOn": false,
+      "source": "SISTEMA-COOLDOWN-CATALOGO.md"
+    }
+  ],
+  "berryTiers": [
+    {
+      "tier": "t16",
+      "growthHours": 16,
+      "wiltHours": 8,
+      "waterWindowsHours": [
+        0,
+        8
+      ],
+      "waterLeadHours": 0,
+      "yield": "3-6"
+    },
+    {
+      "tier": "t20",
+      "growthHours": 20,
+      "wiltHours": 8,
+      "waterWindowsHours": [
+        0,
+        10
+      ],
+      "waterLeadHours": 0,
+      "yield": "4-7"
+    },
+    {
+      "tier": "t42",
+      "growthHours": 42,
+      "wiltHours": 8,
+      "waterWindowsHours": [
+        0,
+        14,
+        28
+      ],
+      "waterLeadHours": 0,
+      "yield": "7-9"
+    },
+    {
+      "tier": "t44",
+      "growthHours": 44,
+      "wiltHours": 8,
+      "waterWindowsHours": [
+        0,
+        15,
+        29
+      ],
+      "waterLeadHours": 0,
+      "yield": "7-10"
+    },
+    {
+      "tier": "t67",
+      "growthHours": 67,
+      "wiltHours": 8,
+      "waterWindowsHours": [
+        0,
+        17,
+        34,
+        50
+      ],
+      "waterLeadHours": 0,
+      "yield": "10-13"
+    }
+  ],
+  "berries": [
+    {
+      "id": "berry_cheri",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Cheri",
+        "en": "Cheri"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_chesto",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Chesto",
+        "en": "Chesto"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_pecha",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Pecha",
+        "en": "Pecha"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_rawst",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Rawst",
+        "en": "Rawst"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_aspear",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Aspear",
+        "en": "Aspear"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_razz",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Razz",
+        "en": "Razz"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_bluk",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Bluk",
+        "en": "Bluk"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_nanab",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Nanab",
+        "en": "Nanab"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_wepear",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Wepear",
+        "en": "Wepear"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_pinap",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Pinap",
+        "en": "Pinap"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_persim",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Persim",
+        "en": "Persim"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_oran",
+      "type": "berry",
+      "tier": "t16",
+      "name": {
+        "pt": "Oran",
+        "en": "Oran"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_aguav",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Aguav",
+        "en": "Aguav"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_wiki",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Wiki",
+        "en": "Wiki"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_mago",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Mago",
+        "en": "Mago"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_figy",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Figy",
+        "en": "Figy"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_iapapa",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Iapapa",
+        "en": "Iapapa"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_leppa",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Leppa (PP)",
+        "en": "Leppa (PP)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_cornn",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Cornn",
+        "en": "Cornn"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_magost",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Magost",
+        "en": "Magost"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_rabuta",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Rabuta",
+        "en": "Rabuta"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_nomel",
+      "type": "berry",
+      "tier": "t20",
+      "name": {
+        "pt": "Nomel",
+        "en": "Nomel"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_spelon",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Spelon",
+        "en": "Spelon"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_pamtre",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Pamtre",
+        "en": "Pamtre"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_watmel",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Watmel",
+        "en": "Watmel"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_durin",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Durin",
+        "en": "Durin"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_belue",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Belue",
+        "en": "Belue"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_occa",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Occa",
+        "en": "Occa"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_passho",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Passho",
+        "en": "Passho"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_wacan",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Wacan",
+        "en": "Wacan"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_rindo",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Rindo",
+        "en": "Rindo"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_yache",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Yache",
+        "en": "Yache"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_chople",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Chople",
+        "en": "Chople"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_kebia",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Kebia",
+        "en": "Kebia"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_shuca",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Shuca",
+        "en": "Shuca"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_coba",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Coba",
+        "en": "Coba"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_payapa",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Payapa",
+        "en": "Payapa"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_tanga",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Tanga",
+        "en": "Tanga"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_charti",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Charti",
+        "en": "Charti"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_kasib",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Kasib",
+        "en": "Kasib"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_haban",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Haban",
+        "en": "Haban"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_colbur",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Colbur",
+        "en": "Colbur"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_babiri",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Babiri",
+        "en": "Babiri"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_chilan",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Chilan",
+        "en": "Chilan"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_enigma",
+      "type": "berry",
+      "tier": "t42",
+      "name": {
+        "pt": "Enigma",
+        "en": "Enigma"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_pomeg",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Pomeg (EV −HP)",
+        "en": "Pomeg (EV −HP)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_kelpsy",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Kelpsy (EV −Atk)",
+        "en": "Kelpsy (EV −Atk)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_qualot",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Qualot (EV −Def)",
+        "en": "Qualot (EV −Def)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_hondew",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Hondew (EV −SpA)",
+        "en": "Hondew (EV −SpA)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_grepa",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Grepa (EV −SpD)",
+        "en": "Grepa (EV −SpD)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_tamato",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Tamato (EV −Spe)",
+        "en": "Tamato (EV −Spe)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_sitrus",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Sitrus (cura HP)",
+        "en": "Sitrus (cura HP)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_lum",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Lum (status)",
+        "en": "Lum (status)"
+      },
+      "popular": true,
+      "defaultOn": true
+    },
+    {
+      "id": "berry_custap",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Custap",
+        "en": "Custap"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_jaboca",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Jaboca",
+        "en": "Jaboca"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_rowap",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Rowap",
+        "en": "Rowap"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_micle",
+      "type": "berry",
+      "tier": "t44",
+      "name": {
+        "pt": "Micle",
+        "en": "Micle"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_liechi",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Liechi",
+        "en": "Liechi"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_ganlon",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Ganlon",
+        "en": "Ganlon"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_salac",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Salac",
+        "en": "Salac"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_petaya",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Petaya",
+        "en": "Petaya"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_apicot",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Apicot",
+        "en": "Apicot"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_lansat",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Lansat",
+        "en": "Lansat"
+      },
+      "popular": false,
+      "defaultOn": false
+    },
+    {
+      "id": "berry_starf",
+      "type": "berry",
+      "tier": "t67",
+      "name": {
+        "pt": "Starf",
+        "en": "Starf"
+      },
+      "popular": false,
+      "defaultOn": false
+    }
+  ],
+  "stateSchema": {
+    "_comment": "Formato do estado do usuário, salvo local (e futuramente sincronizado). Verdade = timestamp absoluto (ms). Reconciliar no startup.",
+    "version": 2,
+    "characters": [
+      {
+        "id": "char_xxxx",
+        "name": "Meu Farmer"
+      }
+    ],
+    "done": {
+      "<charId>:<battleTaskId>": "1720000000000  (ms da marcação; ready = now-ms >= hours*3600000)",
+      "<charId>:berry_<name>:<plot>": {
+        "stage": "índice do último passo",
+        "at": "ms em que foi feito"
+      }
+    }
+  }
+}

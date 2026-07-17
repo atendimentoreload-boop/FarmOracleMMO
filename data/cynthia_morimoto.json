@@ -1,0 +1,311 @@
+{
+ "id": "cynthia_morimoto",
+ "title": "Cynthia & Morimoto",
+ "lead": "Time exclusivo: Metagross, Swellow, Umbreon, Garchomp ×2, Slowking.",
+ "pokepaste": "https://pokepast.es/73afd6d7af99592f",
+ "homePrompt": "Quem você vai enfrentar?",
+ "entryPoints": [
+  {
+   "label": "Morimoto · Castelia",
+   "nodeId": "mori",
+   "portrait": "morimoto"
+  },
+  {
+   "label": "Cynthia · Undella Bay",
+   "nodeId": "cynt",
+   "portrait": "cynthia"
+  }
+ ],
+ "nodes": {
+  "mori": {
+   "id": "mori",
+   "title": "Unova · Morimoto (Castelia)",
+   "leadHint": "Metagross",
+   "gymLead": [
+    {
+     "pokemon": "Metagross"
+    }
+   ],
+   "steps": [
+    {
+     "id": "mori_setup",
+     "kind": "setup",
+     "text": "Monte o time no PC: Metagross, Swellow, Umbreon, Garchomp, Garchomp, Slowking. Morimoto fica em Castelia (Unova) — Ocarina de Teleporte pro Centro. Luta 1 contra 1."
+    },
+    {
+     "id": "mori_t1",
+     "kind": "action",
+     "text": "T1 (Metagross): Stealth Rock — cada Pokémon do Morimoto entra tomando dano."
+    },
+    {
+     "id": "mori_meta_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Metagross — qual golpe em cada Pokémon",
+      "rows": [
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Gengar"
+        ]
+       },
+       {
+        "move": "Meteor Mash",
+        "targets": [
+         "Shuckle"
+        ]
+       },
+       {
+        "move": "Explosion",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "mori_explo",
+     "kind": "action",
+     "text": "No Explosion o Metagross se sacrifica e o Swellow entra de graça: Protect no 1º turno (Flame Orb → Guts)."
+    },
+    {
+     "id": "mori_sw_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Swellow — qual golpe em cada Pokémon",
+      "rows": [
+       {
+        "move": "Brave Bird",
+        "targets": [
+         "Gengar"
+        ]
+       },
+       {
+        "move": "Brave Bird 2×",
+        "targets": [
+         "Shuckle"
+        ]
+       },
+       {
+        "move": "Facade",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Como foi a varredura do Swellow?",
+    "options": [
+     {
+      "label": "Swellow varreu → Morimoto derrotado",
+      "nodeId": "cynt"
+     },
+     {
+      "label": "O Swellow morreu",
+      "nodeId": "mori_recover"
+     }
+    ]
+   }
+  },
+  "mori_recover": {
+   "id": "mori_recover",
+   "title": "Morimoto · deu errado (Swellow caiu)",
+   "steps": [
+    {
+     "id": "mori_rec1",
+     "kind": "action",
+     "text": "Slowking: Yawn — o oponente vai dormir."
+    },
+    {
+     "id": "mori_rec2",
+     "kind": "action",
+     "text": "Slowking: Teleport — entra o Garchomp em segurança."
+    },
+    {
+     "id": "mori_rec3",
+     "kind": "action",
+     "text": "Garchomp: Swords Dance."
+    },
+    {
+     "id": "mori_rec4",
+     "kind": "action",
+     "text": "Garchomp: varre o time todo."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt"
+   }
+  },
+  "cynt": {
+   "id": "cynt",
+   "title": "Unova · Cynthia (Undella Bay)",
+   "leadHint": "Umbreon",
+   "gymLead": [
+    {
+     "pokemon": "Umbreon"
+    }
+   ],
+   "steps": [
+    {
+     "id": "cynt_setup",
+     "kind": "setup",
+     "text": "Vá a Undella Bay enfrentar a Cynthia. Luta 1 contra 1."
+    },
+    {
+     "id": "cynt_yawn",
+     "kind": "action",
+     "text": "Umbreon: Yawn — o oponente vai dormir."
+    },
+    {
+     "id": "cynt_bp",
+     "kind": "action",
+     "text": "Umbreon: Baton Pass."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O Baton Pass saiu antes ou depois do Umbreon levar dano?",
+    "options": [
+     {
+      "label": "Depois de levar o ataque → Garchomp direto",
+      "nodeId": "cynt_direct"
+     },
+     {
+      "label": "Antes de levar o ataque → precisa do Slowking",
+      "nodeId": "cynt_buffer"
+     }
+    ]
+   }
+  },
+  "cynt_direct": {
+   "id": "cynt_direct",
+   "title": "Cynthia · Garchomp direto",
+   "steps": [
+    {
+     "id": "cynt_direct_a",
+     "kind": "action",
+     "text": "Traz o Garchomp direto — ele entra seguro."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_buffer": {
+   "id": "cynt_buffer",
+   "title": "Cynthia · Slowking + Teleport",
+   "steps": [
+    {
+     "id": "cynt_buf1",
+     "kind": "action",
+     "text": "Traz o Slowking — ele leva o dano no lugar."
+    },
+    {
+     "id": "cynt_buf2",
+     "kind": "action",
+     "text": "Slowking: Teleport — só DEPOIS traz o Garchomp, agora seguro."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_sweep": {
+   "id": "cynt_sweep",
+   "title": "Cynthia · varredura do Garchomp",
+   "steps": [
+    {
+     "id": "cynt_sd",
+     "kind": "action",
+     "text": "Garchomp: Swords Dance — sobe muito o Ataque."
+    },
+    {
+     "id": "cynt_ga_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Garchomp — qual golpe em cada Pokémon",
+      "rows": [
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Lucario",
+         "Garchomp",
+         "Empoleon"
+        ]
+       },
+       {
+        "move": "Dragon Claw",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Como foi a varredura do Garchomp?",
+    "options": [
+     {
+      "label": "Garchomp varreu → Cynthia derrotada",
+      "nodeId": "cynt_end"
+     },
+     {
+      "label": "O Garchomp morreu",
+      "nodeId": "cynt_recover"
+     }
+    ]
+   }
+  },
+  "cynt_recover": {
+   "id": "cynt_recover",
+   "title": "Cynthia · deu errado (Garchomp caiu)",
+   "steps": [
+    {
+     "id": "cynt_rec1",
+     "kind": "action",
+     "text": "Slowking: Yawn."
+    },
+    {
+     "id": "cynt_rec2",
+     "kind": "action",
+     "text": "Slowking: Teleport — entra o 2º Garchomp em segurança."
+    },
+    {
+     "id": "cynt_rec3",
+     "kind": "action",
+     "text": "2º Garchomp: Swords Dance."
+    },
+    {
+     "id": "cynt_rec4",
+     "kind": "action",
+     "text": "2º Garchomp: varre o resto — Earthquake em Lucario/Garchomp/Empoleon, Dragon Claw no resto."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_end"
+   }
+  },
+  "cynt_end": {
+   "id": "cynt_end",
+   "title": "Fim",
+   "steps": [
+    {
+     "id": "cynt_end_s",
+     "kind": "setup",
+     "text": "Fim! Cynthia e Morimoto derrotados — CURE o time."
+    }
+   ]
+  }
+ }
+}

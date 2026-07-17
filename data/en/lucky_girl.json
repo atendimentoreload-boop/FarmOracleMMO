@@ -1,0 +1,3146 @@
+{
+ "id": "lucky_girl",
+ "title": "Seven Hells - Lucky Girl Route",
+ "revealAll": true,
+ "allowSkip": true,
+ "lead": "Gym Rerun route (money farm) with the Seven Hells team + Meloetta. Order: Hoenn -> Kanto -> Sinnoh -> Unova -> Johto, gym by gym. Meloetta starts with Choice Specs. Heal when changing region. Goal: 3 turns per gym.",
+ "groupPrompt": "Choose the region and the gym.",
+ "pokepaste": "https://pokepast.es/852ceef5515a4f85",
+ "doc": "https://docs.google.com/document/d/1PINJU34XcRW0hsQ5U9TPkbihCMZFkclspFo4HFHu9XE/edit",
+ "legend": [
+  {
+   "term": "Items (1 stock)",
+   "meaning": "2 Choice Scarf, 1 Choice Specs, 1 Choice Band, 1 Wide Lens. So Meloetta swaps item: starts with Specs (Hoenn), becomes Scarf in Kanto, and goes back to Specs after Kanto (and never swaps again)."
+  },
+  {
+   "term": "+ (plus)",
+   "meaning": "Each Pokémon does ONE action per turn. 'A + B' = the 1st lead does A and the 2nd lead does B, in the SAME turn."
+  },
+  {
+   "term": "T1 / T2 / T3",
+   "meaning": "Turn number. In a multi-turn solve each line is a turn — and both leads act in ALL of them."
+  },
+  {
+   "term": "X-Item",
+   "meaning": "Using an X-Item spends that Pokemon's action on the turn; the other lead still attacks. It appears in the color of WHO uses it (not the target)."
+  },
+  {
+   "term": "swap A » B",
+   "meaning": "Swap A for B. The mon that was NOT swapped still attacks normally. 'A » B » C' = swap A»B this turn and B»C the next."
+  },
+  {
+   "term": "Move colors",
+   "meaning": "Each move appears in the color of the Pokemon that uses it in that gym. Moves used by more than one team member change color depending on who attacks."
+  },
+  {
+   "term": "Meta",
+   "meaning": "Each gym in 3 turns (3-turn solve). Mold Breaker Jolly on Excadrill is mandatory."
+  },
+  {
+   "term": "Skip this stop",
+   "meaning": "Skips the gym and goes straight to the next stop on the route."
+  }
+ ],
+ "palette": [
+  {
+   "name": "Typhlosion",
+   "color": "#FF7A66",
+   "moves": [
+    "Eruption",
+    "Incinerate",
+    "Cut",
+    "Helping Hand"
+   ]
+  },
+  {
+   "name": "Blastoise",
+   "color": "#4FA3FF",
+   "moves": [
+    "Water Spout",
+    "Blizzard",
+    "Helping Hand"
+   ]
+  },
+  {
+   "name": "Vanilluxe",
+   "color": "#76E0EF",
+   "moves": [
+    "Blizzard",
+    "Icy Wind"
+   ]
+  },
+  {
+   "name": "Aerodactyl",
+   "color": "#9AA0B5",
+   "moves": [
+    "Rock Slide",
+    "Rock Blast",
+    "Sunny Day",
+    "Rain Dance",
+    "Protect"
+   ]
+  },
+  {
+   "name": "Excadrill",
+   "color": "#C98A5E",
+   "moves": [
+    "Earthquake",
+    "Rock Slide",
+    "Helping Hand"
+   ]
+  },
+  {
+   "name": "Meloetta",
+   "color": "#E58FA8",
+   "moves": [
+    "Hyper Voice",
+    "Helping Hand",
+    "Psychic",
+    "Shadow Ball"
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "name": "Hoenn",
+   "entries": [
+    {
+     "label": "Optional · Mossdeep",
+     "nodeId": "h_mossdeep"
+    },
+    {
+     "label": "1 · Lavaridge",
+     "nodeId": "h_lavaridge",
+     "portrait": "flannery"
+    },
+    {
+     "label": "2 · Dewford",
+     "nodeId": "h_dewford",
+     "portrait": "brawly"
+    },
+    {
+     "label": "3 · Mauville",
+     "nodeId": "h_mauville",
+     "portrait": "wattson"
+    },
+    {
+     "label": "4 · Rustboro",
+     "nodeId": "h_rustboro",
+     "portrait": "roxanne"
+    },
+    {
+     "label": "5 · Fortree",
+     "nodeId": "h_fortree",
+     "portrait": "winona"
+    },
+    {
+     "label": "Optional · Sootopolis",
+     "nodeId": "h_sootopolis",
+     "portrait": "wallace"
+    }
+   ]
+  },
+  {
+   "name": "Kanto",
+   "entries": [
+    {
+     "label": "1 · Vermillion",
+     "nodeId": "k_vermillion",
+     "portrait": "ltsurge"
+    },
+    {
+     "label": "2 · Cinnabar",
+     "nodeId": "k_cinnabar",
+     "portrait": "blaine"
+    },
+    {
+     "label": "3 · Pewter",
+     "nodeId": "k_pewter",
+     "portrait": "brock"
+    },
+    {
+     "label": "4 · Saffron",
+     "nodeId": "k_saffron",
+     "portrait": "sabrina"
+    },
+    {
+     "label": "5 · Celadon",
+     "nodeId": "k_celadon",
+     "portrait": "erika"
+    },
+    {
+     "label": "6 · Fuschia",
+     "nodeId": "k_fuschia",
+     "portrait": "koga"
+    }
+   ]
+  },
+  {
+   "name": "Sinnoh",
+   "entries": [
+    {
+     "label": "1 · Pastoria",
+     "nodeId": "s_pastoria",
+     "portrait": "crasherwake"
+    },
+    {
+     "label": "2 · Veilstone",
+     "nodeId": "s_veilstone",
+     "portrait": "maylene"
+    },
+    {
+     "label": "3 · Eterna",
+     "nodeId": "s_eterna",
+     "portrait": "gardenia"
+    },
+    {
+     "label": "4 · Oreburgh",
+     "nodeId": "s_oreburgh",
+     "portrait": "roark"
+    },
+    {
+     "label": "5 · Sunyshore",
+     "nodeId": "s_sunyshore",
+     "portrait": "volkner"
+    }
+   ]
+  },
+  {
+   "name": "Unova",
+   "entries": [
+    {
+     "label": "1 · Castelia",
+     "nodeId": "u_castelia",
+     "portrait": "burgh"
+    },
+    {
+     "label": "Optional · Driftveil",
+     "nodeId": "u_driftveil",
+     "portrait": "clay"
+    },
+    {
+     "label": "2 · Striaton (fire)",
+     "nodeId": "u_striaton_fire",
+     "portrait": "cilan"
+    },
+    {
+     "label": "3 · Striaton (grass)",
+     "nodeId": "u_striaton_grass",
+     "portrait": "cilan"
+    },
+    {
+     "label": "4 · Striaton (water)",
+     "nodeId": "u_striaton_water",
+     "portrait": "cilan"
+    },
+    {
+     "label": "5 · Opelucid",
+     "nodeId": "u_opelucid",
+     "portrait": "drayden"
+    },
+    {
+     "label": "6 · Icirrus",
+     "nodeId": "u_icirrus",
+     "portrait": "brycen"
+    },
+    {
+     "label": "7 · Mistralton",
+     "nodeId": "u_mistralton",
+     "portrait": "skyla"
+    },
+    {
+     "label": "8 · Nimbasa",
+     "nodeId": "u_nimbasa",
+     "portrait": "elesa"
+    }
+   ]
+  },
+  {
+   "name": "Johto",
+   "entries": [
+    {
+     "label": "1 · Goldenrod",
+     "nodeId": "j_goldenrod",
+     "portrait": "whitney"
+    },
+    {
+     "label": "2 · Azalea",
+     "nodeId": "j_azalea",
+     "portrait": "bugsy"
+    },
+    {
+     "label": "3 · Violet",
+     "nodeId": "j_violet",
+     "portrait": "falkner"
+    },
+    {
+     "label": "4 · Mahogany",
+     "nodeId": "j_mahogany",
+     "portrait": "pryce"
+    },
+    {
+     "label": "5 · Cianwood",
+     "nodeId": "j_cianwood",
+     "portrait": "chuck"
+    },
+    {
+     "label": "Extra · Olivine",
+     "nodeId": "j_olivine",
+     "portrait": "jasmine"
+    },
+    {
+     "label": "Extra · Blackthorn",
+     "nodeId": "j_blackthorn",
+     "portrait": "clair"
+    }
+   ]
+  },
+  {
+   "name": "Extras / Puladas",
+   "entries": [
+    {
+     "label": "Petalburg (skipped)",
+     "nodeId": "x_petalburg"
+    },
+    {
+     "label": "Canalave (skipped)",
+     "nodeId": "x_canalave"
+    }
+   ]
+  },
+  {
+   "name": "Geral",
+   "entries": [
+    {
+     "label": "RNG & Abilities",
+     "nodeId": "g_rng"
+    },
+    {
+     "label": "Heal & Setup Rules",
+     "nodeId": "g_heal"
+    }
+   ]
+  }
+ ],
+ "nodes": {
+  "h_mossdeep": {
+   "id": "h_mossdeep",
+   "title": "Lucky Girl · Optional · Mossdeep",
+   "leadHint": "Aerodactyl + Excadrill",
+   "steps": [
+    {
+     "id": "h_mossdeep_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Everything's fine",
+      "nodeId": "h_lavaridge"
+     },
+     {
+      "label": "Excadrill fainted",
+      "nodeId": "h_mossdeep_excadrill_morreu"
+     },
+     {
+      "label": "Aerodactyl fainted",
+      "nodeId": "h_mossdeep_aerodactyl_morreu"
+     }
+    ]
+   },
+   "skipTo": "h_lavaridge"
+  },
+  "h_mossdeep_excadrill_morreu": {
+   "id": "h_mossdeep_excadrill_morreu",
+   "title": "Mossdeep · Excadrill fainted",
+   "steps": [
+    {
+     "id": "h_mossdeep_excadrill_morreu_0",
+     "kind": "action",
+     "text": "Send out Blastoise."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_lavaridge"
+   }
+  },
+  "h_mossdeep_aerodactyl_morreu": {
+   "id": "h_mossdeep_aerodactyl_morreu",
+   "title": "Mossdeep · Aerodactyl fainted",
+   "steps": [
+    {
+     "id": "h_mossdeep_aerodactyl_morreu_0",
+     "kind": "action",
+     "text": "Send out Typhlosion."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_lavaridge"
+   }
+  },
+  "h_lavaridge_demais_times": {
+   "id": "h_lavaridge_demais_times",
+   "title": "Lavaridge · Other teams",
+   "steps": [
+    {
+     "id": "h_lavaridge_demais_times_0",
+     "kind": "action",
+     "text": "{Helping Hand|Meloetta} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_dewford"
+   }
+  },
+  "h_lavaridge_vs_torkoal_houndoom_lead": {
+   "id": "h_lavaridge_vs_torkoal_houndoom_lead",
+   "title": "Lavaridge · vs. Torkoal and Houndoom (lead)",
+   "steps": [
+    {
+     "id": "h_lavaridge_vs_torkoal_houndoom_lead_0",
+     "kind": "action",
+     "text": "Hyper Voice + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_dewford"
+   }
+  },
+  "h_lavaridge_vs_arcanine_lv_85": {
+   "id": "h_lavaridge_vs_arcanine_lv_85",
+   "title": "Lavaridge · vs. Arcanine Lv.85",
+   "steps": [
+    {
+     "id": "h_lavaridge_vs_arcanine_lv_85_0",
+     "kind": "action",
+     "text": "T1: {X.SpA|Meloetta} + Water Spout."
+    },
+    {
+     "id": "h_lavaridge_vs_arcanine_lv_85_1",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_dewford"
+   }
+  },
+  "h_lavaridge": {
+   "id": "h_lavaridge",
+   "title": "Lucky Girl · 1 · Lavaridge",
+   "leadHint": "Meloetta [Scarf] + Blastoise",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h_lavaridge_demais_times"
+     },
+     {
+      "label": "vs. Torkoal and Houndoom (lead)",
+      "nodeId": "h_lavaridge_vs_torkoal_houndoom_lead"
+     },
+     {
+      "label": "vs. Arcanine Lv.85",
+      "nodeId": "h_lavaridge_vs_arcanine_lv_85"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "h_dewford"
+  },
+  "h_dewford": {
+   "id": "h_dewford",
+   "title": "Lucky Girl · 2 · Dewford",
+   "leadHint": "Meloetta [Scarf] + Blastoise",
+   "steps": [
+    {
+     "id": "h_dewford_0",
+     "kind": "action",
+     "text": "Hyper Voice + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_mauville"
+   },
+   "skipTo": "h_mauville"
+  },
+  "h_mauville_demais_times": {
+   "id": "h_mauville_demais_times",
+   "title": "Mauville · Other teams",
+   "steps": [
+    {
+     "id": "h_mauville_demais_times_0",
+     "kind": "action",
+     "text": "Hyper Voice + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_rustboro"
+   }
+  },
+  "h_mauville_vs_electrode": {
+   "id": "h_mauville_vs_electrode",
+   "title": "Mauville · vs. Electrode",
+   "steps": [
+    {
+     "id": "h_mauville_vs_electrode_0",
+     "kind": "action",
+     "text": "T1: {X.Spe|Meloetta} + Eruption."
+    },
+    {
+     "id": "h_mauville_vs_electrode_1",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_rustboro"
+   }
+  },
+  "h_mauville": {
+   "id": "h_mauville",
+   "title": "Lucky Girl · 3 · Mauville",
+   "leadHint": "Meloetta [Scarf] + Typhlosion",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h_mauville_demais_times"
+     },
+     {
+      "label": "vs. Electrode",
+      "nodeId": "h_mauville_vs_electrode"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "h_rustboro"
+  },
+  "h_rustboro_demais_times": {
+   "id": "h_rustboro_demais_times",
+   "title": "Rustboro · Other teams",
+   "steps": [
+    {
+     "id": "h_rustboro_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_fortree"
+   }
+  },
+  "h_rustboro_vs_tyranitar_probopass_tyranitar_relicanth": {
+   "id": "h_rustboro_vs_tyranitar_probopass_tyranitar_relicanth",
+   "title": "Rustboro · vs. Tyranitar + Probopass / Tyranitar + Relicanth",
+   "steps": [
+    {
+     "id": "h_rustboro_vs_tyranitar_probopass_tyranitar_relicanth_0",
+     "kind": "action",
+     "text": "{X.Speed|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_fortree"
+   }
+  },
+  "h_rustboro": {
+   "id": "h_rustboro",
+   "title": "Lucky Girl · 4 · Rustboro",
+   "leadHint": "Aerodactyl + Excadrill",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h_rustboro_demais_times"
+     },
+     {
+      "label": "vs. Tyranitar + Probopass / Tyranitar + Relicanth",
+      "nodeId": "h_rustboro_vs_tyranitar_probopass_tyranitar_relicanth"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "skipTo": "h_fortree"
+  },
+  "h_fortree_demais_times": {
+   "id": "h_fortree_demais_times",
+   "title": "Fortree · Other teams",
+   "steps": [
+    {
+     "id": "h_fortree_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + {Blizzard|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_sootopolis"
+   }
+  },
+  "h_fortree_vs_altaria_lead": {
+   "id": "h_fortree_vs_altaria_lead",
+   "title": "Fortree · vs. Altaria (lead)",
+   "steps": [
+    {
+     "id": "h_fortree_vs_altaria_lead_0",
+     "kind": "action",
+     "text": "{X.Accuracy|Aerodactyl} + {Blizzard|Vanilluxe}."
+    },
+    {
+     "id": "h_fortree_vs_altaria_lead_1",
+     "kind": "note",
+     "text": "Cloud Nine: don't worry about the weather, just spam {Blizzard|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_sootopolis"
+   }
+  },
+  "h_fortree_vs_pelipper_lead_3_turnos": {
+   "id": "h_fortree_vs_pelipper_lead_3_turnos",
+   "title": "Fortree · vs. Pelipper (lead) — 3 turns",
+   "steps": [
+    {
+     "id": "h_fortree_vs_pelipper_lead_3_turnos_0",
+     "kind": "action",
+     "text": "T1: {Rock Slide|Aerodactyl} + Icy Wind."
+    },
+    {
+     "id": "h_fortree_vs_pelipper_lead_3_turnos_1",
+     "kind": "action",
+     "text": "T2: {Rock Slide|Aerodactyl} + {X.Atk|Vanilluxe}."
+    },
+    {
+     "id": "h_fortree_vs_pelipper_lead_3_turnos_2",
+     "kind": "action",
+     "text": "T3: {Rock Slide|Aerodactyl} + {X.Accuracy|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_sootopolis"
+   }
+  },
+  "h_fortree_vs_masquerain_gyarados": {
+   "id": "h_fortree_vs_masquerain_gyarados",
+   "title": "Fortree · vs. Masquerain + Gyarados",
+   "steps": [
+    {
+     "id": "h_fortree_vs_masquerain_gyarados_0",
+     "kind": "action",
+     "text": "T1: {X.SpA|Aerodactyl} + {Blizzard|Vanilluxe}."
+    },
+    {
+     "id": "h_fortree_vs_masquerain_gyarados_1",
+     "kind": "action",
+     "text": "T2: {X.Accuracy|Aerodactyl} + {Blizzard|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h_sootopolis"
+   }
+  },
+  "h_fortree": {
+   "id": "h_fortree",
+   "title": "Lucky Girl · 5 · Fortree",
+   "leadHint": "Aerodactyl + Vanilluxe",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h_fortree_demais_times"
+     },
+     {
+      "label": "vs. Altaria (lead)",
+      "nodeId": "h_fortree_vs_altaria_lead"
+     },
+     {
+      "label": "vs. Pelipper (lead) — 3 turns",
+      "nodeId": "h_fortree_vs_pelipper_lead_3_turnos"
+     },
+     {
+      "label": "vs. Masquerain + Gyarados",
+      "nodeId": "h_fortree_vs_masquerain_gyarados"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "h_sootopolis"
+  },
+  "h_sootopolis_demais_times": {
+   "id": "h_sootopolis_demais_times",
+   "title": "Sootopolis · Other teams",
+   "steps": [
+    {
+     "id": "h_sootopolis_demais_times_0",
+     "kind": "action",
+     "text": "T1: {X.SpA|Aerodactyl} + Hyper Voice."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_vermillion"
+   }
+  },
+  "h_sootopolis_vs_lapras_vaporeon": {
+   "id": "h_sootopolis_vs_lapras_vaporeon",
+   "title": "Sootopolis · vs. Lapras / Vaporeon",
+   "steps": [
+    {
+     "id": "h_sootopolis_vs_lapras_vaporeon_0",
+     "kind": "action",
+     "text": "T1: {X.SpA|Aerodactyl} + Hyper Voice."
+    },
+    {
+     "id": "h_sootopolis_vs_lapras_vaporeon_1",
+     "kind": "action",
+     "text": "T2: Foresight + Hyper Voice."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_vermillion"
+   }
+  },
+  "h_sootopolis_quando_estiver_chovendo": {
+   "id": "h_sootopolis_quando_estiver_chovendo",
+   "title": "Sootopolis · When it's raining",
+   "steps": [
+    {
+     "id": "h_sootopolis_quando_estiver_chovendo_0",
+     "kind": "action",
+     "text": "Let the Aero/Typh die and send in Vanilluxe."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_vermillion"
+   }
+  },
+  "h_sootopolis": {
+   "id": "h_sootopolis",
+   "title": "Lucky Girl · Optional · Sootopolis",
+   "leadHint": "Aero or Typh + Meloetta [Scarf]",
+   "steps": [
+    {
+     "id": "h_sootopolis_i0",
+     "kind": "note",
+     "text": "Optional. Requires Aero or Typh with the egg move Foresight. Use Repel for a smooth transition (here and in Kanto)."
+    },
+    {
+     "id": "h_sootopolis_i1",
+     "kind": "note",
+     "text": "Corsola on T2: another X.SpA on Meloetta (or {Helping Hand|Typhlosion} if Typhlosion is on the field)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h_sootopolis_demais_times"
+     },
+     {
+      "label": "vs. Lapras / Vaporeon",
+      "nodeId": "h_sootopolis_vs_lapras_vaporeon"
+     },
+     {
+      "label": "When it's raining",
+      "nodeId": "h_sootopolis_quando_estiver_chovendo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "k_vermillion"
+  },
+  "k_vermillion_demais_times": {
+   "id": "k_vermillion_demais_times",
+   "title": "Vermillion · Other teams",
+   "steps": [
+    {
+     "id": "k_vermillion_demais_times_0",
+     "kind": "action",
+     "text": "Hyper Voice + Incinerate."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_cinnabar"
+   }
+  },
+  "k_vermillion_chuva_ou_electrode_no_campo": {
+   "id": "k_vermillion_chuva_ou_electrode_no_campo",
+   "title": "Vermillion · Rain or Electrode on the field",
+   "steps": [
+    {
+     "id": "k_vermillion_chuva_ou_electrode_no_campo_0",
+     "kind": "action",
+     "text": "Hyper Voice + {X.SpA|Typhlosion}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_cinnabar"
+   }
+  },
+  "k_vermillion": {
+   "id": "k_vermillion",
+   "title": "Lucky Girl · 1 · Vermillion",
+   "leadHint": "Meloetta [Scarf] + Typhlosion",
+   "steps": [
+    {
+     "id": "k_vermillion_i0",
+     "kind": "setup",
+     "text": "Heal upon entering Kanto. Switch Meloetta to Choice Scarf (it stays on Scarf throughout ALL of Kanto)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k_vermillion_demais_times"
+     },
+     {
+      "label": "Rain or Electrode on the field",
+      "nodeId": "k_vermillion_chuva_ou_electrode_no_campo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "k_cinnabar"
+  },
+  "k_cinnabar_demais_times": {
+   "id": "k_cinnabar_demais_times",
+   "title": "Cinnabar · Other teams",
+   "steps": [
+    {
+     "id": "k_cinnabar_demais_times_0",
+     "kind": "action",
+     "text": "T1: swap Aero » Vanilluxe (the Blastoise uses Water Spout). Then {Blizzard|Vanilluxe} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_pewter"
+   }
+  },
+  "k_cinnabar_vs_torkoal_moltres": {
+   "id": "k_cinnabar_vs_torkoal_moltres",
+   "title": "Cinnabar · vs. Torkoal + Moltres",
+   "steps": [
+    {
+     "id": "k_cinnabar_vs_torkoal_moltres_0",
+     "kind": "action",
+     "text": "T1: {X.SpA|Aerodactyl} + Water Spout."
+    },
+    {
+     "id": "k_cinnabar_vs_torkoal_moltres_1",
+     "kind": "action",
+     "text": "T2: {Rock Slide|Aerodactyl} + {X.Atk|Blastoise}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_pewter"
+   }
+  },
+  "k_cinnabar": {
+   "id": "k_cinnabar",
+   "title": "Lucky Girl · 2 · Cinnabar",
+   "leadHint": "Aerodactyl + Blastoise",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k_cinnabar_demais_times"
+     },
+     {
+      "label": "vs. Torkoal + Moltres",
+      "nodeId": "k_cinnabar_vs_torkoal_moltres"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "k_pewter"
+  },
+  "k_pewter": {
+   "id": "k_pewter",
+   "title": "Lucky Girl · 3 · Pewter",
+   "leadHint": "Aerodactyl + Excadrill",
+   "steps": [
+    {
+     "id": "k_pewter_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_saffron"
+   },
+   "skipTo": "k_saffron"
+  },
+  "k_saffron": {
+   "id": "k_saffron",
+   "title": "Lucky Girl · 4 · Saffron",
+   "leadHint": "Aerodactyl (full HP) + Excadrill",
+   "steps": [
+    {
+     "id": "k_saffron_i0",
+     "kind": "setup",
+     "text": "Before Saffron: heal the Aero if it isn't at full HP."
+    },
+    {
+     "id": "k_saffron_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake (Aero with full HP)."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_celadon"
+   },
+   "skipTo": "k_celadon"
+  },
+  "k_celadon_demais_times": {
+   "id": "k_celadon_demais_times",
+   "title": "Celadon · Other teams",
+   "steps": [
+    {
+     "id": "k_celadon_demais_times_0",
+     "kind": "action",
+     "text": "{X.SpA|Aerodactyl} + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_fuschia"
+   }
+  },
+  "k_celadon_vs_dragonite_ou_whimsicott_lead": {
+   "id": "k_celadon_vs_dragonite_ou_whimsicott_lead",
+   "title": "Celadon · vs. Dragonite or Whimsicott (lead)",
+   "steps": [
+    {
+     "id": "k_celadon_vs_dragonite_ou_whimsicott_lead_0",
+     "kind": "action",
+     "text": "Let Aero die and bring in Vanilluxe."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k_fuschia"
+   }
+  },
+  "k_celadon": {
+   "id": "k_celadon",
+   "title": "Lucky Girl · 5 · Celadon",
+   "leadHint": "Aerodactyl + Typhlosion",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k_celadon_demais_times"
+     },
+     {
+      "label": "vs. Dragonite or Whimsicott (lead)",
+      "nodeId": "k_celadon_vs_dragonite_ou_whimsicott_lead"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "k_fuschia"
+  },
+  "k_fuschia_demais_times": {
+   "id": "k_fuschia_demais_times",
+   "title": "Fuschia · Other teams",
+   "steps": [
+    {
+     "id": "k_fuschia_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_pastoria"
+   }
+  },
+  "k_fuschia_meloetta_entrou_por_red_card_gengar_no_campo": {
+   "id": "k_fuschia_meloetta_entrou_por_red_card_gengar_no_campo",
+   "title": "Fuschia · Meloetta entered via Red Card + Gengar on the field",
+   "steps": [
+    {
+     "id": "k_fuschia_meloetta_entrou_por_red_card_gengar_no_campo_0",
+     "kind": "action",
+     "text": "Shadow Ball / Psychic on Gengar + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_pastoria"
+   }
+  },
+  "k_fuschia": {
+   "id": "k_fuschia",
+   "title": "Lucky Girl · 6 · Fuschia",
+   "leadHint": "Aerodactyl + Typhlosion",
+   "steps": [
+    {
+     "id": "k_fuschia_i1",
+     "kind": "note",
+     "text": "If Excadrill comes in via Red Card, it uses {Rock Slide|Excadrill}. Watch out: the enemy Dugtrio ('Gopher') uses Earthquake and kills Typhlosion."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k_fuschia_demais_times"
+     },
+     {
+      "label": "Meloetta came in via Red Card + Gengar on the field",
+      "nodeId": "k_fuschia_meloetta_entrou_por_red_card_gengar_no_campo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "s_pastoria"
+  },
+  "s_pastoria_vs_sharpedo_qualquer": {
+   "id": "s_pastoria_vs_sharpedo_qualquer",
+   "title": "Pastoria · vs. Sharpedo (+ any)",
+   "steps": [
+    {
+     "id": "s_pastoria_vs_sharpedo_qualquer_0",
+     "kind": "action",
+     "text": "T1: {Rock Slide|Aerodactyl} + Hyper Voice."
+    },
+    {
+     "id": "s_pastoria_vs_sharpedo_qualquer_1",
+     "kind": "action",
+     "text": "T2: {X.SpA|Aerodactyl} + Hyper Voice (ALWAYS)."
+    },
+    {
+     "id": "s_pastoria_vs_sharpedo_qualquer_na0",
+     "kind": "note",
+     "text": "If it rains: bring in Vanilluxe when Aero goes down."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_veilstone"
+   }
+  },
+  "s_pastoria_qualquer_um_menos_sharpedo": {
+   "id": "s_pastoria_qualquer_um_menos_sharpedo",
+   "title": "Pastoria · Any one, except Sharpedo",
+   "steps": [
+    {
+     "id": "s_pastoria_qualquer_um_menos_sharpedo_0",
+     "kind": "action",
+     "text": "{X.SpA|Aerodactyl} + Hyper Voice."
+    },
+    {
+     "id": "s_pastoria_qualquer_um_menos_sharpedo_na0",
+     "kind": "note",
+     "text": "If it rains: bring in Vanilluxe when Aero goes down."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_veilstone"
+   }
+  },
+  "s_pastoria": {
+   "id": "s_pastoria",
+   "title": "Lucky Girl · 1 · Pastoria",
+   "leadHint": "Aerodactyl + Meloetta [Specs]",
+   "steps": [
+    {
+     "id": "s_pastoria_i0",
+     "kind": "setup",
+     "text": "Heal upon entering Sinnoh. Put Meloetta back to Choice Specs — and do NOT change her item again."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "vs. Sharpedo (+ any)",
+      "nodeId": "s_pastoria_vs_sharpedo_qualquer"
+     },
+     {
+      "label": "Any one, except Sharpedo",
+      "nodeId": "s_pastoria_qualquer_um_menos_sharpedo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "s_veilstone"
+  },
+  "s_veilstone": {
+   "id": "s_veilstone",
+   "title": "Lucky Girl · 2 · Veilstone",
+   "leadHint": "Aerodactyl + Typhlosion",
+   "steps": [
+    {
+     "id": "s_veilstone_0",
+     "kind": "action",
+     "text": "Aero uses Sunny Day (then {Rock Slide|Aerodactyl}) + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_eterna"
+   },
+   "skipTo": "s_eterna"
+  },
+  "s_eterna": {
+   "id": "s_eterna",
+   "title": "Lucky Girl · 3 · Eterna",
+   "leadHint": "Meloetta [Specs] + Typhlosion",
+   "steps": [
+    {
+     "id": "s_eterna_0",
+     "kind": "action",
+     "text": "Hyper Voice + Eruption."
+    },
+    {
+     "id": "s_eterna_1",
+     "kind": "note",
+     "text": "Solve on Melo + Typh to ensure the Milotic variation dies in 3 turns."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_oreburgh"
+   },
+   "skipTo": "s_oreburgh"
+  },
+  "s_oreburgh_demais_times": {
+   "id": "s_oreburgh_demais_times",
+   "title": "Oreburgh · Other teams",
+   "steps": [
+    {
+     "id": "s_oreburgh_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_sunyshore"
+   }
+  },
+  "s_oreburgh_vs_excadrill_gigalith": {
+   "id": "s_oreburgh_vs_excadrill_gigalith",
+   "title": "Oreburgh · vs. Excadrill + Gigalith",
+   "steps": [
+    {
+     "id": "s_oreburgh_vs_excadrill_gigalith_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_sunyshore"
+   }
+  },
+  "s_oreburgh_vs_tyranitar_excadrill": {
+   "id": "s_oreburgh_vs_tyranitar_excadrill",
+   "title": "Oreburgh · vs. Tyranitar + Excadrill",
+   "steps": [
+    {
+     "id": "s_oreburgh_vs_tyranitar_excadrill_0",
+     "kind": "action",
+     "text": "Protect (Aero) + Earthquake. The Exca needs high Def IVs so it doesn't attract the Earthquake."
+    },
+    {
+     "id": "s_oreburgh_vs_tyranitar_excadrill_1",
+     "kind": "note",
+     "text": "Small chance to survive with {Rock Slide|Aerodactyl} + Earthquake — 3-turn gamble, needs 31 HP and 31 Def."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_sunyshore"
+   }
+  },
+  "s_oreburgh_vs_tyranitar_probopass": {
+   "id": "s_oreburgh_vs_tyranitar_probopass",
+   "title": "Oreburgh · vs. Tyranitar + Probopass",
+   "steps": [
+    {
+     "id": "s_oreburgh_vs_tyranitar_probopass_0",
+     "kind": "note",
+     "text": "Salamence team — always a 4-turn solve."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s_sunyshore"
+   }
+  },
+  "s_oreburgh": {
+   "id": "s_oreburgh",
+   "title": "Lucky Girl · 4 · Oreburgh",
+   "leadHint": "Aerodactyl + Excadrill",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s_oreburgh_demais_times"
+     },
+     {
+      "label": "vs. Excadrill + Gigalith",
+      "nodeId": "s_oreburgh_vs_excadrill_gigalith"
+     },
+     {
+      "label": "vs. Tyranitar + Excadrill",
+      "nodeId": "s_oreburgh_vs_tyranitar_excadrill"
+     },
+     {
+      "label": "vs. Tyranitar + Probopass",
+      "nodeId": "s_oreburgh_vs_tyranitar_probopass"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ],
+   "skipTo": "s_sunyshore"
+  },
+  "s_sunyshore_demais_times": {
+   "id": "s_sunyshore_demais_times",
+   "title": "Sunyshore · Other teams",
+   "steps": [
+    {
+     "id": "s_sunyshore_demais_times_0",
+     "kind": "action",
+     "text": "Hyper Voice + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_castelia"
+   }
+  },
+  "s_sunyshore_vs_lanturn": {
+   "id": "s_sunyshore_vs_lanturn",
+   "title": "Sunyshore · vs. Lanturn",
+   "steps": [
+    {
+     "id": "s_sunyshore_vs_lanturn_0",
+     "kind": "action",
+     "text": "Hyper Voice + {X.SpA|Blastoise}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_castelia"
+   }
+  },
+  "s_sunyshore": {
+   "id": "s_sunyshore",
+   "title": "Lucky Girl · 5 · Sunyshore",
+   "leadHint": "Meloetta [Specs] + Blastoise",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s_sunyshore_demais_times"
+     },
+     {
+      "label": "vs. Lanturn",
+      "nodeId": "s_sunyshore_vs_lanturn"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "u_castelia"
+  },
+  "u_castelia": {
+   "id": "u_castelia",
+   "title": "Lucky Girl · 1 · Castelia",
+   "leadHint": "Vanilluxe + Blastoise",
+   "steps": [
+    {
+     "id": "u_castelia_i0",
+     "kind": "setup",
+     "text": "Heal when entering Unova."
+    },
+    {
+     "id": "u_castelia_0",
+     "kind": "action",
+     "text": "{Blizzard|Vanilluxe} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_driftveil"
+   },
+   "skipTo": "u_driftveil"
+  },
+  "u_driftveil_demais_times": {
+   "id": "u_driftveil_demais_times",
+   "title": "Driftveil · Other teams",
+   "steps": [
+    {
+     "id": "u_driftveil_demais_times_0",
+     "kind": "action",
+     "text": "{Blizzard|Vanilluxe} + Water Spout."
+    },
+    {
+     "id": "u_driftveil_demais_times_na0",
+     "kind": "setup",
+     "text": "After this gym, refill the PP of Water Spout and {Blizzard|Vanilluxe} with Leppa Berries."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_fire"
+   }
+  },
+  "u_driftveil_areia_sand_no_campo": {
+   "id": "u_driftveil_areia_sand_no_campo",
+   "title": "Driftveil · Sandstorm on the field",
+   "steps": [
+    {
+     "id": "u_driftveil_areia_sand_no_campo_0",
+     "kind": "action",
+     "text": "T1: {X.Speed|Vanilluxe} + Water Spout."
+    },
+    {
+     "id": "u_driftveil_areia_sand_no_campo_1",
+     "kind": "action",
+     "text": "T2: Icy Wind + Water Spout."
+    },
+    {
+     "id": "u_driftveil_areia_sand_no_campo_na0",
+     "kind": "setup",
+     "text": "After this gym, refill the PP of Water Spout and {Blizzard|Vanilluxe} with Leppa Berries."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_fire"
+   }
+  },
+  "u_driftveil_vs_sableye_ou_seismitoad_no_t2": {
+   "id": "u_driftveil_vs_sableye_ou_seismitoad_no_t2",
+   "title": "Driftveil · vs. Sableye (or Seismitoad on T2)",
+   "steps": [
+    {
+     "id": "u_driftveil_vs_sableye_ou_seismitoad_no_t2_0",
+     "kind": "action",
+     "text": "{X.SpA|Vanilluxe} + {Blizzard|Blastoise}."
+    },
+    {
+     "id": "u_driftveil_vs_sableye_ou_seismitoad_no_t2_na0",
+     "kind": "setup",
+     "text": "After this gym, refill the PP of Water Spout and {Blizzard|Vanilluxe} with Leppa Berries."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_fire"
+   }
+  },
+  "u_driftveil": {
+   "id": "u_driftveil",
+   "title": "Lucky Girl · Optional · Driftveil",
+   "leadHint": "Vanilluxe + Blastoise",
+   "steps": [
+    {
+     "id": "u_driftveil_i0",
+     "kind": "note",
+     "text": "Optional."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u_driftveil_demais_times"
+     },
+     {
+      "label": "Sandstorm on the field",
+      "nodeId": "u_driftveil_areia_sand_no_campo"
+     },
+     {
+      "label": "vs. Sableye (or Seismitoad on T2)",
+      "nodeId": "u_driftveil_vs_sableye_ou_seismitoad_no_t2"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "u_striaton_fire"
+  },
+  "u_striaton_fire_demais_times": {
+   "id": "u_striaton_fire_demais_times",
+   "title": "Striaton (fire) · Other teams",
+   "steps": [
+    {
+     "id": "u_striaton_fire_demais_times_0",
+     "kind": "action",
+     "text": "{Helping Hand|Meloetta} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_grass"
+   }
+  },
+  "u_striaton_fire_vs_ninetales_ou_typhlosion": {
+   "id": "u_striaton_fire_vs_ninetales_ou_typhlosion",
+   "title": "Striaton (fire) · vs. Ninetales or Typhlosion",
+   "steps": [
+    {
+     "id": "u_striaton_fire_vs_ninetales_ou_typhlosion_0",
+     "kind": "action",
+     "text": "{X.SpA|Meloetta} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_grass"
+   }
+  },
+  "u_striaton_fire": {
+   "id": "u_striaton_fire",
+   "title": "Lucky Girl · 2 · Striaton (fire)",
+   "leadHint": "Meloetta [Specs] + Blastoise",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u_striaton_fire_demais_times"
+     },
+     {
+      "label": "vs. Ninetales or Typhlosion",
+      "nodeId": "u_striaton_fire_vs_ninetales_ou_typhlosion"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "u_striaton_grass"
+  },
+  "u_striaton_grass": {
+   "id": "u_striaton_grass",
+   "title": "Lucky Girl · 3 · Striaton (grass)",
+   "leadHint": "Meloetta [Specs] + Typhlosion [Incinerate]",
+   "steps": [
+    {
+     "id": "u_striaton_grass_0",
+     "kind": "action",
+     "text": "Hyper Voice + Incinerate."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_striaton_water"
+   },
+   "skipTo": "u_striaton_water"
+  },
+  "u_striaton_water": {
+   "id": "u_striaton_water",
+   "title": "Lucky Girl · 4 · Striaton (water)",
+   "leadHint": "Meloetta [Specs] + Typhlosion",
+   "steps": [
+    {
+     "id": "u_striaton_water_0",
+     "kind": "action",
+     "text": "Hyper Voice + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_opelucid"
+   },
+   "skipTo": "u_opelucid"
+  },
+  "u_opelucid": {
+   "id": "u_opelucid",
+   "title": "Lucky Girl · 5 · Opelucid",
+   "leadHint": "Vanilluxe + Typhlosion",
+   "steps": [
+    {
+     "id": "u_opelucid_0",
+     "kind": "action",
+     "text": "{Blizzard|Vanilluxe} + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_icirrus"
+   },
+   "skipTo": "u_icirrus"
+  },
+  "u_icirrus": {
+   "id": "u_icirrus",
+   "title": "Lucky Girl · 6 · Icirrus",
+   "leadHint": "Aerodactyl + Typhlosion",
+   "steps": [
+    {
+     "id": "u_icirrus_0",
+     "kind": "action",
+     "text": "Aero uses Sunny Day (then {Rock Slide|Aerodactyl}) + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_mistralton"
+   },
+   "skipTo": "u_mistralton"
+  },
+  "u_mistralton_com_whimsicott_ou_skarmory_no_lead": {
+   "id": "u_mistralton_com_whimsicott_ou_skarmory_no_lead",
+   "title": "Mistralton · With Whimsicott or Skarmory in the lead",
+   "steps": [
+    {
+     "id": "u_mistralton_com_whimsicott_ou_skarmory_no_lead_0",
+     "kind": "action",
+     "text": "{Blizzard|Blastoise} + Icy Wind."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_nimbasa"
+   }
+  },
+  "u_mistralton_sem_whimsicott_nem_skarmory": {
+   "id": "u_mistralton_sem_whimsicott_nem_skarmory",
+   "title": "Mistralton · Without Whimsicott nor Skarmory",
+   "steps": [
+    {
+     "id": "u_mistralton_sem_whimsicott_nem_skarmory_0",
+     "kind": "action",
+     "text": "{Blizzard|Blastoise} + {X.SpA|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u_nimbasa"
+   }
+  },
+  "u_mistralton": {
+   "id": "u_mistralton",
+   "title": "Lucky Girl · 7 · Mistralton",
+   "leadHint": "Blastoise [Blizzard] + Vanilluxe (Icy Wind)",
+   "steps": [
+    {
+     "id": "u_mistralton_i0",
+     "kind": "note",
+     "text": "Use double {Blizzard|Blastoise} whenever possible, or refill PP with Leppa to ensure the 3-turn solve."
+    },
+    {
+     "id": "u_mistralton_i1",
+     "kind": "note",
+     "text": "If you did Driftveil, you can just spam {Blizzard|Blastoise} + Water Spout."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "With Whimsicott or Skarmory on the lead",
+      "nodeId": "u_mistralton_com_whimsicott_ou_skarmory_no_lead"
+     },
+     {
+      "label": "Without Whimsicott nor Skarmory",
+      "nodeId": "u_mistralton_sem_whimsicott_nem_skarmory"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "u_nimbasa"
+  },
+  "u_nimbasa_demais_times": {
+   "id": "u_nimbasa_demais_times",
+   "title": "Nimbasa · Other teams",
+   "steps": [
+    {
+     "id": "u_nimbasa_demais_times_0",
+     "kind": "action",
+     "text": "Hyper Voice + Incinerate (Eruption when possible)."
+    },
+    {
+     "id": "u_nimbasa_demais_times_na0",
+     "kind": "note",
+     "text": "Last of Unova — can be reckless: with Blaze (low HP) Typhlosion can still gigaspam A."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_goldenrod"
+   }
+  },
+  "u_nimbasa_vs_ampharos_ou_milotic": {
+   "id": "u_nimbasa_vs_ampharos_ou_milotic",
+   "title": "Nimbasa · vs. Ampharos or Milotic",
+   "steps": [
+    {
+     "id": "u_nimbasa_vs_ampharos_ou_milotic_0",
+     "kind": "action",
+     "text": "Hyper Voice + {X.SpA|Typhlosion}."
+    },
+    {
+     "id": "u_nimbasa_vs_ampharos_ou_milotic_na0",
+     "kind": "note",
+     "text": "Last of Unova — can be reckless: with Blaze (low HP) Typhlosion can still gigaspam A."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_goldenrod"
+   }
+  },
+  "u_nimbasa": {
+   "id": "u_nimbasa",
+   "title": "Lucky Girl · 8 · Nimbasa",
+   "leadHint": "Meloetta [Specs] + Typhlosion",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u_nimbasa_demais_times"
+     },
+     {
+      "label": "vs. Ampharos or Milotic",
+      "nodeId": "u_nimbasa_vs_ampharos_ou_milotic"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "j_goldenrod"
+  },
+  "j_goldenrod_demais_times": {
+   "id": "j_goldenrod_demais_times",
+   "title": "Goldenrod · Other teams",
+   "steps": [
+    {
+     "id": "j_goldenrod_demais_times_0",
+     "kind": "action",
+     "text": "Hyper Voice + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_azalea"
+   }
+  },
+  "j_goldenrod_vs_minccino_miltank_lead": {
+   "id": "j_goldenrod_vs_minccino_miltank_lead",
+   "title": "Goldenrod · vs. Minccino + Miltank (lead)",
+   "steps": [
+    {
+     "id": "j_goldenrod_vs_minccino_miltank_lead_0",
+     "kind": "action",
+     "text": "Switch both to Aero + Exca ({Rock Slide|Aerodactyl} + Earthquake)."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_azalea"
+   }
+  },
+  "j_goldenrod": {
+   "id": "j_goldenrod",
+   "title": "Lucky Girl · 1 · Goldenrod",
+   "leadHint": "Meloetta [Specs] + Typhlosion",
+   "steps": [
+    {
+     "id": "j_goldenrod_i0",
+     "kind": "setup",
+     "text": "Heal upon entering Johto."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j_goldenrod_demais_times"
+     },
+     {
+      "label": "vs. Minccino + Miltank (lead)",
+      "nodeId": "j_goldenrod_vs_minccino_miltank_lead"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "j_azalea"
+  },
+  "j_azalea_demais_times": {
+   "id": "j_azalea_demais_times",
+   "title": "Azalea · Other teams",
+   "steps": [
+    {
+     "id": "j_azalea_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Incinerate."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_violet"
+   }
+  },
+  "j_azalea_vs_yanmega_ou_butterfree": {
+   "id": "j_azalea_vs_yanmega_ou_butterfree",
+   "title": "Azalea · vs. Yanmega or Butterfree",
+   "steps": [
+    {
+     "id": "j_azalea_vs_yanmega_ou_butterfree_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Eruption (Quagsire team)."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_violet"
+   }
+  },
+  "j_azalea_vs_beedrill_ou_forretress": {
+   "id": "j_azalea_vs_beedrill_ou_forretress",
+   "title": "Azalea · vs. Beedrill or Forretress",
+   "steps": [
+    {
+     "id": "j_azalea_vs_beedrill_ou_forretress_0",
+     "kind": "action",
+     "text": "Switch both to Aero + Exca."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_violet"
+   }
+  },
+  "j_azalea": {
+   "id": "j_azalea",
+   "title": "Lucky Girl · 2 · Azalea",
+   "leadHint": "Aerodactyl + Typhlosion [Incinerate]",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j_azalea_demais_times"
+     },
+     {
+      "label": "vs. Yanmega or Butterfree",
+      "nodeId": "j_azalea_vs_yanmega_ou_butterfree"
+     },
+     {
+      "label": "vs. Beedrill or Forretress",
+      "nodeId": "j_azalea_vs_beedrill_ou_forretress"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "j_violet"
+  },
+  "j_violet_demais_times": {
+   "id": "j_violet_demais_times",
+   "title": "Violet · Other teams",
+   "steps": [
+    {
+     "id": "j_violet_demais_times_0",
+     "kind": "action",
+     "text": "Water Spout + {Blizzard|Vanilluxe}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_mahogany"
+   }
+  },
+  "j_violet_vs_pelipper_ou_zapdos": {
+   "id": "j_violet_vs_pelipper_ou_zapdos",
+   "title": "Violet · vs. Pelipper or Zapdos",
+   "steps": [
+    {
+     "id": "j_violet_vs_pelipper_ou_zapdos_0",
+     "kind": "action",
+     "text": "{X.SpA|Blastoise} + Water Spout."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_mahogany"
+   }
+  },
+  "j_violet": {
+   "id": "j_violet",
+   "title": "Lucky Girl · 3 · Violet",
+   "leadHint": "Blastoise + Vanilluxe",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j_violet_demais_times"
+     },
+     {
+      "label": "vs. Pelipper or Zapdos",
+      "nodeId": "j_violet_vs_pelipper_ou_zapdos"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ],
+   "skipTo": "j_mahogany"
+  },
+  "j_mahogany": {
+   "id": "j_mahogany",
+   "title": "Lucky Girl · 4 · Mahogany",
+   "leadHint": "Aerodactyl + Typhlosion",
+   "steps": [
+    {
+     "id": "j_mahogany_0",
+     "kind": "action",
+     "text": "Aero uses Sunny Day (then {Rock Slide|Aerodactyl}) + Eruption."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_cianwood"
+   },
+   "skipTo": "j_cianwood"
+  },
+  "j_cianwood_demais_times": {
+   "id": "j_cianwood_demais_times",
+   "title": "Cianwood · Other teams",
+   "steps": [
+    {
+     "id": "j_cianwood_demais_times_0",
+     "kind": "action",
+     "text": "T1: Hyper Voice + {X.SpA|Typhlosion} (guarantees OHKO on all variations)."
+    },
+    {
+     "id": "j_cianwood_demais_times_1",
+     "kind": "action",
+     "text": "T2+: Hyper Voice + {Helping Hand|Typhlosion}, if Donphan/Rhyperior are not on the field."
+    },
+    {
+     "id": "j_cianwood_demais_times_na0",
+     "kind": "note",
+     "text": "All solves are now 3 turns."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_olivine"
+   }
+  },
+  "j_cianwood_vs_machamp_hitmontop_donphan_71": {
+   "id": "j_cianwood_vs_machamp_hitmontop_donphan_71",
+   "title": "Cianwood · vs. Machamp / Hitmontop (Donphan 71)",
+   "steps": [
+    {
+     "id": "j_cianwood_vs_machamp_hitmontop_donphan_71_0",
+     "kind": "action",
+     "text": "T1: Hyper Voice + {X.SpA|Typhlosion}."
+    },
+    {
+     "id": "j_cianwood_vs_machamp_hitmontop_donphan_71_1",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Eruption."
+    },
+    {
+     "id": "j_cianwood_vs_machamp_hitmontop_donphan_71_na0",
+     "kind": "note",
+     "text": "All solves are now 3 turns."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_olivine"
+   }
+  },
+  "j_cianwood": {
+   "id": "j_cianwood",
+   "title": "Lucky Girl · 5 · Cianwood",
+   "leadHint": "Meloetta [Specs] + Typhlosion",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j_cianwood_demais_times"
+     },
+     {
+      "label": "vs. Machamp / Hitmontop (Donphan 71)",
+      "nodeId": "j_cianwood_vs_machamp_hitmontop_donphan_71"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "j_olivine"
+  },
+  "j_olivine_demais_times": {
+   "id": "j_olivine_demais_times",
+   "title": "Olivine · Other teams",
+   "steps": [
+    {
+     "id": "j_olivine_demais_times_0",
+     "kind": "action",
+     "text": "Water Spout + Eruption (when possible)."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_blackthorn"
+   }
+  },
+  "j_olivine_vs_rapidash": {
+   "id": "j_olivine_vs_rapidash",
+   "title": "Olivine · vs. Rapidash",
+   "steps": [
+    {
+     "id": "j_olivine_vs_rapidash_0",
+     "kind": "action",
+     "text": "{X.SpA|Blastoise}."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j_blackthorn"
+   }
+  },
+  "j_olivine": {
+   "id": "j_olivine",
+   "title": "Lucky Girl · Extra · Olivine",
+   "leadHint": "Blastoise + Typhlosion [Eruption when possible]",
+   "steps": [
+    {
+     "id": "j_olivine_i0",
+     "kind": "note",
+     "text": "Optional extra gym — need to heal first."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j_olivine_demais_times"
+     },
+     {
+      "label": "vs. Rapidash",
+      "nodeId": "j_olivine_vs_rapidash"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ],
+   "skipTo": "j_blackthorn"
+  },
+  "j_blackthorn": {
+   "id": "j_blackthorn",
+   "title": "Lucky Girl · Extra · Blackthorn",
+   "leadHint": "Aerodactyl + Meloetta [Specs]",
+   "steps": [
+    {
+     "id": "j_blackthorn_0",
+     "kind": "note",
+     "text": "Optional extra gym — need to heal first."
+    },
+    {
+     "id": "j_blackthorn_1",
+     "kind": "action",
+     "text": "T1: {X.SpA|Aerodactyl} + Hyper Voice."
+    },
+    {
+     "id": "j_blackthorn_2",
+     "kind": "note",
+     "text": "Then: let the Aero die and bring in Vanilluxe."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Meloetta",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "x_petalburg": {
+   "id": "x_petalburg",
+   "title": "Lucky Girl · Petalburg (skipped)",
+   "leadHint": "Legacy doc: Togekiss + Typhlosion",
+   "steps": [
+    {
+     "id": "x_petalburg_0",
+     "kind": "note",
+     "text": "Skipped in the doc. Legacy solve — mentions Togekiss, which this team no longer uses."
+    },
+    {
+     "id": "x_petalburg_1",
+     "kind": "action",
+     "text": "Doc: Togekiss + Typhlosion. If Chansey/Blissey on the field: switch Typhlosion » Excadrill."
+    },
+    {
+     "id": "x_petalburg_2",
+     "kind": "note",
+     "text": "Reason to skip: Meloetta does not kill Blissey in one hit and Typhlosion does not kill Slaking in one hit."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "x_canalave_demais_times": {
+   "id": "x_canalave_demais_times",
+   "title": "Canalave (skipped) · Other teams",
+   "steps": [
+    {
+     "id": "x_canalave_demais_times_0",
+     "kind": "action",
+     "text": "{Rock Slide|Aerodactyl} + Earthquake."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "x_canalave_areia_no_campo": {
+   "id": "x_canalave_areia_no_campo",
+   "title": "Canalave (skipped) · Sandstorm on the field",
+   "steps": [
+    {
+     "id": "x_canalave_areia_no_campo_0",
+     "kind": "action",
+     "text": "Aero uses Sunny Day."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "x_canalave_chuva_no_campo": {
+   "id": "x_canalave_chuva_no_campo",
+   "title": "Canalave (skipped) · Rain on the field",
+   "steps": [
+    {
+     "id": "x_canalave_chuva_no_campo_0",
+     "kind": "action",
+     "text": "Switch both leads to Vanilluxe + Blastoise."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "x_canalave_skarmory_ou_moltres_no_campo": {
+   "id": "x_canalave_skarmory_ou_moltres_no_campo",
+   "title": "Canalave (skipped) · Skarmory or Moltres on the field",
+   "steps": [
+    {
+     "id": "x_canalave_skarmory_ou_moltres_no_campo_0",
+     "kind": "action",
+     "text": "Switch both leads to Vanilluxe + Blastoise."
+    }
+   ],
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "x_canalave": {
+   "id": "x_canalave",
+   "title": "Lucky Girl · Canalave (skipped)",
+   "leadHint": "Aerodactyl + Excadrill",
+   "steps": [
+    {
+     "id": "x_canalave_i0",
+     "kind": "note",
+     "text": "Skipped in the doc: terrible RNG + Flash Fire, mons 71. Include only if you scout beforehand."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "x_canalave_demais_times"
+     },
+     {
+      "label": "Sandstorm on the field",
+      "nodeId": "x_canalave_areia_no_campo"
+     },
+     {
+      "label": "Rain on the field",
+      "nodeId": "x_canalave_chuva_no_campo"
+     },
+     {
+      "label": "Skarmory or Moltres on the field",
+      "nodeId": "x_canalave_skarmory_ou_moltres_no_campo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Aerodactyl",
+     "item": "Wide Lens"
+    },
+    {
+     "pokemon": "Excadrill",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "g_rng": {
+   "id": "g_rng",
+   "title": "Lucky Girl · RNG & Abilities",
+   "steps": [
+    {
+     "id": "g_rng_0",
+     "kind": "note",
+     "text": "{Rock Slide|Aerodactyl} missed (Aero): log out and wait for the cooldown."
+    },
+    {
+     "id": "g_rng_1",
+     "kind": "note",
+     "text": "Your mon died: send another — use your head to decide who."
+    },
+    {
+     "id": "g_rng_2",
+     "kind": "note",
+     "text": "Burn (Aero/Exca): heal."
+    },
+    {
+     "id": "g_rng_3",
+     "kind": "note",
+     "text": "Paralysis (any): heal."
+    },
+    {
+     "id": "g_rng_4",
+     "kind": "note",
+     "text": "Intimidate (Stoutland/Gyarados/Arcanine/Luxray/Masquerain/Tauros/Hitmontop/Salamence/Granbull): see the gym solve."
+    },
+    {
+     "id": "g_rng_5",
+     "kind": "note",
+     "text": "Physically tanky (Tangrowth/Exeggutor): keep pushing, it becomes 4+ turns."
+    },
+    {
+     "id": "g_rng_6",
+     "kind": "note",
+     "text": "Especially tanky (Chansey/Blissey/Snorlax/Milotic/Walrein/Tyranitar): X-Items or switch the lead to physical (Aero/Exca)."
+    },
+    {
+     "id": "g_rng_7",
+     "kind": "note",
+     "text": "Fast (Electrode / Lucario Scarf @ Mossdeep): X.Speed on your sweeper or X.Atk on Aero."
+    },
+    {
+     "id": "g_rng_8",
+     "kind": "note",
+     "text": "Sand Rush (enemy Excadrill): two ways to play."
+    },
+    {
+     "id": "g_rng_9",
+     "kind": "note",
+     "text": "Swift Swim (Floatzel/Kabutops): log out and wait for the cooldown."
+    },
+    {
+     "id": "g_rng_10",
+     "kind": "note",
+     "text": "Chlorophyll (Lilligant/Venusaur): X.Spe; use the sun to kill Ninetales."
+    },
+    {
+     "id": "g_rng_11",
+     "kind": "note",
+     "text": "Slush Rush / Snow Cloak (Beartic/Froslass): Aero Sunny Day; Exca Mold Breaker."
+    },
+    {
+     "id": "g_rng_12",
+     "kind": "note",
+     "text": "Sun (Torkoal/Ninetales): X.Spe; use the sun to kill the Ninetales."
+    },
+    {
+     "id": "g_rng_13",
+     "kind": "note",
+     "text": "Rain (Pelipper/Politoed): switch to Vanilluxe (changes the weather immediately) or Aero Sunny Day."
+    },
+    {
+     "id": "g_rng_14",
+     "kind": "note",
+     "text": "Flash Fire (Typhlosion/Ninetales/Chandelure/Houndoom/Heatran): Aero Rain Dance; don't use fire attacks."
+    },
+    {
+     "id": "g_rng_15",
+     "kind": "note",
+     "text": "Water Absorb (Lanturn/Toxicroak/Cradily/Lapras/Seismitoad/Poliwrath/Vaporeon): log out/wait CD; don't use water attacks."
+    },
+    {
+     "id": "g_rng_16",
+     "kind": "note",
+     "text": "Cloud Nine (Altaria): ignore — spam {Blizzard|Vanilluxe} + X.Accuracy."
+    },
+    {
+     "id": "g_rng_17",
+     "kind": "note",
+     "text": "Levitate (Rotom/Bronzong/Eelektross/Mismagius/Flygon/Lunatone/Solrock/Claydol): Excadrill Mold Breaker."
+    },
+    {
+     "id": "g_rng_18",
+     "kind": "note",
+     "text": "Scizor on the field: let Aero die or use Aero Protect."
+    },
+    {
+     "id": "g_rng_19",
+     "kind": "note",
+     "text": "Furret with Protect: open point ('Devs y')."
+    }
+   ]
+  },
+  "g_heal": {
+   "id": "g_heal",
+   "title": "Lucky Girl · Heal & Setup Rules",
+   "steps": [
+    {
+     "id": "g_heal_0",
+     "kind": "note",
+     "text": "Always heal when changing region. You can use Teleport Ocarina to optimize."
+    },
+    {
+     "id": "g_heal_1",
+     "kind": "note",
+     "text": "Heal Aero to full HP with potions of 20. Typh, Blast and Exca also recommended."
+    },
+    {
+     "id": "g_heal_2",
+     "kind": "note",
+     "text": "Burned physical attackers (Aero/Exca) only need to heal if they are used in the next gyms of the region."
+    },
+    {
+     "id": "g_heal_3",
+     "kind": "note",
+     "text": "Checkpoint bypass: if a mon died but won't be used until the next checkpoint (region change), you don't need to heal."
+    },
+    {
+     "id": "g_heal_4",
+     "kind": "note",
+     "text": "Items (1 stock): 2 Choice Scarf, 1 Choice Specs, 1 Choice Band, 1 Wide Lens. Only Meloetta swaps item (Specs <-> Scarf)."
+    },
+    {
+     "id": "g_heal_5",
+     "kind": "note",
+     "text": "Teleport Ocarina and Fly Ocarina are mandatory. PP Max on the main moves. Main move in the 1st slot for gigaspam A."
+    },
+    {
+     "id": "g_heal_6",
+     "kind": "note",
+     "text": "Multi-device: offset the battles — start talking to the leader on the 2nd device only after the first 2 mons of the 1st fall."
+    }
+   ]
+  }
+ }
+}

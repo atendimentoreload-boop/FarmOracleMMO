@@ -1,0 +1,775 @@
+{
+ "id": "cynthia_morimoto_cadozz",
+ "title": "Cynthia & Morimoto (cadozz)",
+ "lead": "Time do cadozz: Chansey, Smeargle, Infernape, Torterra + Smeargle (Scarf) e Scyther. Vence Cynthia E Morimoto (faça a Cynthia primeiro).",
+ "pokepaste": "https://pokepast.es/acbe0d2c63e3c68c",
+ "doc": "https://forums.pokemmo.com/index.php?/topic/198035-beating-cynthia-fast-a-strategy-guide/",
+ "homePrompt": "Quem você vai enfrentar?",
+ "entryPoints": [
+  {
+   "label": "Cynthia · Undella",
+   "nodeId": "cynt",
+   "portrait": "cynthia"
+  },
+  {
+   "label": "Morimoto · Castelia",
+   "nodeId": "mori",
+   "portrait": "morimoto"
+  }
+ ],
+ "nodes": {
+  "cynt": {
+   "id": "cynt",
+   "title": "Unova · Cynthia (Undella)",
+   "steps": [
+    {
+     "id": "cynt_setup",
+     "kind": "setup",
+     "text": "Time (cadozz): Chansey, Smeargle (Rocky Helmet), Infernape, Torterra — e deixe também o Smeargle (Choice Scarf) e o Scyther do Morimoto no time. Cynthia fica em Undella Town (Unova), só no VERÃO/PRIMAVERA. Ela sorteia 1 de 5 times, com lead aleatório (Lvl 90; Garchomp Lvl 92). Faça a Cynthia ANTES do Morimoto. Luta 1 contra 1 (~9-10 turnos)."
+    },
+    {
+     "id": "cynt_idea",
+     "kind": "note",
+     "text": "Ideia: a Chansey isca e dá Teleport; você monta (Yawn / Stealth Rock) e o Torterra entra, usa Shell Smash e varre."
+    },
+    {
+     "id": "cynt_lead_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Chansey — conforme o LEAD da Cynthia (depois, Teleport pra trocar)",
+      "rows": [
+       {
+        "move": "Soft-Boiled, depois Teleport",
+        "targets": [
+         "Eelektross"
+        ]
+       },
+       {
+        "move": "Safeguard, depois Teleport",
+        "targets": [
+         "Roserade"
+        ]
+       },
+       {
+        "move": "Teleport direto",
+        "targets": [
+         "qualquer outro lead"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "leadHint": "Chansey",
+   "gymLead": [
+    {
+     "pokemon": "Chansey"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O que você está enfrentando DEPOIS do Teleport?",
+    "options": [
+     {
+      "label": "Braviary",
+      "nodeId": "cynt_braviary"
+     },
+     {
+      "label": "Eelektross",
+      "nodeId": "cynt_eel"
+     },
+     {
+      "label": "Empoleon",
+      "nodeId": "cynt_empoleon"
+     },
+     {
+      "label": "Garchomp",
+      "nodeId": "cynt_garchomp"
+     },
+     {
+      "label": "Gastrodon",
+      "nodeId": "cynt_gastrodon"
+     },
+     {
+      "label": "Glaceon",
+      "nodeId": "cynt_glaceon"
+     },
+     {
+      "label": "Lucario",
+      "nodeId": "cynt_lucario"
+     },
+     {
+      "label": "Roserade",
+      "nodeId": "cynt_roserade"
+     },
+     {
+      "label": "Spiritomb",
+      "nodeId": "cynt_spiritomb"
+     }
+    ]
+   }
+  },
+  "cynt_braviary": {
+   "id": "cynt_braviary",
+   "title": "Cynthia · Braviary [Time 2]",
+   "steps": [
+    {
+     "id": "cynt_brav_1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_brav_2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_brav_3",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_eel": {
+   "id": "cynt_eel",
+   "title": "Cynthia · Eelektross [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_eel_1",
+     "kind": "action",
+     "text": "Traz o Torterra direto (sem precisar montar)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_empoleon": {
+   "id": "cynt_empoleon",
+   "title": "Cynthia · Empoleon",
+   "steps": [
+    {
+     "id": "cynt_emp_note",
+     "kind": "note",
+     "text": "Veja qual golpe o Empoleon usou:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O Empoleon usou o quê?",
+    "options": [
+     {
+      "label": "Scald [Time 1]",
+      "nodeId": "cynt_emp_scald"
+     },
+     {
+      "label": "Earthquake [Time 2]",
+      "nodeId": "cynt_emp_eq"
+     }
+    ]
+   }
+  },
+  "cynt_emp_scald": {
+   "id": "cynt_emp_scald",
+   "title": "Empoleon · Scald [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_emp_s1",
+     "kind": "action",
+     "text": "Infernape: Aura Sphere (ele vai cair pro Garchomp que aparece)."
+    },
+    {
+     "id": "cynt_emp_s2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_emp_eq": {
+   "id": "cynt_emp_eq",
+   "title": "Empoleon · Earthquake [Time 2]",
+   "steps": [
+    {
+     "id": "cynt_emp_e1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_emp_e2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_emp_e3",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_garchomp": {
+   "id": "cynt_garchomp",
+   "title": "Cynthia · Garchomp",
+   "steps": [
+    {
+     "id": "cynt_gar_note",
+     "kind": "note",
+     "text": "O Garchomp tomou recuo (Life Orb) ou entrou trocando? Escolha:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Qual a situação do Garchomp?",
+    "options": [
+     {
+      "label": "Sem Life Orb [Time 1]",
+      "nodeId": "cynt_gar_nolo"
+     },
+     {
+      "label": "Com Life Orb / tomou recuo [Time 2]",
+      "nodeId": "cynt_gar_lo"
+     },
+     {
+      "label": "Ele ENTROU trocando [Time 1]",
+      "nodeId": "cynt_gar_sw"
+     }
+    ]
+   }
+  },
+  "cynt_gar_nolo": {
+   "id": "cynt_gar_nolo",
+   "title": "Garchomp · sem Life Orb [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_gar_nolo_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Conforme o golpe do Garchomp",
+      "rows": [
+       {
+        "move": "Infernape Switcheroo (ele cai), depois Torterra",
+        "targets": [
+         "Fire Fang"
+        ]
+       },
+       {
+        "move": "Torterra direto",
+        "targets": [
+         "Earthquake"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_gar_lo": {
+   "id": "cynt_gar_lo",
+   "title": "Garchomp · com Life Orb [Time 2]",
+   "steps": [
+    {
+     "id": "cynt_gar_lo1",
+     "kind": "action",
+     "text": "Smeargle do Morimoto (Choice Scarf): Stealth Rock."
+    },
+    {
+     "id": "cynt_gar_lo2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_gar_sw": {
+   "id": "cynt_gar_sw",
+   "title": "Garchomp · entrou trocando [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_gar_sw1",
+     "kind": "action",
+     "text": "Infernape ataca (vai cair pro Garchomp)."
+    },
+    {
+     "id": "cynt_gar_sw2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_gastrodon": {
+   "id": "cynt_gastrodon",
+   "title": "Cynthia · Gastrodon",
+   "steps": [
+    {
+     "id": "cynt_gas_note",
+     "kind": "note",
+     "text": "O Scald do Gastrodon deu pelo menos 9% de dano?"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Quanto o Scald do Gastrodon causou?",
+    "options": [
+     {
+      "label": "Scald deu ≥9% [Time 2]",
+      "nodeId": "cynt_gas_scald"
+     },
+     {
+      "label": "Menos que isso [Time 1]",
+      "nodeId": "cynt_gas_other"
+     }
+    ]
+   }
+  },
+  "cynt_gas_scald": {
+   "id": "cynt_gas_scald",
+   "title": "Gastrodon · Scald ≥9% [Time 2]",
+   "steps": [
+    {
+     "id": "cynt_gas_s1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_gas_s2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_gas_s3",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_gas_other": {
+   "id": "cynt_gas_other",
+   "title": "Gastrodon · pouco dano [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_gas_o1",
+     "kind": "action",
+     "text": "Infernape: Grass Knot (ele cai pro Garchomp que aparece)."
+    },
+    {
+     "id": "cynt_gas_o2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_glaceon": {
+   "id": "cynt_glaceon",
+   "title": "Cynthia · Glaceon [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_gla_1",
+     "kind": "action",
+     "text": "Infernape: Aura Sphere (cai pro Garchomp que aparece)."
+    },
+    {
+     "id": "cynt_gla_2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_lucario": {
+   "id": "cynt_lucario",
+   "title": "Cynthia · Lucario",
+   "steps": [
+    {
+     "id": "cynt_luc_note",
+     "kind": "note",
+     "text": "O Lucario isca fácil. Veja o que aconteceu:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Qual a situação do Lucario?",
+    "options": [
+     {
+      "label": "Usou Aura Sphere [Time 2]",
+      "nodeId": "cynt_luc_as"
+     },
+     {
+      "label": "Lead era Milotic/Lickilicky/Eelektross/Togekiss/Roserade [Time 3/4]",
+      "nodeId": "cynt_luc_lead"
+     },
+     {
+      "label": "Caso contrário [Time 3/4/5]",
+      "nodeId": "cynt_luc_other"
+     }
+    ]
+   }
+  },
+  "cynt_luc_as": {
+   "id": "cynt_luc_as",
+   "title": "Lucario · Aura Sphere [Time 2]",
+   "steps": [
+    {
+     "id": "cynt_luc_as1",
+     "kind": "action",
+     "text": "Smeargle: Volt Tackle."
+    },
+    {
+     "id": "cynt_luc_as2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_luc_lead": {
+   "id": "cynt_luc_lead",
+   "title": "Lucario · lead conhecido [Time 3/4]",
+   "steps": [
+    {
+     "id": "cynt_luc_l1",
+     "kind": "action",
+     "text": "Smeargle: Stealth Rock."
+    },
+    {
+     "id": "cynt_luc_l2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_luc_other": {
+   "id": "cynt_luc_other",
+   "title": "Lucario · outros [Time 3/4/5]",
+   "steps": [
+    {
+     "id": "cynt_luc_o1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_luc_o2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_luc_o3",
+     "kind": "action",
+     "text": "Traz o Torterra. (No Time 5 o Garchomp é gordo: use Wood Hammer nele — o Earthquake não mata.)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_roserade": {
+   "id": "cynt_roserade",
+   "title": "Cynthia · Roserade [Time 1]",
+   "steps": [
+    {
+     "id": "cynt_ros_1",
+     "kind": "action",
+     "text": "Traz o Torterra direto."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_spiritomb": {
+   "id": "cynt_spiritomb",
+   "title": "Cynthia · Spiritomb [Time 2/4]",
+   "steps": [
+    {
+     "id": "cynt_spi_1",
+     "kind": "action",
+     "text": "Smeargle: Stealth Rock (repita até o Smeargle cair)."
+    },
+    {
+     "id": "cynt_spi_2",
+     "kind": "action",
+     "text": "Traz o Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_sweep"
+   }
+  },
+  "cynt_sweep": {
+   "id": "cynt_sweep",
+   "title": "Cynthia · varredura do Torterra",
+   "steps": [
+    {
+     "id": "cynt_sw_ss",
+     "kind": "action",
+     "text": "Torterra: Shell Smash (sobe muito Ataque e Velocidade; a habilidade Shell Armor não deixa tomar crítico)."
+    },
+    {
+     "id": "cynt_sw_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Torterra — qual golpe pra varrer",
+      "rows": [
+       {
+        "move": "Heavy Slam",
+        "targets": [
+         "tipos Voadores"
+        ]
+       },
+       {
+        "move": "Wood Hammer",
+        "targets": [
+         "Eelektross",
+         "Garchomp do Time 5"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "o resto (padrão)"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "cynt_done",
+     "kind": "setup",
+     "text": "Cynthia derrotada! Agora enfrente o Morimoto (troque para a entrada \"Morimoto\")."
+    }
+   ]
+  },
+  "mori": {
+   "id": "mori",
+   "title": "Unova · Morimoto (Castelia)",
+   "steps": [
+    {
+     "id": "mori_setup",
+     "kind": "setup",
+     "text": "Time (cadozz): Chansey, Scyther, Smeargle (Choice Scarf). Morimoto fica em Castelia (Unova) — no beco à direita do Centro, entre no 1º prédio, suba o elevador e siga reto; ele é o NPC da direita dos três. Sorteia 1 de 5 times, lead aleatório (Lvl 85). Luta 1 contra 1 (~9-10 turnos)."
+    },
+    {
+     "id": "mori_line",
+     "kind": "note",
+     "text": "Linha básica (siga sempre): 1) Chansey Stealth Rock; 2) Chansey Teleport (entra o Scyther); 3) Scyther Swords Dance; 4) varre. Cada time tem NO MÁXIMO 1 exceção (~50% de chance). Cheque na ordem abaixo e aplique a 1ª que bater; se nenhuma bater, siga só a linha básica."
+    }
+   ],
+   "leadHint": "Chansey",
+   "gymLead": [
+    {
+     "pokemon": "Chansey"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Alguma exceção apareceu? (cheque na ordem)",
+    "options": [
+     {
+      "label": "Lead Flareon (fogo)",
+      "nodeId": "mori_flareon"
+     },
+     {
+      "label": "Lead Simisear (fogo)",
+      "nodeId": "mori_simisear"
+     },
+     {
+      "label": "Chansey caiu ANTES dos rocks (crit do Primeape)",
+      "nodeId": "mori_chansey_dead"
+     },
+     {
+      "label": "Machamp com Dynamic Punch (após o Teleport)",
+      "nodeId": "mori_dynpunch"
+     },
+     {
+      "label": "Machamp queimado / Flame Orb (após o Teleport)",
+      "nodeId": "mori_burnt"
+     },
+     {
+      "label": "Jolteon com Thunderbolt ou Simipour com Ice Beam",
+      "nodeId": "mori_jolteon"
+     },
+     {
+      "label": "Nenhuma exceção → segue a linha básica",
+      "nodeId": "mori_sweep"
+     }
+    ]
+   }
+  },
+  "mori_flareon": {
+   "id": "mori_flareon",
+   "title": "Morimoto · lead Flareon",
+   "steps": [
+    {
+     "id": "mori_fl1",
+     "kind": "action",
+     "text": "Flareon segura Toxic Orb e vai de Superpower. Chansey: Soft-Boiled 2×; depois siga a linha básica (Stealth Rock → Teleport → Scyther Swords Dance)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_simisear": {
+   "id": "mori_simisear",
+   "title": "Morimoto · lead Simisear",
+   "steps": [
+    {
+     "id": "mori_si1",
+     "kind": "action",
+     "text": "Simisear segura Life Orb e vai de Superpower. Chansey: Soft-Boiled 1×; depois siga a linha básica."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_chansey_dead": {
+   "id": "mori_chansey_dead",
+   "title": "Morimoto · Chansey caiu antes dos rocks",
+   "steps": [
+    {
+     "id": "mori_cd1",
+     "kind": "action",
+     "text": "Pode acontecer por crítico do Primeape. Traz o Smeargle e usa Stealth Rock; depois Scyther Swords Dance."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_dynpunch": {
+   "id": "mori_dynpunch",
+   "title": "Morimoto · Machamp Dynamic Punch",
+   "steps": [
+    {
+     "id": "mori_dp1",
+     "kind": "action",
+     "text": "Traz o Smeargle e usa Safeguard (evita a confusão do Dynamic Punch). Depois Scyther Swords Dance."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_burnt": {
+   "id": "mori_burnt",
+   "title": "Morimoto · Machamp queimado (Flame Orb)",
+   "steps": [
+    {
+     "id": "mori_bu1",
+     "kind": "action",
+     "text": "Machamp com Flame Orb NÃO fica choice-locked. Traz o Smeargle e usa Encore (trava ele fora do Ice Punch). Depois Scyther."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_jolteon": {
+   "id": "mori_jolteon",
+   "title": "Morimoto · Jolteon/Simipour especial",
+   "steps": [
+    {
+     "id": "mori_jo1",
+     "kind": "action",
+     "text": "Jolteon dando Thunderbolt ou Simipour dando Ice Beam: a IA não troca (tem um Machamp fraco). Traz o Smeargle e usa Final Gambit pra iscar o Shuckle. Depois Scyther."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "mori_sweep"
+   }
+  },
+  "mori_sweep": {
+   "id": "mori_sweep",
+   "title": "Morimoto · varredura do Scyther",
+   "steps": [
+    {
+     "id": "mori_sw_sd",
+     "kind": "action",
+     "text": "Scyther: Swords Dance (se ainda não subiu) — Technician + Quick Attack fecham a luta."
+    },
+    {
+     "id": "mori_sw_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Scyther — qual golpe pra varrer",
+      "rows": [
+       {
+        "move": "Quick Attack",
+        "targets": [
+         "Pokémon rápidos: Dugtrio, Jolteon, Zebstrika, Primeape (Scarf)"
+        ]
+       },
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Gengar"
+        ]
+       },
+       {
+        "move": "Aerial Ace",
+        "targets": [
+         "o resto (padrão)"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "mori_done",
+     "kind": "setup",
+     "text": "Morimoto derrotado! CURE o time se precisar."
+    }
+   ]
+  }
+ }
+}

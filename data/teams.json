@@ -1,0 +1,60 @@
+{
+  "default": "shadow_scale",
+  "teamScopedModes": ["elite4_kanto", "elite4_hoenn", "elite4_unova", "elite4_sinnoh", "elite4_johto"],
+  "teams": [
+    {
+      "id": "shadow_scale",
+      "name": "Shadow Scale",
+      "icon": "gengar",
+      "pokemon": ["Scrafty", "Dragonite", "Gengar", "Heatran", "Toxicroak", "Chansey"],
+      "pokepaste": "https://pokepast.es/fd3af5008999ab56",
+      "hasEmoji": false,
+      "code": "ABBBD90F8429CB9D0F0A43BC8383BD40"
+    },
+    {
+      "id": "reversed_fate",
+      "name": "Reversed Fate",
+      "icon": "pikachu",
+      "pokemon": ["Jirachi", "Pikachu", "Chandelure", "Dragonite", "Gallade", "Scrafty"],
+      "pokepaste": "https://pokepast.es/acfa939f6291de32",
+      "hasEmoji": true,
+      "code": "B151481A13261FD1D97228B5E1196524"
+    },
+    {
+      "id": "dingxianyou",
+      "name": "Dingxianyou",
+      "icon": "volcarona",
+      "pokemon": ["Chansey", "Slowbro", "Politoed", "Gengar", "Poliwrath", "Volcarona"],
+      "pokepaste": "https://pokepast.es/e356ee22f26cf6dc",
+      "hasEmoji": false,
+      "code": "8975A86C592A1AAF933039A14C02AF08"
+    },
+    {
+      "id": "starlight",
+      "name": "Starlight",
+      "icon": "jirachi",
+      "pokemon": ["Chansey", "Jirachi", "Gengar", "Chandelure", "Gallade", "Dragonite"],
+      "pokepaste": "https://pokepast.es/fe2e5dfc8f470029",
+      "hasEmoji": false,
+      "code": "2E98DB4DC0BCBDE6DD2B811D650D7872"
+    },
+    {
+      "id": "ghost_dance",
+      "name": "Ghost Dance",
+      "icon": "jellicent",
+      "pokemon": ["Chansey", "Gengar", "Jellicent", "Volcarona", "Scrafty", "Gliscor"],
+      "pokepaste": "https://pokepast.es/db569c2bb3979a55",
+      "hasEmoji": false,
+      "code": "8A0799DAFFA649738B89D3878E2A0CEC"
+    },
+    {
+      "id": "sacred_inferno",
+      "name": "Sacred Inferno",
+      "icon": "volcarona",
+      "pokemon": ["Chansey", "Slowbro", "Gengar", "Volcarona", "Gallade", "Gliscor"],
+      "pokepaste": "https://pokepast.es/6d6ea2781d7e4181",
+      "hasEmoji": false,
+      "code": "DACC146CAB408F368C5EFA9061678D69"
+    }
+  ]
+}

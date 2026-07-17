@@ -1,0 +1,114 @@
+{
+ "id": "hooh",
+ "title": "Ho-Oh (rematch)",
+ "revealAll": true,
+ "lead": "Time do Allen - Yatsura: Shuckle, Rotom e Ducklett. Suba o Rotom a +6 de Sp. Atk e varra com Discharge/Thunderbolt.",
+ "pokepaste": "https://pokepast.es/95c7ab2b67af6a1a",
+ "homePrompt": "Ho-Oh (rematch)",
+ "legend": [
+  {
+   "term": "Shuckle (Bold/Relaxed) @ Sitrus Berry",
+   "meaning": "EV 252 Def / 252 SpD · IV HP/Def/SpD 31 · golpes: Guard Split, Bind."
+  },
+  {
+   "term": "Rotom (Modest) @ Shell Bell",
+   "meaning": "EV 252 HP / 252 SpA · golpes: Nasty Plot, Snatch, Discharge, Thunderbolt."
+  },
+  {
+   "term": "Ducklett (qualquer nível)",
+   "meaning": "golpes: Fly, Aqua Ring."
+  }
+ ],
+ "palette": [
+  {
+   "name": "Shuckle",
+   "color": "#E8B84B",
+   "moves": ["Guard Split", "Bind"]
+  },
+  {
+   "name": "Rotom",
+   "color": "#FF7A4D",
+   "moves": ["Snatch", "Nasty Plot", "Discharge", "Thunderbolt"]
+  },
+  {
+   "name": "Ducklett",
+   "color": "#5BC0EB",
+   "moves": ["Aqua Ring", "Fly"]
+  },
+  {
+   "name": "Ho-Oh",
+   "color": "#F2C14E",
+   "moves": []
+  }
+ ],
+ "entryPoints": [
+  {
+   "label": "Ho-Oh",
+   "nodeId": "f1"
+  }
+ ],
+ "nodes": {
+  "f1": {
+   "id": "f1",
+   "title": "Ho-Oh · 1ª forma",
+   "steps": [
+    {
+     "id": "t1",
+     "kind": "action",
+     "text": "T1: Guard Split no Rotom + Snatch + Aqua Ring."
+    },
+    {
+     "id": "t2",
+     "kind": "action",
+     "text": "T2: Bind no Ho-Oh + Nasty Plot."
+    },
+    {
+     "id": "t3",
+     "kind": "action",
+     "text": "T3: Bind no Ho-Oh + Nasty Plot."
+    },
+    {
+     "id": "t4",
+     "kind": "action",
+     "text": "T4 (opcional, se o Shuckle estiver vivo): Bind no Ho-Oh + Nasty Plot."
+    },
+    {
+     "id": "t5",
+     "kind": "action",
+     "text": "T5+: o Rotom deve estar em +6 de Sp. Atk → use Discharge até MATAR a 1ª forma (sempre que houver aliados ao lado do Ho-Oh)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Quando a 1ª forma cair:",
+    "options": [
+     {
+      "label": "Fase 2 · Ho-Oh Shiny (Radiante)",
+      "nodeId": "f2"
+     }
+    ]
+   }
+  },
+  "f2": {
+   "id": "f2",
+   "title": "Ho-Oh Radiante · 2ª forma",
+   "steps": [
+    {
+     "id": "f2_note",
+     "kind": "note",
+     "text": "O Ho-Oh Radiante (shiny) RENASCE com os status zerados — seu Rotom volta a +0."
+    },
+    {
+     "id": "f2_t1",
+     "kind": "action",
+     "text": "T1: Nasty Plot."
+    },
+    {
+     "id": "f2_t2",
+     "kind": "action",
+     "text": "T2: Thunderbolt — repita até derrotar."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "id": "hooh_trickroom",
+ "title": "Ho-Oh (rematch)",
+ "revealAll": true,
+ "lead": "Time Trick Room (Lewis Nield): Chandelure, Rotom-Heat e Lunatone. Suba o Rotom-Heat com Nasty Plot, copie o boost pro Lunatone (Psych Up) e martele o Ho-Oh com Power Gem (Rock = 4×) debaixo de Trick Room. Luta de TRIO.",
+ "pokepaste": "https://pokepast.es/bf35cfea0d1b7356",
+ "homePrompt": "Ho-Oh (rematch) · Trick Room",
+ "legend": [
+  {
+   "term": "Chandelure (Modest) @ Spell Tag",
+   "meaning": "EV 252 Def / 58 SpA / 200 SpD · golpes: Safeguard, Shadow Ball, Protect, Psych Up."
+  },
+  {
+   "term": "Rotom-Heat (Quiet) @ Soft Sand",
+   "meaning": "EV 6 HP / 252 SpA / 252 SpD · golpes: HP Ground, Thunderbolt, Light Screen, Nasty Plot."
+  },
+  {
+   "term": "Lunatone (Quiet) @ Hard Stone",
+   "meaning": "EV 92 HP / 252 Def / 166 SpA · golpes: Trick Room, Power Gem, Protect, Psych Up."
+  }
+ ],
+ "palette": [
+  {
+   "name": "Chandelure",
+   "color": "#A970FF",
+   "moves": ["Safeguard", "Shadow Ball"]
+  },
+  {
+   "name": "Rotom-Heat",
+   "color": "#FF7A4D",
+   "moves": ["Nasty Plot", "Thunderbolt", "HP Ground", "Light Screen"]
+  },
+  {
+   "name": "Lunatone",
+   "color": "#5BC0EB",
+   "moves": ["Trick Room", "Power Gem"]
+  },
+  {
+   "name": "Ho-Oh",
+   "color": "#F2C14E",
+   "moves": []
+  }
+ ],
+ "entryPoints": [
+  {
+   "label": "Ho-Oh",
+   "nodeId": "f1"
+  }
+ ],
+ "nodes": {
+  "f1": {
+   "id": "f1",
+   "title": "Ho-Oh · 1ª forma",
+   "steps": [
+    {
+     "id": "f1_intro",
+     "kind": "note",
+     "text": "Luta de TRIO (3 contra vários). Os aliados do Ho-Oh são os 3 cães lendários: Suicune, Entei e Raikou. 'Trocar de posição' = manobra de triple battle: o Chandelure troca de lugar com o Lunatone em campo (NÃO é troca por reserva)."
+    },
+    {
+     "id": "t1",
+     "kind": "action",
+     "text": "T1: Chandelure: Safeguard (blinda o time contra status) + Rotom-Heat: Nasty Plot + Lunatone: {Protect|Lunatone}."
+    },
+    {
+     "id": "t2",
+     "kind": "action",
+     "text": "T2: Chandelure: {Protect|Chandelure} + Rotom-Heat: Nasty Plot (chega a +4 de Sp. Atk) + Lunatone: Trick Room (os lentos passam a agir primeiro)."
+    },
+    {
+     "id": "t3",
+     "kind": "action",
+     "text": "T3: Chandelure: troca de posição com o Lunatone + Rotom-Heat: elimina um dos cães (Thunderbolt no Suicune, HP Ground no Entei/Raikou) + Lunatone: {Psych Up|Lunatone} no Rotom-Heat (copia os +4 de Sp. Atk)."
+    },
+    {
+     "id": "t4",
+     "kind": "action",
+     "text": "T4: Chandelure: troca de posição com o Lunatone + Rotom-Heat: elimina outro cão + Lunatone: Power Gem no Ho-Oh (Rock = 4× de dano)."
+    },
+    {
+     "id": "t5",
+     "kind": "action",
+     "text": "T5: Chandelure: troca de posição com o Lunatone + Rotom-Heat: Thunderbolt no Ho-Oh + Lunatone: Power Gem no Ho-Oh."
+    },
+    {
+     "id": "t6",
+     "kind": "action",
+     "text": "T6: Chandelure: troca de posição com o Lunatone + Rotom-Heat: elimina o último cão + Lunatone: Power Gem no Ho-Oh."
+    },
+    {
+     "id": "t7",
+     "kind": "action",
+     "text": "T7: Chandelure: troca de posição com o Lunatone + Rotom-Heat: Light Screen (segura o dano especial antes do renascimento) + Lunatone: Trick Room (renova — dura 5 turnos)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Quando a 1ª forma cair:",
+    "options": [
+     {
+      "label": "Fase 2 · Ho-Oh Shiny (Radiante)",
+      "nodeId": "f2"
+     }
+    ]
+   }
+  },
+  "f2": {
+   "id": "f2",
+   "title": "Ho-Oh Radiante · 2ª forma",
+   "steps": [
+    {
+     "id": "f2_note",
+     "kind": "note",
+     "text": "O Ho-Oh Radiante (shiny) RENASCE com os status zerados — e seus boosts também voltam ao normal. Por isso o Rotom-Heat sobe Nasty Plot de novo e o Chandelure copia com Psych Up. O Trick Room renovado no T7 continua ativo."
+    },
+    {
+     "id": "f2_t1",
+     "kind": "action",
+     "text": "T1 (renascimento): Chandelure: {Psych Up|Chandelure} no Rotom-Heat (copia o boost) + Rotom-Heat: Nasty Plot + Lunatone: Power Gem no Ho-Oh."
+    },
+    {
+     "id": "f2_t2",
+     "kind": "action",
+     "text": "T2+: Chandelure: Shadow Ball + Rotom-Heat: Thunderbolt + Lunatone: Power Gem — repita até derrotar o Ho-Oh."
+    }
+   ]
+  }
+ }
+}

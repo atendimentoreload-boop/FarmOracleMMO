@@ -1,0 +1,911 @@
+{
+ "id": "red_colored",
+ "title": "Red (Colored)",
+ "lead": "Always lead with Blissey!",
+ "homePrompt": "What did Red lead with?",
+ "legend": [
+  {
+   "term": "TP (Teleport)",
+   "meaning": "Blissey uses Teleport to switch out safely and bring in the next Pokémon."
+  },
+  {
+   "term": "Skill Swap",
+   "meaning": "Only needed on Pikachu — since it shows up in two lines, Skill Swap tells you which one to follow."
+  },
+  {
+   "term": "Sacrifice",
+   "meaning": "Let Red knock out your Pokémon on purpose."
+  },
+  {
+   "term": "Send",
+   "meaning": "Send the Pokémon in after a knockout."
+  },
+  {
+   "term": "Finish",
+   "meaning": "Sweep the rest of Red's team with the boosted Pokémon."
+  },
+  {
+   "term": "Moves in English",
+   "meaning": "Move and Pokémon names stay in English to match the PokeMMO screen."
+  }
+ ],
+ "pokepaste": "https://pokepast.es/433ccc371e07d52c",
+ "doc": "https://docs.google.com/document/d/1hcpaFvBere2nWb0C61PVqteTeouoNiMMsmln3YLmFk8/edit",
+ "entryPoints": [
+  {
+   "label": "Blastoise",
+   "nodeId": "gen1_blastoise"
+  },
+  {
+   "label": "Charizard",
+   "nodeId": "gen1_charizard"
+  },
+  {
+   "label": "Emboar",
+   "nodeId": "gen5_emboar"
+  },
+  {
+   "label": "Espeon",
+   "nodeId": "gen1_espeon"
+  },
+  {
+   "label": "Excadrill",
+   "nodeId": "gen5_excadrill"
+  },
+  {
+   "label": "Gliscor",
+   "nodeId": "gen2"
+  },
+  {
+   "label": "Hydreigon",
+   "nodeId": "gen5_hss"
+  },
+  {
+   "label": "Pikachu",
+   "nodeId": "pikachu"
+  },
+  {
+   "label": "Samurott",
+   "nodeId": "gen5_hss"
+  },
+  {
+   "label": "Serperior",
+   "nodeId": "gen5_hss"
+  },
+  {
+   "label": "Snorlax",
+   "nodeId": "gen1_snorlax"
+  },
+  {
+   "label": "Staraptor",
+   "nodeId": "gen4"
+  },
+  {
+   "label": "Swampert",
+   "nodeId": "gen3"
+  },
+  {
+   "label": "Venusaur",
+   "nodeId": "gen1_venusaur"
+  }
+ ],
+ "nodes": {
+  "gen2": {
+   "id": "gen2",
+   "title": "Gliscor",
+   "steps": [
+    {
+     "id": "gen2_1",
+     "kind": "action",
+     "text": "Switch to Golduck and use Encore"
+    },
+    {
+     "id": "gen2_2",
+     "kind": "action",
+     "text": "Switch to Gliscor"
+    },
+    {
+     "id": "gen2_3",
+     "kind": "action",
+     "text": "Use Swords Dance twice"
+    },
+    {
+     "id": "gen2_4",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "gen2_5",
+     "kind": "conditional",
+     "table": {
+      "title": "Gliscor's move to finish",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Gliscor",
+         "Feraligatr",
+         "Meganium"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Typhlosion",
+         "Pikachu",
+         "Tyranitar"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gen3": {
+   "id": "gen3",
+   "title": "Swampert",
+   "steps": [
+    {
+     "id": "gen3_1",
+     "kind": "action",
+     "text": "Switch to Golduck and use Encore"
+    },
+    {
+     "id": "gen3_2",
+     "kind": "action",
+     "text": "Switch to Gliscor"
+    },
+    {
+     "id": "gen3_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "gen3_4",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "gen3_5",
+     "kind": "conditional",
+     "table": {
+      "title": "Gliscor's move to finish",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Swampert",
+         "Blaziken",
+         "Salamence",
+         "Sceptile"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Metagross",
+         "Pikachu"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gen4": {
+   "id": "gen4",
+   "title": "Staraptor (Whirlwind)",
+   "steps": [
+    {
+     "id": "gen4_1",
+     "kind": "note",
+     "text": "Staraptor uses Whirlwind and forces you to switch to a random Pokémon."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Who did Whirlwind force in?",
+    "options": [
+     {
+      "label": "Golduck or Lapras",
+      "nodeId": "gen4_golduck_lapras"
+     },
+     {
+      "label": "Gliscor, Honchkrow or Breloom",
+      "nodeId": "gen4_others"
+     }
+    ]
+   }
+  },
+  "gen4_golduck_lapras": {
+   "id": "gen4_golduck_lapras",
+   "title": "Staraptor · Golduck/Lapras in",
+   "steps": [
+    {
+     "id": "gen4_golduck_lapras_1",
+     "kind": "action",
+     "text": "Send Gliscor, then Breloom, then Blissey (sacrificing them as Staraptor attacks)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen4_after"
+   }
+  },
+  "gen4_others": {
+   "id": "gen4_others",
+   "title": "Staraptor · another in",
+   "steps": [
+    {
+     "id": "gen4_others_1",
+     "kind": "action",
+     "text": "Send Blissey"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen4_after"
+   }
+  },
+  "gen4_after": {
+   "id": "gen4_after",
+   "title": "Staraptor down → Lapras",
+   "steps": [
+    {
+     "id": "gen4_after_1",
+     "kind": "note",
+     "text": "After Staraptor has fainted:"
+    },
+    {
+     "id": "gen4_after_2",
+     "kind": "action",
+     "text": "Send Lapras"
+    },
+    {
+     "id": "gen4_after_3",
+     "kind": "action",
+     "text": "Use Dragon Dance twice"
+    },
+    {
+     "id": "gen4_after_4",
+     "kind": "action",
+     "text": "Use Substitute"
+    },
+    {
+     "id": "gen4_after_5",
+     "kind": "conditional",
+     "table": {
+      "title": "Lapras's move to finish",
+      "rows": [
+       {
+        "move": "Icicle Spear",
+        "targets": [
+         "Infernape",
+         "Pikachu",
+         "Torterra",
+         "Garchomp"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Empoleon"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gen1_espeon": {
+   "id": "gen1_espeon",
+   "title": "Espeon",
+   "steps": [
+    {
+     "id": "gen1_espeon_1",
+     "kind": "action",
+     "text": "Use TP (Teleport) with Blissey"
+    },
+    {
+     "id": "gen1_espeon_2",
+     "kind": "action",
+     "text": "Send Honchkrow and use Sucker Punch"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_blastoise": {
+   "id": "gen1_blastoise",
+   "title": "Blastoise",
+   "steps": [
+    {
+     "id": "gen1_blastoise_1",
+     "kind": "action",
+     "text": "Use TP (Teleport) with Blissey"
+    },
+    {
+     "id": "gen1_blastoise_2",
+     "kind": "action",
+     "text": "Send Honchkrow and use Sucker Punch twice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_charizard": {
+   "id": "gen1_charizard",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "gen1_charizard_1",
+     "kind": "action",
+     "text": "Use TP (Teleport) with Blissey"
+    },
+    {
+     "id": "gen1_charizard_2",
+     "kind": "action",
+     "text": "Send Honchkrow, use Protect, then Sucker Punch"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_venusaur": {
+   "id": "gen1_venusaur",
+   "title": "Venusaur",
+   "steps": [
+    {
+     "id": "gen1_venusaur_1",
+     "kind": "action",
+     "text": "Use TP (Teleport) with Blissey"
+    },
+    {
+     "id": "gen1_venusaur_2",
+     "kind": "action",
+     "text": "Send Honchkrow"
+    },
+    {
+     "id": "gen1_venusaur_3",
+     "kind": "note",
+     "text": "Honchkrow's move depends on the sun:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Is the sun up?",
+    "options": [
+     {
+      "label": "No sun",
+      "nodeId": "gen1_venusaur_lead_nosun"
+     },
+     {
+      "label": "Sun is up",
+      "nodeId": "gen1_venusaur_lead_sun"
+     }
+    ]
+   }
+  },
+  "gen1_venusaur_lead_nosun": {
+   "id": "gen1_venusaur_lead_nosun",
+   "title": "Venusaur (no sun)",
+   "steps": [
+    {
+     "id": "gen1_venusaur_lead_nosun_1",
+     "kind": "action",
+     "text": "Use Brave Bird"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_venusaur_lead_sun": {
+   "id": "gen1_venusaur_lead_sun",
+   "title": "Venusaur (sun)",
+   "steps": [
+    {
+     "id": "gen1_venusaur_lead_sun_1",
+     "kind": "action",
+     "text": "Use Sucker Punch twice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_snorlax": {
+   "id": "gen1_snorlax",
+   "title": "Snorlax",
+   "steps": [
+    {
+     "id": "gen1_snorlax_1",
+     "kind": "action",
+     "text": "Use TP (Teleport) with Blissey"
+    },
+    {
+     "id": "gen1_snorlax_2",
+     "kind": "action",
+     "text": "Send Breloom and use Brick Break"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Who came in next?",
+    "options": [
+     {
+      "label": "Charizard",
+      "nodeId": "gen1_snorlax_charizard"
+     },
+     {
+      "label": "Anything else",
+      "nodeId": "gen1_plus1"
+     }
+    ]
+   }
+  },
+  "gen1_snorlax_charizard": {
+   "id": "gen1_snorlax_charizard",
+   "title": "Snorlax → Charizard",
+   "steps": [
+    {
+     "id": "gen1_snorlax_charizard_1",
+     "kind": "action",
+     "text": "Use Mach Punch"
+    },
+    {
+     "id": "gen1_snorlax_charizard_2",
+     "kind": "action",
+     "text": "Send Honchkrow and use Sucker Punch"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_snorlax_blissey": {
+   "id": "gen1_snorlax_blissey",
+   "title": "Pikachu → Snorlax",
+   "steps": [
+    {
+     "id": "gen1_snorlax_blissey_1",
+     "kind": "action",
+     "text": "With Blissey, use TP or sacrifice it"
+    },
+    {
+     "id": "gen1_snorlax_blissey_2",
+     "kind": "note",
+     "text": "Follow the Snorlax solve."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_snorlax"
+   }
+  },
+  "gen1_pika_espeon": {
+   "id": "gen1_pika_espeon",
+   "title": "Pikachu → Espeon",
+   "steps": [
+    {
+     "id": "gen1_pika_espeon_1",
+     "kind": "action",
+     "text": "Send Honchkrow and use Sucker Punch"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus1"
+   }
+  },
+  "gen1_plus1": {
+   "id": "gen1_plus1",
+   "title": "Red's 2nd Pokémon (Honchkrow +1)",
+   "steps": [
+    {
+     "id": "gen1_plus1_1",
+     "kind": "note",
+     "text": "Honchkrow gained Moxie (+1 Attack). Handle Red's next Pokémon:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What is Red's next Pokémon?",
+    "options": [
+     {
+      "label": "Blastoise",
+      "nodeId": "gen1_p1_blastoise"
+     },
+     {
+      "label": "Charizard",
+      "nodeId": "gen1_p1_charizard"
+     },
+     {
+      "label": "Venusaur",
+      "nodeId": "gen1_p1_venusaur"
+     },
+     {
+      "label": "Anything else",
+      "nodeId": "gen1_plus2"
+     }
+    ]
+   }
+  },
+  "gen1_p1_blastoise": {
+   "id": "gen1_p1_blastoise",
+   "title": "Blastoise",
+   "steps": [
+    {
+     "id": "gen1_p1_blastoise_1",
+     "kind": "action",
+     "text": "Use Sucker Punch twice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus2"
+   }
+  },
+  "gen1_p1_charizard": {
+   "id": "gen1_p1_charizard",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "gen1_p1_charizard_1",
+     "kind": "action",
+     "text": "Use Protect, then Sucker Punch"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus2"
+   }
+  },
+  "gen1_p1_venusaur": {
+   "id": "gen1_p1_venusaur",
+   "title": "Venusaur",
+   "steps": [
+    {
+     "id": "gen1_p1_venusaur_1",
+     "kind": "note",
+     "text": "Depends on the sun:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Is the sun up?",
+    "options": [
+     {
+      "label": "No sun",
+      "nodeId": "gen1_venusaur_nosun"
+     },
+     {
+      "label": "Sun is up",
+      "nodeId": "gen1_venusaur_sun"
+     }
+    ]
+   }
+  },
+  "gen1_venusaur_nosun": {
+   "id": "gen1_venusaur_nosun",
+   "title": "Venusaur (no sun)",
+   "steps": [
+    {
+     "id": "gen1_venusaur_nosun_1",
+     "kind": "action",
+     "text": "Use Brave Bird"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus2"
+   }
+  },
+  "gen1_venusaur_sun": {
+   "id": "gen1_venusaur_sun",
+   "title": "Venusaur (sun)",
+   "steps": [
+    {
+     "id": "gen1_venusaur_sun_1",
+     "kind": "action",
+     "text": "Use Sucker Punch twice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen1_plus2"
+   }
+  },
+  "gen1_plus2": {
+   "id": "gen1_plus2",
+   "title": "Finish (Honchkrow +2)",
+   "steps": [
+    {
+     "id": "gen1_plus2_1",
+     "kind": "note",
+     "text": "Sweep the rest of the team (Honchkrow +2):"
+    },
+    {
+     "id": "gen1_plus2_2",
+     "kind": "conditional",
+     "table": {
+      "title": "Honchkrow's move to finish",
+      "rows": [
+       {
+        "move": "Superpower",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gen5_excadrill": {
+   "id": "gen5_excadrill",
+   "title": "Excadrill",
+   "steps": [
+    {
+     "id": "gen5_excadrill_1",
+     "kind": "action",
+     "text": "Send Honchkrow and use Sucker Punch"
+    },
+    {
+     "id": "gen5_excadrill_2",
+     "kind": "action",
+     "text": "Send Breloom and use Mach Punch"
+    },
+    {
+     "id": "gen5_excadrill_3",
+     "kind": "note",
+     "text": "Follow the Emboar solve."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_emboar"
+   }
+  },
+  "gen5_hss": {
+   "id": "gen5_hss",
+   "title": "Hydreigon / Samurott / Serperior",
+   "steps": [
+    {
+     "id": "gen5_hss_1",
+     "kind": "action",
+     "text": "Use TP (Teleport)"
+    },
+    {
+     "id": "gen5_hss_2",
+     "kind": "note",
+     "text": "Follow the Emboar solve."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_emboar"
+   }
+  },
+  "gen5_emboar": {
+   "id": "gen5_emboar",
+   "title": "Emboar (Roar)",
+   "steps": [
+    {
+     "id": "gen5_emboar_1",
+     "kind": "note",
+     "text": "Emboar uses Roar and forces you to switch to a random Pokémon."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Who did Roar force in?",
+    "options": [
+     {
+      "label": "Golduck",
+      "nodeId": "gen5_emboar_golduck"
+     },
+     {
+      "label": "Lapras",
+      "nodeId": "gen5_emboar_lapras"
+     },
+     {
+      "label": "Anything else",
+      "nodeId": "gen5_emboar_other"
+     }
+    ]
+   }
+  },
+  "gen5_emboar_golduck": {
+   "id": "gen5_emboar_golduck",
+   "title": "Emboar → Golduck",
+   "steps": [
+    {
+     "id": "gen5_emboar_golduck_1",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "gen5_emboar_golduck_2",
+     "kind": "action",
+     "text": "Use Double-Edge"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_after"
+   }
+  },
+  "gen5_emboar_lapras": {
+   "id": "gen5_emboar_lapras",
+   "title": "Emboar → Lapras",
+   "steps": [
+    {
+     "id": "gen5_emboar_lapras_1",
+     "kind": "action",
+     "text": "Use Dragon Dance"
+    },
+    {
+     "id": "gen5_emboar_lapras_2",
+     "kind": "action",
+     "text": "Switch to Golduck and use Yawn, then Double-Edge"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_after"
+   }
+  },
+  "gen5_emboar_other": {
+   "id": "gen5_emboar_other",
+   "title": "Emboar → another",
+   "steps": [
+    {
+     "id": "gen5_emboar_other_1",
+     "kind": "action",
+     "text": "Switch to Lapras"
+    },
+    {
+     "id": "gen5_emboar_other_2",
+     "kind": "action",
+     "text": "Switch to Golduck and use Yawn, then Double-Edge"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_after"
+   }
+  },
+  "gen5_after": {
+   "id": "gen5_after",
+   "title": "Finish with Breloom",
+   "steps": [
+    {
+     "id": "gen5_after_1",
+     "kind": "note",
+     "text": "After Golduck has fainted:"
+    },
+    {
+     "id": "gen5_after_2",
+     "kind": "action",
+     "text": "Send Breloom and use Swords Dance"
+    },
+    {
+     "id": "gen5_after_3",
+     "kind": "conditional",
+     "table": {
+      "title": "Breloom's move to finish",
+      "rows": [
+       {
+        "move": "Mach Punch",
+        "targets": [
+         "Emboar",
+         "Serperior",
+         "Hydreigon",
+         "Pikachu",
+         "Excadrill"
+        ]
+       },
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Samurott"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "pikachu": {
+   "id": "pikachu",
+   "title": "Pikachu",
+   "steps": [
+    {
+     "id": "pikachu_1",
+     "kind": "action",
+     "text": "Use Skill Swap on Pikachu (reveals the line)"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which line did Skill Swap reveal? (Gen 1 or Gen 5)",
+    "options": [
+     {
+      "label": "Gen 1 (Espeon/Snorlax around)",
+      "nodeId": "gen1_pikachu_who"
+     },
+     {
+      "label": "Gen 5 (Emboar around)",
+      "nodeId": "gen5_pikachu_tp"
+     }
+    ]
+   }
+  },
+  "gen1_pikachu_who": {
+   "id": "gen1_pikachu_who",
+   "title": "Pikachu (Gen 1)",
+   "steps": [
+    {
+     "id": "gen1_pikachu_who_1",
+     "kind": "note",
+     "text": "React to Red's next Pokémon:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Who came in next?",
+    "options": [
+     {
+      "label": "Espeon",
+      "nodeId": "gen1_pika_espeon"
+     },
+     {
+      "label": "Snorlax",
+      "nodeId": "gen1_snorlax_blissey"
+     }
+    ]
+   }
+  },
+  "gen5_pikachu_tp": {
+   "id": "gen5_pikachu_tp",
+   "title": "Pikachu (Gen 5)",
+   "steps": [
+    {
+     "id": "gen5_pikachu_tp_1",
+     "kind": "action",
+     "text": "Use TP (Teleport)"
+    },
+    {
+     "id": "gen5_pikachu_tp_2",
+     "kind": "note",
+     "text": "Follow the Emboar solve."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "gen5_emboar"
+   }
+  }
+ }
+}

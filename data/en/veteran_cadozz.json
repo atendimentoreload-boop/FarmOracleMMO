@@ -1,0 +1,4436 @@
+{
+ "id": "veteran_cadozz",
+ "title": "Farm Route (Veteran)",
+ "revealAll": true,
+ "palette": [
+  {
+   "name": "Typhlosion",
+   "color": "#FF7A66",
+   "moves": [
+    "Eruption",
+    "Incinerate",
+    "Swift"
+   ]
+  },
+  {
+   "name": "Togekiss",
+   "color": "#C9CCD3",
+   "moves": [
+    "Hyper Voice",
+    "Helping Hand"
+   ]
+  },
+  {
+   "name": "Blastoise",
+   "color": "#4FA3FF",
+   "moves": [
+    "Water Spout",
+    "Fake Out"
+   ]
+  },
+  {
+   "name": "Vanilluxe",
+   "color": "#76E0EF",
+   "moves": [
+    "Blizzard"
+   ]
+  },
+  {
+   "name": "Weezing",
+   "color": "#C18CFF",
+   "moves": [
+    "Explosion",
+    "Assurance",
+    "Rain Dance"
+   ]
+  },
+  {
+   "name": "Garchomp",
+   "color": "#7E8CFF",
+   "moves": [
+    "Earthquake",
+    "Dragon Claw",
+    "Sunny Day"
+   ]
+  }
+ ],
+ "lead": "Choose the region and the city. 'Next' follows the whole route in order (Hoenn → Kanto → Sinnoh → Johto → Unova).",
+ "pokepaste": "https://pokepast.es/f00df8948e58939c",
+ "doc": "https://docs.google.com/document/d/1cWYvyJ7JxlkQqnrIeLZj0l_Yra0JKMuT2dIPwGwNjGA/edit",
+ "legend": [
+  {
+   "term": "Items",
+   "meaning": "1 Stock: 2 Choice Scarf, 1 Choice Specs and 1 Black Glasses. The item swaps for the next gym show up as POST-BATTLE (green)."
+  },
+  {
+   "term": "Team",
+   "meaning": "Typhlosion, Togekiss, Blastoise, Vanilluxe, Weezing, Garchomp."
+  },
+  {
+   "term": "+ (plus)",
+   "meaning": "The two Pokémon acting on the same turn (e.g. 'Water Spout + Helping Hand')."
+  },
+  {
+   "term": "POST-BATTLE",
+   "meaning": "Prep for the next gym: heal, item swap and position swap."
+  },
+  {
+   "term": "Skip this stop",
+   "meaning": "Skips the gym/city and goes straight to the next stop on the route."
+  }
+ ],
+ "groups": [
+  {
+   "name": "Hoenn",
+   "entries": [
+    {
+     "label": "1 · Lavaridge",
+     "nodeId": "h1",
+     "portrait": "flannery"
+    },
+    {
+     "label": "2 · Dewford",
+     "nodeId": "h2",
+     "portrait": "brawly"
+    },
+    {
+     "label": "3 · Fortree",
+     "nodeId": "h3",
+     "portrait": "winona"
+    },
+    {
+     "label": "4 · Mauville",
+     "nodeId": "h4",
+     "portrait": "wattson"
+    },
+    {
+     "label": "5 · Rustboro",
+     "nodeId": "h5",
+     "portrait": "roxanne"
+    }
+   ]
+  },
+  {
+   "name": "Kanto",
+   "entries": [
+    {
+     "label": "1 · Vermillion",
+     "nodeId": "k1",
+     "portrait": "ltsurge"
+    },
+    {
+     "label": "2 · Cinnabar",
+     "nodeId": "k2",
+     "portrait": "blaine"
+    },
+    {
+     "label": "3 · Celadon",
+     "nodeId": "k3",
+     "portrait": "erika"
+    },
+    {
+     "label": "4 · Saffron",
+     "nodeId": "k4",
+     "portrait": "sabrina"
+    },
+    {
+     "label": "5 · Pewter",
+     "nodeId": "k5",
+     "portrait": "brock"
+    }
+   ]
+  },
+  {
+   "name": "Sinnoh",
+   "entries": [
+    {
+     "label": "1 · Sunyshore",
+     "nodeId": "s1",
+     "portrait": "volkner"
+    },
+    {
+     "label": "2 · Eterna",
+     "nodeId": "s2",
+     "portrait": "gardenia"
+    },
+    {
+     "label": "3 · Veilstone",
+     "nodeId": "s3",
+     "portrait": "maylene"
+    },
+    {
+     "label": "4 · Oreburgh",
+     "nodeId": "s4",
+     "portrait": "roark"
+    },
+    {
+     "label": "5 · Pastoria",
+     "nodeId": "s5",
+     "portrait": "crasherwake"
+    }
+   ]
+  },
+  {
+   "name": "Johto",
+   "entries": [
+    {
+     "label": "1 · Cianwood",
+     "nodeId": "j1",
+     "portrait": "chuck"
+    },
+    {
+     "label": "2 · Goldenrod",
+     "nodeId": "j2",
+     "portrait": "whitney"
+    },
+    {
+     "label": "3 · Olivine",
+     "nodeId": "j3",
+     "portrait": "jasmine"
+    },
+    {
+     "label": "4 · Azalea",
+     "nodeId": "j4",
+     "portrait": "bugsy"
+    },
+    {
+     "label": "5 · Violet",
+     "nodeId": "j5",
+     "portrait": "falkner"
+    },
+    {
+     "label": "6 · Blackthorn",
+     "nodeId": "j6",
+     "portrait": "clair"
+    },
+    {
+     "label": "7 · Mahogany",
+     "nodeId": "j7",
+     "portrait": "pryce"
+    }
+   ]
+  },
+  {
+   "name": "Unova",
+   "entries": [
+    {
+     "label": "Morimoto · Castelia",
+     "nodeId": "cz_mori",
+     "portrait": "morimoto"
+    },
+    {
+     "label": "Cynthia · Undella Bay",
+     "nodeId": "cz_cynt",
+     "portrait": "cynthia"
+    },
+    {
+     "label": "1 · Castelia",
+     "nodeId": "u1",
+     "portrait": "burgh"
+    },
+    {
+     "label": "2 · Striaton",
+     "nodeId": "u2a",
+     "portrait": "chili"
+    },
+    {
+     "label": "3 · Mistralton",
+     "nodeId": "u3",
+     "portrait": "skyla"
+    },
+    {
+     "label": "4 · Nimbasa",
+     "nodeId": "u4",
+     "portrait": "elesa"
+    },
+    {
+     "label": "5 · Opelucid",
+     "nodeId": "u5",
+     "portrait": "drayden"
+    },
+    {
+     "label": "6 · Driftveil",
+     "nodeId": "u6",
+     "portrait": "clay"
+    },
+    {
+     "label": "7 · Nacrene",
+     "nodeId": "u7",
+     "portrait": "lenora"
+    },
+    {
+     "label": "8 · Icirrus",
+     "nodeId": "u8",
+     "portrait": "brycen"
+    }
+   ]
+  }
+ ],
+ "nodes": {
+  "h1": {
+   "id": "h1",
+   "title": "Hoenn 1 · Lavaridge",
+   "skipTo": "h2",
+   "leadHint": "Blastoise and Togekiss",
+   "steps": [
+    {
+     "id": "h1_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h1_def"
+     },
+     {
+      "label": "vs. Houndoom or Arcanine Lv.85",
+      "nodeId": "h1_hound"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "h1_def": {
+   "id": "h1_def",
+   "title": "Lavaridge · standard line",
+   "steps": [
+    {
+     "id": "h1d_1",
+     "kind": "action",
+     "text": "Use Water Spout + Helping Hand"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "h1_hound": {
+   "id": "h1_hound",
+   "title": "Lavaridge · vs. Houndoom/Arcanine",
+   "steps": [
+    {
+     "id": "h1h_1",
+     "kind": "action",
+     "text": "Use Water Spout + Hyper Voice"
+    },
+    {
+     "id": "h1h_2",
+     "kind": "note",
+     "text": "Very low chance to last 4 turns; heal if Blastoise is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "h2": {
+   "id": "h2",
+   "title": "Hoenn 2 · Dewford",
+   "skipTo": "h3",
+   "leadHint": "Blastoise and Togekiss",
+   "steps": [
+    {
+     "id": "h2_1",
+     "kind": "action",
+     "text": "Use Water Spout + Hyper Voice"
+    },
+    {
+     "id": "h2_2",
+     "kind": "setup",
+     "text": "Switch Togekiss's Choice Specs to Choice Scarf."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "h3": {
+   "id": "h3",
+   "title": "Hoenn 3 · Fortree",
+   "skipTo": "h4",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "h3_n",
+     "kind": "note",
+     "text": "Lead with Blastoise and Weezing."
+    },
+    {
+     "id": "h3_reset",
+     "kind": "setup",
+     "text": "Switch Togekiss's Choice Scarf to Choice Specs."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h3_def"
+     },
+     {
+      "label": "vs. Swellow",
+      "nodeId": "h3_swellow"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h3_def": {
+   "id": "h3_def",
+   "title": "Fortree · standard line",
+   "steps": [
+    {
+     "id": "h3d_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "h3d_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h3_swellow": {
+   "id": "h3_swellow",
+   "title": "Fortree · vs. Swellow",
+   "steps": [
+    {
+     "id": "h3s_1",
+     "kind": "action",
+     "text": "T1: Fake Out on Swellow + Explosion"
+    },
+    {
+     "id": "h3s_2",
+     "kind": "action",
+     "text": "T2: Blizzard + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h4": {
+   "id": "h4",
+   "title": "Hoenn 4 · Mauville",
+   "skipTo": "h5",
+   "leadHint": "Typhlosion and Garchomp",
+   "steps": [
+    {
+     "id": "h4_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "h4_def"
+     },
+     {
+      "label": "vs. Zebstrika with Air Balloon",
+      "nodeId": "h4_zeb"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h4_def": {
+   "id": "h4_def",
+   "title": "Mauville · standard line",
+   "steps": [
+    {
+     "id": "h4d_1",
+     "kind": "action",
+     "text": "Use Eruption + Dragon Claw"
+    },
+    {
+     "id": "h4d_2",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h4_zeb": {
+   "id": "h4_zeb",
+   "title": "Mauville · vs. Zebstrika (Air Balloon)",
+   "steps": [
+    {
+     "id": "h4z_1",
+     "kind": "action",
+     "text": "Use Eruption + switch Garchomp for Togekiss and use Hyper Voice"
+    },
+    {
+     "id": "h4z_2",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "h5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "h5": {
+   "id": "h5",
+   "title": "Hoenn 5 · Rustboro",
+   "skipTo": "k1",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "h5_1",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k1"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k1": {
+   "id": "k1",
+   "title": "Kanto 1 · Vermillion",
+   "skipTo": "k2",
+   "leadHint": "Typhlosion and Garchomp",
+   "steps": [
+    {
+     "id": "k1_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k1_def"
+     },
+     {
+      "label": "vs. Electrode",
+      "nodeId": "k1_electrode"
+     },
+     {
+      "label": "vs. Politoed",
+      "nodeId": "k1_politoed"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k1_def": {
+   "id": "k1_def",
+   "title": "Vermillion · standard line",
+   "steps": [
+    {
+     "id": "k1d_1",
+     "kind": "action",
+     "text": "Use Eruption + Dragon Claw"
+    },
+    {
+     "id": "k1d_2",
+     "kind": "setup",
+     "text": "Switch Weezing's Choice Band to Black Glasses."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k1_electrode": {
+   "id": "k1_electrode",
+   "title": "Vermillion · vs. Electrode",
+   "steps": [
+    {
+     "id": "k1e_1",
+     "kind": "action",
+     "text": "T1: X.Speed + Eruption"
+    },
+    {
+     "id": "k1e_2",
+     "kind": "action",
+     "text": "T2: Eruption + Dragon Claw"
+    },
+    {
+     "id": "k1e_3",
+     "kind": "setup",
+     "text": "Switch Weezing's Choice Band to Black Glasses."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k1_politoed": {
+   "id": "k1_politoed",
+   "title": "Vermillion · vs. Politoed",
+   "steps": [
+    {
+     "id": "k1p_1",
+     "kind": "action",
+     "text": "T1: Swift + Earthquake"
+    },
+    {
+     "id": "k1p_2",
+     "kind": "action",
+     "text": "T2: Blizzard + Earthquake"
+    },
+    {
+     "id": "k1p_3",
+     "kind": "note",
+     "text": "If Vanilluxe faints to a crit Earthquake: send out Togekiss and use Hyper Voice (need to heal Typhlosion)."
+    },
+    {
+     "id": "k1p_4",
+     "kind": "setup",
+     "text": "Switch Weezing's Choice Band to Black Glasses."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k2": {
+   "id": "k2",
+   "title": "Kanto 2 · Cinnabar",
+   "skipTo": "k3",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "k2_n",
+     "kind": "note",
+     "text": "Lead with Blastoise and Weezing."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "vs. Arcanine / Charizard",
+      "nodeId": "k2_arc"
+     },
+     {
+      "label": "vs. the rest",
+      "nodeId": "k2_rest"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Black Glasses"
+    }
+   ]
+  },
+  "k2_arc": {
+   "id": "k2_arc",
+   "title": "Cinnabar · vs. Arcanine/Charizard",
+   "steps": [
+    {
+     "id": "k2a_1",
+     "kind": "action",
+     "text": "T1: Water Spout + switch Weezing for Vanilluxe"
+    },
+    {
+     "id": "k2a_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Blizzard"
+    },
+    {
+     "id": "k2a_3",
+     "kind": "setup",
+     "text": "Switch Weezing's Black Glasses to Choice Band."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Black Glasses"
+    }
+   ]
+  },
+  "k2_rest": {
+   "id": "k2_rest",
+   "title": "Cinnabar · rest",
+   "steps": [
+    {
+     "id": "k2r_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Rain Dance"
+    },
+    {
+     "id": "k2r_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Assurance"
+    },
+    {
+     "id": "k2r_3",
+     "kind": "setup",
+     "text": "Switch Weezing's Black Glasses to Choice Band."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Black Glasses"
+    }
+   ]
+  },
+  "k3": {
+   "id": "k3",
+   "title": "Kanto 3 · Celadon",
+   "skipTo": "k4",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "k3_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k3_def"
+     },
+     {
+      "label": "vs. Victreebel",
+      "nodeId": "k3_vic"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k3_def": {
+   "id": "k3_def",
+   "title": "Celadon · standard line",
+   "steps": [
+    {
+     "id": "k3d_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "k3d_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k3_vic": {
+   "id": "k3_vic",
+   "title": "Celadon · vs. Victreebel",
+   "steps": [
+    {
+     "id": "k3v_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "k3v_2",
+     "kind": "action",
+     "text": "T2: Eruption + Dragon Claw"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k4": {
+   "id": "k4",
+   "title": "Kanto 4 · Saffron",
+   "skipTo": "k5",
+   "leadHint": "Typhlosion and Garchomp",
+   "steps": [
+    {
+     "id": "k4_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "k4_def"
+     },
+     {
+      "label": "vs. Espeon / Wobbuffet",
+      "nodeId": "k4_esp"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k4_def": {
+   "id": "k4_def",
+   "title": "Saffron · standard line",
+   "steps": [
+    {
+     "id": "k4d_1",
+     "kind": "action",
+     "text": "Use Eruption + Dragon Claw"
+    },
+    {
+     "id": "k4d_2",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k4_esp": {
+   "id": "k4_esp",
+   "title": "Saffron · vs. Espeon/Wobbuffet",
+   "steps": [
+    {
+     "id": "k4e_1",
+     "kind": "action",
+     "text": "T1: Eruption + Earthquake"
+    },
+    {
+     "id": "k4e_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "k4e_3",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "k5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k5": {
+   "id": "k5",
+   "title": "Kanto 5 · Pewter",
+   "skipTo": "s1",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "k5_n1",
+     "kind": "note",
+     "text": "Optional gym (G2). Heal afterward if needed."
+    },
+    {
+     "id": "k5_n2",
+     "kind": "note",
+     "text": "Lead with Blastoise and Weezing."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "vs. Golem / Toxicroak",
+      "nodeId": "k5_golem"
+     },
+     {
+      "label": "vs. Ludicolo / Aerodactyl",
+      "nodeId": "k5_ludi"
+     },
+     {
+      "label": "vs. Swampert",
+      "nodeId": "k5_swamp"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k5_golem": {
+   "id": "k5_golem",
+   "title": "Pewter · vs. Golem/Toxicroak",
+   "steps": [
+    {
+     "id": "k5g_1",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s1"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k5_ludi": {
+   "id": "k5_ludi",
+   "title": "Pewter · vs. Ludicolo/Aerodactyl",
+   "steps": [
+    {
+     "id": "k5l_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "k5l_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Earthquake"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s1"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "k5_swamp": {
+   "id": "k5_swamp",
+   "title": "Pewter · vs. Swampert",
+   "steps": [
+    {
+     "id": "k5s_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "k5s_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s1"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "s1": {
+   "id": "s1",
+   "title": "Sinnoh 1 · Sunyshore",
+   "skipTo": "s2",
+   "leadHint": "Blastoise and Togekiss",
+   "steps": [
+    {
+     "id": "s1_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s1_def"
+     },
+     {
+      "label": "vs. Jolteon",
+      "nodeId": "s1_jolt"
+     },
+     {
+      "label": "vs. Lanturn",
+      "nodeId": "s1_lant"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s1_def": {
+   "id": "s1_def",
+   "title": "Sunyshore · standard line",
+   "steps": [
+    {
+     "id": "s1d_1",
+     "kind": "action",
+     "text": "Use Water Spout + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s1_jolt": {
+   "id": "s1_jolt",
+   "title": "Sunyshore · vs. Jolteon",
+   "steps": [
+    {
+     "id": "s1j_1",
+     "kind": "action",
+     "text": "Use Water Spout + Helping Hand"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s1_lant": {
+   "id": "s1_lant",
+   "title": "Sunyshore · vs. Lanturn",
+   "steps": [
+    {
+     "id": "s1l_1",
+     "kind": "action",
+     "text": "T1: {X.Special|Blastoise} + Hyper Voice"
+    },
+    {
+     "id": "s1l_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s2": {
+   "id": "s2",
+   "title": "Sinnoh 2 · Eterna",
+   "skipTo": "s3",
+   "leadHint": "Typhlosion and Togekiss",
+   "steps": [
+    {
+     "id": "s2_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s2_def"
+     },
+     {
+      "label": "vs. Ninetales",
+      "nodeId": "s2_nine"
+     },
+     {
+      "label": "vs. Roserade",
+      "nodeId": "s2_rose"
+     },
+     {
+      "label": "vs. Whimsicott",
+      "nodeId": "s2_whim"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s2_def": {
+   "id": "s2_def",
+   "title": "Eterna · standard line",
+   "steps": [
+    {
+     "id": "s2d_1",
+     "kind": "action",
+     "text": "Use Swift + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s2_nine": {
+   "id": "s2_nine",
+   "title": "Eterna · vs. Ninetales",
+   "steps": [
+    {
+     "id": "s2n_1",
+     "kind": "action",
+     "text": "T1: Incinerate + Hyper Voice"
+    },
+    {
+     "id": "s2n_2",
+     "kind": "action",
+     "text": "T2: Incinerate + switch Togekiss for Weezing (Assurance)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s2_rose": {
+   "id": "s2_rose",
+   "title": "Eterna · vs. Roserade",
+   "steps": [
+    {
+     "id": "s2r_1",
+     "kind": "action",
+     "text": "Use Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s2_whim": {
+   "id": "s2_whim",
+   "title": "Eterna · vs. Whimsicott",
+   "steps": [
+    {
+     "id": "s2w_1",
+     "kind": "action",
+     "text": "T1: Eruption + switch Togekiss for Weezing"
+    },
+    {
+     "id": "s2w_2",
+     "kind": "action",
+     "text": "T2: Eruption + {Incinerate|Weezing}"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s3": {
+   "id": "s3",
+   "title": "Sinnoh 3 · Veilstone",
+   "skipTo": "s4",
+   "leadHint": "Typhlosion and Togekiss",
+   "steps": [
+    {
+     "id": "s3_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s3_def"
+     },
+     {
+      "label": "vs. Infernape",
+      "nodeId": "s3_infer"
+     },
+     {
+      "label": "vs. Mienshao",
+      "nodeId": "s3_mien"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s3_def": {
+   "id": "s3_def",
+   "title": "Veilstone · standard line",
+   "steps": [
+    {
+     "id": "s3d_1",
+     "kind": "action",
+     "text": "Use Eruption + Helping Hand"
+    },
+    {
+     "id": "s3d_2",
+     "kind": "setup",
+     "text": "Leave the battle. You may need to heal if Typhlosion is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s3_infer": {
+   "id": "s3_infer",
+   "title": "Veilstone · vs. Infernape",
+   "steps": [],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which solution?",
+    "options": [
+     {
+      "label": "Slow solve (safer)",
+      "nodeId": "s3_islow"
+     },
+     {
+      "label": "Fast solve",
+      "nodeId": "s3_ifast"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s3_mien": {
+   "id": "s3_mien",
+   "title": "Veilstone · vs. Mienshao",
+   "steps": [
+    {
+     "id": "s3m_1",
+     "kind": "action",
+     "text": "Use Incinerate + Hyper Voice"
+    },
+    {
+     "id": "s3m_2",
+     "kind": "setup",
+     "text": "Leave the battle. You may need to heal if Typhlosion is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "s4": {
+   "id": "s4",
+   "title": "Sinnoh 4 · Oreburgh",
+   "skipTo": "s5",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "s4_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s4_def"
+     },
+     {
+      "label": "vs. Probopass",
+      "nodeId": "s4_probo"
+     },
+     {
+      "label": "vs. Tyranitar and Excadrill",
+      "nodeId": "s4_tyra"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "s4_def": {
+   "id": "s4_def",
+   "title": "Oreburgh · standard line",
+   "steps": [
+    {
+     "id": "s4d_1",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "s4_probo": {
+   "id": "s4_probo",
+   "title": "Oreburgh · vs. Probopass",
+   "steps": [
+    {
+     "id": "s4p_1",
+     "kind": "action",
+     "text": "T1: Water Spout + switch Weezing for Vanilluxe"
+    },
+    {
+     "id": "s4p_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "s4_tyra": {
+   "id": "s4_tyra",
+   "title": "Oreburgh · vs. Tyranitar/Excadrill",
+   "steps": [
+    {
+     "id": "s4t_0",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    },
+    {
+     "id": "s4t_1",
+     "kind": "action",
+     "text": "If Cradily and Slowbro come in together on Turn 2, use Assurance on Cradily."
+    },
+    {
+     "id": "s4t_2",
+     "kind": "note",
+     "text": "If Weezing gets KO'd by a Psychic crit: send out Vanilluxe (Blizzard)."
+    },
+    {
+     "id": "s4t_3",
+     "kind": "setup",
+     "text": "You may need to heal if Typhlosion is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "s5": {
+   "id": "s5",
+   "title": "Sinnoh 5 · Pastoria",
+   "skipTo": "j1",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "s5_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "s5_def"
+     },
+     {
+      "label": "Sharpedo team",
+      "nodeId": "s5_sharp"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j1": {
+   "id": "j1",
+   "title": "Johto 1 · Cianwood",
+   "skipTo": "j2",
+   "leadHint": "Togekiss and Garchomp",
+   "steps": [
+    {
+     "id": "j1_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j1_def"
+     },
+     {
+      "label": "vs. Granbull (lead) — experimental",
+      "nodeId": "j1_gran"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j1_def": {
+   "id": "j1_def",
+   "title": "Cianwood · standard line",
+   "steps": [
+    {
+     "id": "j1d_1",
+     "kind": "action",
+     "text": "Use Hyper Voice + Earthquake"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j1_gran": {
+   "id": "j1_gran",
+   "title": "Cianwood · vs. Granbull",
+   "steps": [
+    {
+     "id": "j1g_1",
+     "kind": "action",
+     "text": "T1: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "j1g_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + X.Special"
+    },
+    {
+     "id": "j1g_3",
+     "kind": "action",
+     "text": "T3: Hyper Voice + Earthquake"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j2"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j2": {
+   "id": "j2",
+   "title": "Johto 2 · Goldenrod",
+   "skipTo": "j3",
+   "leadHint": "Garchomp (1st slot) and Togekiss",
+   "steps": [
+    {
+     "id": "j2_1",
+     "kind": "setup",
+     "text": "Position: Garchomp in the first slot and Togekiss in the second."
+    },
+    {
+     "id": "j2_2",
+     "kind": "action",
+     "text": "Use Hyper Voice + Earthquake"
+    },
+    {
+     "id": "j2_3",
+     "kind": "note",
+     "text": "Switch to Typhlosion if Garchomp faints."
+    },
+    {
+     "id": "j2_4",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j3"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ]
+  },
+  "j3": {
+   "id": "j3",
+   "title": "Johto 3 · Olivine",
+   "skipTo": "j4",
+   "leadHint": "Typhlosion and Weezing",
+   "steps": [
+    {
+     "id": "j3_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j3_def"
+     },
+     {
+      "label": "vs. Metagross",
+      "nodeId": "j3_meta"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j3_def": {
+   "id": "j3_def",
+   "title": "Olivine · standard line",
+   "steps": [
+    {
+     "id": "j3d_1",
+     "kind": "action",
+     "text": "Use Eruption + Assurance"
+    },
+    {
+     "id": "j3d_2",
+     "kind": "setup",
+     "text": "Switch Blastoise's Choice Scarf to Choice Specs."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j3_meta": {
+   "id": "j3_meta",
+   "title": "Olivine · vs. Metagross",
+   "steps": [
+    {
+     "id": "j3m_n",
+     "kind": "note",
+     "text": "Pick the solution based on whether you want to heal afterward or not."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which solution?",
+    "options": [
+     {
+      "label": "Without item (need to heal afterward)",
+      "nodeId": "j3_meta_noitem"
+     },
+     {
+      "label": "With item (no need to heal)",
+      "nodeId": "j3_meta_item"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j3_meta_noitem": {
+   "id": "j3_meta_noitem",
+   "title": "Olivine · Metagross (without item)",
+   "steps": [
+    {
+     "id": "j3mn_1",
+     "kind": "action",
+     "text": "T1: Eruption + Explosion"
+    },
+    {
+     "id": "j3mn_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "j3mn_3",
+     "kind": "setup",
+     "text": "Heal the team."
+    },
+    {
+     "id": "j3mn_4",
+     "kind": "setup",
+     "text": "Switch Blastoise's Choice Scarf to Choice Specs."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j3_meta_item": {
+   "id": "j3_meta_item",
+   "title": "Olivine · Metagross (with item)",
+   "steps": [
+    {
+     "id": "j3mi_1",
+     "kind": "action",
+     "text": "T1: Eruption + X.Special"
+    },
+    {
+     "id": "j3mi_2",
+     "kind": "action",
+     "text": "T2: Eruption + Assurance"
+    },
+    {
+     "id": "j3mi_3",
+     "kind": "setup",
+     "text": "Switch Blastoise's Choice Scarf to Choice Specs."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j4": {
+   "id": "j4",
+   "title": "Johto 4 · Azalea",
+   "skipTo": "j5",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "j4_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j4_def"
+     },
+     {
+      "label": "vs. Scyther",
+      "nodeId": "j4_scyther"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j4_def": {
+   "id": "j4_def",
+   "title": "Azalea · standard line",
+   "steps": [
+    {
+     "id": "j4d_1",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    },
+    {
+     "id": "j4d_2",
+     "kind": "setup",
+     "text": "Switch Blastoise's Choice Specs to Choice Scarf."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j4_scyther": {
+   "id": "j4_scyther",
+   "title": "Azalea · vs. Scyther",
+   "steps": [
+    {
+     "id": "j4s_1",
+     "kind": "action",
+     "text": "Use Water Spout + {Incinerate|Weezing}"
+    },
+    {
+     "id": "j4s_2",
+     "kind": "setup",
+     "text": "Switch Blastoise's Choice Specs to Choice Scarf."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j5": {
+   "id": "j5",
+   "title": "Johto 5 · Violet",
+   "skipTo": "j6",
+   "leadHint": "Blastoise and Vanilluxe",
+   "steps": [
+    {
+     "id": "j5_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j5_def"
+     },
+     {
+      "label": "vs. Pidgeot (optional, 3 turns)",
+      "nodeId": "j5_pidgeot"
+     },
+     {
+      "label": "vs. Zapdos",
+      "nodeId": "j5_zapdos"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "j5_def": {
+   "id": "j5_def",
+   "title": "Violet · standard line",
+   "steps": [
+    {
+     "id": "j5d_1",
+     "kind": "action",
+     "text": "Use Water Spout + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "j5_pidgeot": {
+   "id": "j5_pidgeot",
+   "title": "Violet · vs. Pidgeot",
+   "steps": [
+    {
+     "id": "j5p_1",
+     "kind": "action",
+     "text": "T1: X.Speed + Blizzard"
+    },
+    {
+     "id": "j5p_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "j5_zapdos": {
+   "id": "j5_zapdos",
+   "title": "Violet · vs. Zapdos",
+   "steps": [
+    {
+     "id": "j5z_1",
+     "kind": "action",
+     "text": "Use Water Spout + Hyper Voice (Hyper Voice in place of Blizzard)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "j6": {
+   "id": "j6",
+   "title": "Johto 6 · Blackthorn",
+   "skipTo": "j7",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "j6_n",
+     "kind": "note",
+     "text": "Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "j6_def"
+     },
+     {
+      "label": "vs. Blastoise",
+      "nodeId": "j6_blast"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j6_def": {
+   "id": "j6_def",
+   "title": "Blackthorn · standard line",
+   "steps": [
+    {
+     "id": "j6d_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "j6d_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Blizzard"
+    },
+    {
+     "id": "j6d_3",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j7"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j6_blast": {
+   "id": "j6_blast",
+   "title": "Blackthorn · vs. Blastoise",
+   "steps": [
+    {
+     "id": "j6b_1",
+     "kind": "action",
+     "text": "T1: Fake Out (on Blastoise) + Explosion"
+    },
+    {
+     "id": "j6b_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Blizzard"
+    },
+    {
+     "id": "j6b_3",
+     "kind": "setup",
+     "text": "Heal the team."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j7"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j7": {
+   "id": "j7",
+   "title": "Johto 7 · Mahogany",
+   "skipTo": "cz_mori",
+   "leadHint": "Weezing and Garchomp",
+   "steps": [
+    {
+     "id": "j7_n1",
+     "kind": "note",
+     "text": "Lead with Weezing and Garchomp (you need Garchomp to faint; skip this stop if it doesn't faint)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which opponent?",
+    "options": [
+     {
+      "label": "vs. Articuno / Walrein",
+      "nodeId": "j7_arti"
+     },
+     {
+      "label": "vs. Froslass",
+      "nodeId": "j7_fros"
+     },
+     {
+      "label": "vs. Glalie",
+      "nodeId": "j7_glalie"
+     },
+     {
+      "label": "vs. Mamoswine",
+      "nodeId": "j7_mamo"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j7_arti": {
+   "id": "j7_arti",
+   "title": "Mahogany · vs. Articuno/Walrein",
+   "steps": [
+    {
+     "id": "j7a_1",
+     "kind": "action",
+     "text": "T1: Explosion + Dragon Claw (on Articuno/Walrein)"
+    },
+    {
+     "id": "j7a_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    },
+    {
+     "id": "j7a_3",
+     "kind": "setup",
+     "text": "Go to Unova WITHOUT healing. On arrival, use the Teleport Ocarina to quickly reach the Pokémon Center, switch your team, and head to Morimoto (in Castelia)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j7_fros": {
+   "id": "j7_fros",
+   "title": "Mahogany · vs. Froslass",
+   "steps": [
+    {
+     "id": "j7f_1",
+     "kind": "action",
+     "text": "T1: Explosion + Sunny Day"
+    },
+    {
+     "id": "j7f_2",
+     "kind": "action",
+     "text": "T2: Eruption + Water Spout"
+    },
+    {
+     "id": "j7f_3",
+     "kind": "setup",
+     "text": "Restore Typhlosion's Eruption PP."
+    },
+    {
+     "id": "j7f_4",
+     "kind": "setup",
+     "text": "Go to Unova WITHOUT healing. On arrival, use the Teleport Ocarina to quickly reach the Pokémon Center, switch your team, and head to Morimoto (in Castelia)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j7_glalie": {
+   "id": "j7_glalie",
+   "title": "Mahogany · vs. Glalie",
+   "steps": [
+    {
+     "id": "j7g_1",
+     "kind": "action",
+     "text": "T1: Explosion, then hard switch Garchomp to Blastoise"
+    },
+    {
+     "id": "j7g_2",
+     "kind": "action",
+     "text": "T2: Eruption + Earthquake"
+    },
+    {
+     "id": "j7g_3",
+     "kind": "action",
+     "text": "T3: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "j7g_4",
+     "kind": "setup",
+     "text": "Go to Unova WITHOUT healing. On arrival, use the Teleport Ocarina to quickly reach the Pokémon Center, switch your team, and head to Morimoto (in Castelia)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "j7_mamo": {
+   "id": "j7_mamo",
+   "title": "Mahogany · vs. Mamoswine",
+   "steps": [
+    {
+     "id": "j7m_1",
+     "kind": "action",
+     "text": "T1: Explosion + Dragon Claw (on Mamoswine)"
+    },
+    {
+     "id": "j7m_2",
+     "kind": "action",
+     "text": "T2: Water Spout + Eruption"
+    },
+    {
+     "id": "j7m_3",
+     "kind": "setup",
+     "text": "Go to Unova WITHOUT healing. On arrival, use the Teleport Ocarina to quickly reach the Pokémon Center, switch your team, and head to Morimoto (in Castelia)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u1": {
+   "id": "u1",
+   "title": "Unova 1 · Castelia",
+   "skipTo": "u2a",
+   "leadHint": "Blastoise and Vanilluxe",
+   "steps": [
+    {
+     "id": "u1_1",
+     "kind": "note",
+     "text": "Lead with Blastoise and Vanilluxe."
+    },
+    {
+     "id": "u1_2",
+     "kind": "action",
+     "text": "Use Water Spout + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u2a"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u3": {
+   "id": "u3",
+   "title": "Unova 3 · Mistralton",
+   "skipTo": "u4",
+   "leadHint": "Blastoise and Vanilluxe",
+   "steps": [
+    {
+     "id": "u3_n",
+     "kind": "note",
+     "text": "Lead with Blastoise and Vanilluxe."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which opponent?",
+    "options": [
+     {
+      "label": "vs. Braviary / Mandibuzz",
+      "nodeId": "u3_brav"
+     },
+     {
+      "label": "vs. Swanna / Whimsicott",
+      "nodeId": "u3_swan"
+     },
+     {
+      "label": "vs. Unfezant",
+      "nodeId": "u3_unfe"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u3_brav": {
+   "id": "u3_brav",
+   "title": "Mistralton · vs. Braviary/Mandibuzz",
+   "steps": [
+    {
+     "id": "u3b_1",
+     "kind": "action",
+     "text": "Use Water Spout + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u3_swan": {
+   "id": "u3_swan",
+   "title": "Mistralton · vs. Swanna/Whimsicott",
+   "steps": [
+    {
+     "id": "u3s_1",
+     "kind": "action",
+     "text": "Use {Blizzard|Blastoise} + {Blizzard|Vanilluxe}"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u3_unfe": {
+   "id": "u3_unfe",
+   "title": "Mistralton · vs. Unfezant",
+   "steps": [
+    {
+     "id": "u3u_1",
+     "kind": "action",
+     "text": "T1: Blizzard + switch to Weezing"
+    },
+    {
+     "id": "u3u_2",
+     "kind": "action",
+     "text": "T2: Blizzard + Assurance"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u4"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u4": {
+   "id": "u4",
+   "title": "Unova 4 · Nimbasa",
+   "skipTo": "u5",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "u4_n",
+     "kind": "note",
+     "text": "Lead with Blastoise and Weezing."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u4_def"
+     },
+     {
+      "label": "vs. Emolga",
+      "nodeId": "u4_emolga"
+     },
+     {
+      "label": "vs. Galvantula",
+      "nodeId": "u4_galv"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u4_def": {
+   "id": "u4_def",
+   "title": "Nimbasa · standard line",
+   "steps": [
+    {
+     "id": "u4d_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "u4d_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    },
+    {
+     "id": "u4d_3",
+     "kind": "setup",
+     "text": "Heal the team (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u4_galv": {
+   "id": "u4_galv",
+   "title": "Nimbasa · vs. Galvantula",
+   "steps": [
+    {
+     "id": "u4g_1",
+     "kind": "action",
+     "text": "T1: Fake Out on Galvantula + Explosion"
+    },
+    {
+     "id": "u4g_2",
+     "kind": "action",
+     "text": "T2: Swift + Hyper Voice"
+    },
+    {
+     "id": "u4g_3",
+     "kind": "setup",
+     "text": "Heal the team (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u5"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u5": {
+   "id": "u5",
+   "title": "Unova 5 · Opelucid",
+   "skipTo": "u6",
+   "leadHint": "Typhlosion and Vanilluxe",
+   "steps": [
+    {
+     "id": "u5_1",
+     "kind": "note",
+     "text": "Lead with Typhlosion and Vanilluxe."
+    },
+    {
+     "id": "u5_2",
+     "kind": "action",
+     "text": "Use Eruption + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What survived and KO'd your Pokémon?",
+    "options": [
+     {
+      "label": "Emboar KO'd Vanilluxe",
+      "nodeId": "u5_emboar"
+     },
+     {
+      "label": "Lapras KO'd Typhlosion",
+      "nodeId": "u5_lapras"
+     },
+     {
+      "label": "Samurott KO'd Typhlosion",
+      "nodeId": "u5_samurott"
+     },
+     {
+      "label": "Nothing — went normal",
+      "nodeId": "u5_ok"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u5_emboar": {
+   "id": "u5_emboar",
+   "title": "Opelucid · Emboar",
+   "steps": [
+    {
+     "id": "u5e_1",
+     "kind": "action",
+     "text": "Send out Blastoise and use {Blizzard|Blastoise}"
+    },
+    {
+     "id": "u5e_2",
+     "kind": "setup",
+     "text": "Heal the team if needed (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u5_lapras": {
+   "id": "u5_lapras",
+   "title": "Opelucid · Lapras",
+   "steps": [
+    {
+     "id": "u5l_1",
+     "kind": "action",
+     "text": "Send out Garchomp and use Earthquake"
+    },
+    {
+     "id": "u5l_2",
+     "kind": "setup",
+     "text": "Heal the team if needed (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u5_samurott": {
+   "id": "u5_samurott",
+   "title": "Opelucid · Samurott",
+   "steps": [
+    {
+     "id": "u5s_1",
+     "kind": "action",
+     "text": "Send out Togekiss and use Hyper Voice"
+    },
+    {
+     "id": "u5s_2",
+     "kind": "setup",
+     "text": "Heal the team if needed (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u5_ok": {
+   "id": "u5_ok",
+   "title": "Opelucid · went normal",
+   "steps": [
+    {
+     "id": "u5o_1",
+     "kind": "setup",
+     "text": "Heal the team if needed (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u6"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Vanilluxe",
+     "item": "Choice Scarf"
+    }
+   ]
+  },
+  "u6": {
+   "id": "u6",
+   "title": "Unova 6 · Driftveil",
+   "skipTo": "u7",
+   "leadHint": "Blastoise and Weezing",
+   "steps": [
+    {
+     "id": "u6_n1",
+     "kind": "note",
+     "text": "Lead with Blastoise and Weezing."
+    },
+    {
+     "id": "u6_n2",
+     "kind": "action",
+     "text": "Use Water Spout + Rain Dance"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which opponent?",
+    "options": [
+     {
+      "label": "vs. Sableye",
+      "nodeId": "u6_sab"
+     },
+     {
+      "label": "vs. Torterra",
+      "nodeId": "u6_tort"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u6_sab": {
+   "id": "u6_sab",
+   "title": "Driftveil · vs. Sableye",
+   "steps": [
+    {
+     "id": "u6s_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "u6s_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Blizzard"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u7"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u6_tort": {
+   "id": "u6_tort",
+   "title": "Driftveil · vs. Torterra",
+   "steps": [
+    {
+     "id": "u6t_1",
+     "kind": "action",
+     "text": "Use Water Spout + Assurance"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u7"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Blastoise",
+     "item": "Choice Scarf"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u7": {
+   "id": "u7",
+   "title": "Unova 7 · Nacrene",
+   "skipTo": "u8",
+   "leadHint": "Weezing and Garchomp",
+   "steps": [
+    {
+     "id": "u7_n1",
+     "kind": "note",
+     "text": "Optional stop: only if you have 2:45 on the clock. You need Garchomp to faint and Weezing and Typhlosion to be alive."
+    },
+    {
+     "id": "u7_n2",
+     "kind": "note",
+     "text": "Lead with Weezing and Garchomp."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u7_def"
+     },
+     {
+      "label": "vs. Stantler",
+      "nodeId": "u7_stant"
+     }
+    ]
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u7_def": {
+   "id": "u7_def",
+   "title": "Nacrene · standard line",
+   "steps": [
+    {
+     "id": "u7d_1",
+     "kind": "action",
+     "text": "T1: Explosion + Sunny Day"
+    },
+    {
+     "id": "u7d_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u8"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u7_stant": {
+   "id": "u7_stant",
+   "title": "Nacrene · vs. Stantler",
+   "steps": [
+    {
+     "id": "u7s_1",
+     "kind": "action",
+     "text": "Switch Garchomp for Typhlosion, then use Explosion"
+    },
+    {
+     "id": "u7s_2",
+     "kind": "action",
+     "text": "Next: Hyper Voice + Earthquake"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u8"
+   },
+   "gymLead": [
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u8": {
+   "id": "u8",
+   "title": "Unova 8 · Icirrus",
+   "steps": [
+    {
+     "id": "u8_1",
+     "kind": "action",
+     "text": "Use Eruption + Assurance"
+    },
+    {
+     "id": "u8_2",
+     "kind": "note",
+     "text": "End of the route! 🎉"
+    }
+   ],
+   "branch": null,
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Weezing",
+     "item": "Choice Band"
+    }
+   ]
+  },
+  "u2a": {
+   "id": "u2a",
+   "title": "Striaton · Chili (Fire)",
+   "skipTo": "u3",
+   "leadHint": "Togekiss and Garchomp",
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2a_n",
+     "kind": "note",
+     "text": "1st of the 3 Striaton leaders. Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u2a_def"
+     },
+     {
+      "label": "vs. Ninetales / Stoutland",
+      "nodeId": "u2a_nine"
+     }
+    ]
+   }
+  },
+  "u2a_def": {
+   "id": "u2a_def",
+   "title": "Chili · standard line",
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2a_d1",
+     "kind": "action",
+     "text": "Use Hyper Voice + Earthquake"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u2b"
+   }
+  },
+  "u2a_nine": {
+   "id": "u2a_nine",
+   "title": "Chili · vs. Ninetales/Stoutland",
+   "gymLead": [
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Garchomp",
+     "item": "Choice Band"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2a_n1",
+     "kind": "action",
+     "text": "Use Hyper Voice + {Helping Hand|Garchomp}"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u2b"
+   }
+  },
+  "u2b": {
+   "id": "u2b",
+   "title": "Striaton · Cilan (Grass)",
+   "leadHint": "Typhlosion and Togekiss",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2b_n",
+     "kind": "note",
+     "text": "2nd leader. Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u2b_def"
+     },
+     {
+      "label": "vs. Leavanny",
+      "nodeId": "u2b_leav"
+     }
+    ]
+   }
+  },
+  "u2b_def": {
+   "id": "u2b_def",
+   "title": "Cilan · standard line",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2b_d1",
+     "kind": "action",
+     "text": "Use Incinerate + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u2c"
+   }
+  },
+  "u2b_leav": {
+   "id": "u2b_leav",
+   "title": "Cilan · vs. Leavanny",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2b_l1",
+     "kind": "action",
+     "text": "Use Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u2c"
+   }
+  },
+  "u2c": {
+   "id": "u2c",
+   "title": "Striaton · Cress (Water)",
+   "leadHint": "Typhlosion and Togekiss",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2c_n",
+     "kind": "note",
+     "text": "3rd leader. Identify the opponent before acting."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the situation?",
+    "options": [
+     {
+      "label": "Other teams",
+      "nodeId": "u2c_def"
+     },
+     {
+      "label": "vs. Floatzel",
+      "nodeId": "u2c_float"
+     }
+    ]
+   }
+  },
+  "u2c_def": {
+   "id": "u2c_def",
+   "title": "Cress · standard line",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2c_d1",
+     "kind": "action",
+     "text": "Use Eruption + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u3"
+   }
+  },
+  "u2c_float": {
+   "id": "u2c_float",
+   "title": "Cress · vs. Floatzel",
+   "gymLead": [
+    {
+     "pokemon": "Typhlosion",
+     "item": "Choice Specs"
+    },
+    {
+     "pokemon": "Togekiss",
+     "item": "Choice Specs"
+    }
+   ],
+   "steps": [
+    {
+     "id": "u2c_f1",
+     "kind": "action",
+     "text": "T1: switch Typhlosion for Vanilluxe + Hyper Voice"
+    },
+    {
+     "id": "u2c_f2",
+     "kind": "action",
+     "text": "T2: {Hyper Voice|Vanilluxe} + Hyper Voice"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u3"
+   }
+  },
+  "s3_islow": {
+   "id": "s3_islow",
+   "title": "Veilstone · Infernape (slow solve)",
+   "steps": [
+    {
+     "id": "s3is_1",
+     "kind": "action",
+     "text": "Use Eruption + Hyper Voice"
+    },
+    {
+     "id": "s3is_2",
+     "kind": "setup",
+     "text": "Leave the battle. You may need to heal if Typhlosion is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s4"
+   }
+  },
+  "s3_ifast": {
+   "id": "s3_ifast",
+   "title": "Veilstone · Infernape (fast solve)",
+   "steps": [
+    {
+     "id": "s3if_1",
+     "kind": "action",
+     "text": "T1: {X.Special|Typhlosion} + Hyper Voice"
+    },
+    {
+     "id": "s3if_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    },
+    {
+     "id": "s3if_3",
+     "kind": "setup",
+     "text": "Leave the battle. You may need to heal if Typhlosion is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "s4"
+   }
+  },
+  "s5_def": {
+   "id": "s5_def",
+   "title": "Pastoria · Other teams",
+   "steps": [
+    {
+     "id": "s5d_1",
+     "kind": "action",
+     "text": "T1: Water Spout + Explosion"
+    },
+    {
+     "id": "s5d_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "s5d_3",
+     "kind": "setup",
+     "text": "You may need to heal if Garchomp is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j1"
+   }
+  },
+  "s5_sharp": {
+   "id": "s5_sharp",
+   "title": "Pastoria · Sharpedo team",
+   "steps": [
+    {
+     "id": "s5s_1",
+     "kind": "action",
+     "text": "T1: Fake Out (on Sharpedo) + Explosion"
+    },
+    {
+     "id": "s5s_2",
+     "kind": "action",
+     "text": "T2: Hyper Voice + Earthquake"
+    },
+    {
+     "id": "s5s_3",
+     "kind": "setup",
+     "text": "You may need to heal if Garchomp is hurt."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "j1"
+   }
+  },
+  "u4_emolga": {
+   "id": "u4_emolga",
+   "title": "Nimbasa · vs. Emolga",
+   "steps": [
+    {
+     "id": "u4e_1",
+     "kind": "action",
+     "text": "T1: Fake Out (on Emolga) + Explosion"
+    },
+    {
+     "id": "u4e_2",
+     "kind": "action",
+     "text": "T2: Eruption + Hyper Voice"
+    },
+    {
+     "id": "u4e_3",
+     "kind": "setup",
+     "text": "Heal the team (HEAL)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u5"
+   }
+  },
+  "cynt_end": {
+   "id": "cynt_end",
+   "title": "Back to route",
+   "steps": [
+    {
+     "id": "cynt_end_s",
+     "kind": "setup",
+     "text": "Teleport Ocarina again → Castelia Center (1st Unova gym). HEAL, switch back to your farm team and continue the route."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "u1"
+   }
+  },
+  "cz_cynt": {
+   "id": "cz_cynt",
+   "title": "Unova · Cynthia (Undella)",
+   "steps": [
+    {
+     "id": "cynt_setup",
+     "kind": "setup",
+     "text": "Team (cadozz): Chansey, Smeargle (Rocky Helmet), Infernape, Torterra — and also keep the Morimoto Smeargle (Choice Scarf) and Scyther in your team. Cynthia is in Undella Town (Unova), only in SUMMER/SPRING. She randomly picks 1 of 5 teams, with a random lead (Lvl 90; Garchomp Lvl 92). Do Cynthia BEFORE Morimoto. 1-on-1 fight (~9-10 turns)."
+    },
+    {
+     "id": "cynt_idea",
+     "kind": "note",
+     "text": "Idea: Chansey baits and Teleports; you set up (Yawn / Stealth Rock) and Torterra comes in, uses Shell Smash and sweeps."
+    },
+    {
+     "id": "cynt_lead_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Chansey — depending on Cynthia's LEAD (then Teleport out)",
+      "rows": [
+       {
+        "move": "Soft-Boiled, then Teleport",
+        "targets": [
+         "Eelektross"
+        ]
+       },
+       {
+        "move": "Safeguard, then Teleport",
+        "targets": [
+         "Roserade"
+        ]
+       },
+       {
+        "move": "Teleport straight away",
+        "targets": [
+         "any other lead"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "leadHint": "Chansey",
+   "gymLead": [
+    {
+     "pokemon": "Chansey"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What are you facing AFTER the Teleport?",
+    "options": [
+     {
+      "label": "Braviary",
+      "nodeId": "cz_cynt_braviary"
+     },
+     {
+      "label": "Eelektross",
+      "nodeId": "cz_cynt_eel"
+     },
+     {
+      "label": "Empoleon",
+      "nodeId": "cz_cynt_empoleon"
+     },
+     {
+      "label": "Garchomp",
+      "nodeId": "cz_cynt_garchomp"
+     },
+     {
+      "label": "Gastrodon",
+      "nodeId": "cz_cynt_gastrodon"
+     },
+     {
+      "label": "Glaceon",
+      "nodeId": "cz_cynt_glaceon"
+     },
+     {
+      "label": "Lucario",
+      "nodeId": "cz_cynt_lucario"
+     },
+     {
+      "label": "Roserade",
+      "nodeId": "cz_cynt_roserade"
+     },
+     {
+      "label": "Spiritomb",
+      "nodeId": "cz_cynt_spiritomb"
+     }
+    ]
+   }
+  },
+  "cz_cynt_braviary": {
+   "id": "cz_cynt_braviary",
+   "title": "Cynthia · Braviary [Team 2]",
+   "steps": [
+    {
+     "id": "cynt_brav_1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_brav_2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_brav_3",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_eel": {
+   "id": "cz_cynt_eel",
+   "title": "Cynthia · Eelektross [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_eel_1",
+     "kind": "action",
+     "text": "Bring in Torterra straight away (no setup needed)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_empoleon": {
+   "id": "cz_cynt_empoleon",
+   "title": "Cynthia · Empoleon",
+   "steps": [
+    {
+     "id": "cynt_emp_note",
+     "kind": "note",
+     "text": "Check which move Empoleon used:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What did Empoleon use?",
+    "options": [
+     {
+      "label": "Scald [Team 1]",
+      "nodeId": "cz_cynt_emp_scald"
+     },
+     {
+      "label": "Earthquake [Team 2]",
+      "nodeId": "cz_cynt_emp_eq"
+     }
+    ]
+   }
+  },
+  "cz_cynt_emp_scald": {
+   "id": "cz_cynt_emp_scald",
+   "title": "Empoleon · Scald [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_emp_s1",
+     "kind": "action",
+     "text": "Infernape: Aura Sphere (it will faint to the Garchomp that shows up)."
+    },
+    {
+     "id": "cynt_emp_s2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_emp_eq": {
+   "id": "cz_cynt_emp_eq",
+   "title": "Empoleon · Earthquake [Team 2]",
+   "steps": [
+    {
+     "id": "cynt_emp_e1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_emp_e2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_emp_e3",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_garchomp": {
+   "id": "cz_cynt_garchomp",
+   "title": "Cynthia · Garchomp",
+   "steps": [
+    {
+     "id": "cynt_gar_note",
+     "kind": "note",
+     "text": "Did Garchomp take recoil (Life Orb) or switch in? Choose:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the Garchomp situation?",
+    "options": [
+     {
+      "label": "No Life Orb [Team 1]",
+      "nodeId": "cz_cynt_gar_nolo"
+     },
+     {
+      "label": "Life Orb / took recoil [Team 2]",
+      "nodeId": "cz_cynt_gar_lo"
+     },
+     {
+      "label": "It SWITCHED in [Team 1]",
+      "nodeId": "cz_cynt_gar_sw"
+     }
+    ]
+   }
+  },
+  "cz_cynt_gar_nolo": {
+   "id": "cz_cynt_gar_nolo",
+   "title": "Garchomp · no Life Orb [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_gar_nolo_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Depending on Garchomp's move",
+      "rows": [
+       {
+        "move": "Infernape Switcheroo (it faints), then Torterra",
+        "targets": [
+         "Fire Fang"
+        ]
+       },
+       {
+        "move": "Torterra straight away",
+        "targets": [
+         "Earthquake"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_gar_lo": {
+   "id": "cz_cynt_gar_lo",
+   "title": "Garchomp · Life Orb [Team 2]",
+   "steps": [
+    {
+     "id": "cynt_gar_lo1",
+     "kind": "action",
+     "text": "Morimoto Smeargle (Choice Scarf): Stealth Rock."
+    },
+    {
+     "id": "cynt_gar_lo2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_gar_sw": {
+   "id": "cz_cynt_gar_sw",
+   "title": "Garchomp · switched in [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_gar_sw1",
+     "kind": "action",
+     "text": "Infernape attacks (it will faint to Garchomp)."
+    },
+    {
+     "id": "cynt_gar_sw2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_gastrodon": {
+   "id": "cz_cynt_gastrodon",
+   "title": "Cynthia · Gastrodon",
+   "steps": [
+    {
+     "id": "cynt_gas_note",
+     "kind": "note",
+     "text": "Did Gastrodon's Scald deal at least 9% damage?"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "How much did Gastrodon's Scald deal?",
+    "options": [
+     {
+      "label": "Scald dealt ≥9% [Team 2]",
+      "nodeId": "cz_cynt_gas_scald"
+     },
+     {
+      "label": "Less than that [Team 1]",
+      "nodeId": "cz_cynt_gas_other"
+     }
+    ]
+   }
+  },
+  "cz_cynt_gas_scald": {
+   "id": "cz_cynt_gas_scald",
+   "title": "Gastrodon · Scald ≥9% [Team 2]",
+   "steps": [
+    {
+     "id": "cynt_gas_s1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_gas_s2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_gas_s3",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_gas_other": {
+   "id": "cz_cynt_gas_other",
+   "title": "Gastrodon · low damage [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_gas_o1",
+     "kind": "action",
+     "text": "Infernape: Grass Knot (it faints to the Garchomp that shows up)."
+    },
+    {
+     "id": "cynt_gas_o2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_glaceon": {
+   "id": "cz_cynt_glaceon",
+   "title": "Cynthia · Glaceon [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_gla_1",
+     "kind": "action",
+     "text": "Infernape: Aura Sphere (faints to the Garchomp that shows up)."
+    },
+    {
+     "id": "cynt_gla_2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_lucario": {
+   "id": "cz_cynt_lucario",
+   "title": "Cynthia · Lucario",
+   "steps": [
+    {
+     "id": "cynt_luc_note",
+     "kind": "note",
+     "text": "Lucario baits easily. See what happened:"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What's the Lucario situation?",
+    "options": [
+     {
+      "label": "Used Aura Sphere [Team 2]",
+      "nodeId": "cz_cynt_luc_as"
+     },
+     {
+      "label": "Lead was Milotic/Lickilicky/Eelektross/Togekiss/Roserade [Team 3/4]",
+      "nodeId": "cz_cynt_luc_lead"
+     },
+     {
+      "label": "Otherwise [Team 3/4/5]",
+      "nodeId": "cz_cynt_luc_other"
+     }
+    ]
+   }
+  },
+  "cz_cynt_luc_as": {
+   "id": "cz_cynt_luc_as",
+   "title": "Lucario · Aura Sphere [Team 2]",
+   "steps": [
+    {
+     "id": "cynt_luc_as1",
+     "kind": "action",
+     "text": "Smeargle: Volt Tackle."
+    },
+    {
+     "id": "cynt_luc_as2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_luc_lead": {
+   "id": "cz_cynt_luc_lead",
+   "title": "Lucario · known lead [Team 3/4]",
+   "steps": [
+    {
+     "id": "cynt_luc_l1",
+     "kind": "action",
+     "text": "Smeargle: Stealth Rock."
+    },
+    {
+     "id": "cynt_luc_l2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_luc_other": {
+   "id": "cz_cynt_luc_other",
+   "title": "Lucario · others [Team 3/4/5]",
+   "steps": [
+    {
+     "id": "cynt_luc_o1",
+     "kind": "action",
+     "text": "Smeargle: Yawn."
+    },
+    {
+     "id": "cynt_luc_o2",
+     "kind": "action",
+     "text": "Infernape: Stealth Rock."
+    },
+    {
+     "id": "cynt_luc_o3",
+     "kind": "action",
+     "text": "Bring in Torterra. (On Team 5 the Garchomp is bulky: use Wood Hammer on it — Earthquake won't KO.)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_roserade": {
+   "id": "cz_cynt_roserade",
+   "title": "Cynthia · Roserade [Team 1]",
+   "steps": [
+    {
+     "id": "cynt_ros_1",
+     "kind": "action",
+     "text": "Bring in Torterra straight away."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_spiritomb": {
+   "id": "cz_cynt_spiritomb",
+   "title": "Cynthia · Spiritomb [Team 2/4]",
+   "steps": [
+    {
+     "id": "cynt_spi_1",
+     "kind": "action",
+     "text": "Smeargle: Stealth Rock (repeat until Smeargle faints)."
+    },
+    {
+     "id": "cynt_spi_2",
+     "kind": "action",
+     "text": "Bring in Torterra."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt_sweep"
+   }
+  },
+  "cz_cynt_sweep": {
+   "id": "cz_cynt_sweep",
+   "title": "Cynthia · Torterra sweep",
+   "steps": [
+    {
+     "id": "cynt_sw_ss",
+     "kind": "action",
+     "text": "Torterra: Shell Smash (raises Attack and Speed a lot; its Shell Armor blocks crits)."
+    },
+    {
+     "id": "cynt_sw_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Torterra — which move to sweep",
+      "rows": [
+       {
+        "move": "Heavy Slam",
+        "targets": [
+         "Flying types"
+        ]
+       },
+       {
+        "move": "Wood Hammer",
+        "targets": [
+         "Eelektross",
+         "Team 5 Garchomp"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "everything else (default)"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "cynt_done",
+     "kind": "setup",
+     "text": "Cynthia beaten!"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cynt_end"
+   }
+  },
+  "cz_mori": {
+   "id": "cz_mori",
+   "title": "Unova · Morimoto (Castelia)",
+   "steps": [
+    {
+     "id": "mori_setup",
+     "kind": "setup",
+     "text": "Team (cadozz): Chansey, Scyther, Smeargle (Choice Scarf). Morimoto is in Castelia (Unova) — in the alley right of the Pokémon Center, enter the 1st building, take the elevator and walk straight; he's the rightmost of the three NPCs. Randomly picks 1 of 5 teams, random lead (Lvl 85). 1-on-1 fight (~9-10 turns)."
+    },
+    {
+     "id": "mori_line",
+     "kind": "note",
+     "text": "Basic line (always follow): 1) Chansey Stealth Rock; 2) Chansey Teleport (Scyther comes in); 3) Scyther Swords Dance; 4) sweep. Each team has AT MOST 1 exception (~50% chance). Check in the order below and apply the first that matches; if none matches, just follow the basic line."
+    }
+   ],
+   "leadHint": "Chansey",
+   "gymLead": [
+    {
+     "pokemon": "Chansey"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Any exception showed up? (check in order)",
+    "options": [
+     {
+      "label": "Flareon lead (Fire)",
+      "nodeId": "cz_mori_flareon"
+     },
+     {
+      "label": "Simisear lead (Fire)",
+      "nodeId": "cz_mori_simisear"
+     },
+     {
+      "label": "Chansey fainted BEFORE rocks (Primeape crit)",
+      "nodeId": "cz_mori_chansey_dead"
+     },
+     {
+      "label": "Machamp with Dynamic Punch (after Teleport)",
+      "nodeId": "cz_mori_dynpunch"
+     },
+     {
+      "label": "Burnt Machamp / Flame Orb (after Teleport)",
+      "nodeId": "cz_mori_burnt"
+     },
+     {
+      "label": "Jolteon Thunderbolt or Simipour Ice Beam",
+      "nodeId": "cz_mori_jolteon"
+     },
+     {
+      "label": "No exception → follow the basic line",
+      "nodeId": "cz_mori_sweep"
+     }
+    ]
+   }
+  },
+  "cz_mori_flareon": {
+   "id": "cz_mori_flareon",
+   "title": "Morimoto · Flareon lead",
+   "steps": [
+    {
+     "id": "mori_fl1",
+     "kind": "action",
+     "text": "Flareon holds Toxic Orb and goes for Superpower. Chansey: Soft-Boiled x2; then follow the basic line (Stealth Rock → Teleport → Scyther Swords Dance)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_simisear": {
+   "id": "cz_mori_simisear",
+   "title": "Morimoto · Simisear lead",
+   "steps": [
+    {
+     "id": "mori_si1",
+     "kind": "action",
+     "text": "Simisear holds Life Orb and goes for Superpower. Chansey: Soft-Boiled x1; then follow the basic line."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_chansey_dead": {
+   "id": "cz_mori_chansey_dead",
+   "title": "Morimoto · Chansey fainted before rocks",
+   "steps": [
+    {
+     "id": "mori_cd1",
+     "kind": "action",
+     "text": "Can happen from a Primeape crit. Bring in Smeargle and use Stealth Rock; then Scyther Swords Dance."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_dynpunch": {
+   "id": "cz_mori_dynpunch",
+   "title": "Morimoto · Machamp Dynamic Punch",
+   "steps": [
+    {
+     "id": "mori_dp1",
+     "kind": "action",
+     "text": "Bring in Smeargle and use Safeguard (prevents Dynamic Punch confusion). Then Scyther Swords Dance."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_burnt": {
+   "id": "cz_mori_burnt",
+   "title": "Morimoto · Burnt Machamp (Flame Orb)",
+   "steps": [
+    {
+     "id": "mori_bu1",
+     "kind": "action",
+     "text": "A Flame Orb Machamp is NOT choice-locked. Bring in Smeargle and use Encore (locks it out of Ice Punch). Then Scyther."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_jolteon": {
+   "id": "cz_mori_jolteon",
+   "title": "Morimoto · Jolteon/Simipour special",
+   "steps": [
+    {
+     "id": "mori_jo1",
+     "kind": "action",
+     "text": "Jolteon using Thunderbolt or Simipour using Ice Beam: the AI won't switch (it has a weak Machamp). Bring in Smeargle and use Final Gambit to bait out Shuckle. Then Scyther."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_mori_sweep"
+   }
+  },
+  "cz_mori_sweep": {
+   "id": "cz_mori_sweep",
+   "title": "Morimoto · Scyther sweep",
+   "steps": [
+    {
+     "id": "mori_sw_sd",
+     "kind": "action",
+     "text": "Scyther: Swords Dance (if not up yet) — Technician + Quick Attack close out the fight."
+    },
+    {
+     "id": "mori_sw_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Scyther — which move to sweep",
+      "rows": [
+       {
+        "move": "Quick Attack",
+        "targets": [
+         "fast Pokémon: Dugtrio, Jolteon, Zebstrika, Primeape (Scarf)"
+        ]
+       },
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Gengar"
+        ]
+       },
+       {
+        "move": "Aerial Ace",
+        "targets": [
+         "everything else (default)"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "mori_done",
+     "kind": "setup",
+     "text": "Morimoto beaten! HEAL your team if needed. Now take on Cynthia (Undella Bay)."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "cz_cynt"
+   }
+  }
+ },
+ "allowSkip": true,
+ "groupPrompt": "Choose the region:"
+}

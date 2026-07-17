@@ -1,0 +1,489 @@
+{
+ "id": "red_ribbons",
+ "title": "Red — Karu (Ribbon)",
+ "lead": "Leve o Crobat como líder da party — e sempre um 6º mon 'sack' (≥ nível 50) pela Legend Ribbon.",
+ "homePrompt": "Com o que o Red liderou?",
+ "legend": [
+  {
+   "term": "T1M (Turn 1 Move)",
+   "meaning": "Todo Pokémon do Red usa um golpe grátis ao ENTRAR em campo (buff, debuff, disruptor ou clima). Já espere isso."
+  },
+  {
+   "term": "Sack / Sacrificar",
+   "meaning": "Deixe o Red nocautear de propósito um mon que já cumpriu a função, pra trazer o próximo com segurança. O 6º mon 'sack' (≥ nível 50) também ganha a Legend Ribbon — mesmo desmaiado."
+  },
+  {
+   "term": "U-Turn / Volt Switch",
+   "meaning": "Golpes de pivô: saem em segurança e já trazem o próximo mon (também escapam de Block)."
+  },
+  {
+   "term": "Golpes em inglês",
+   "meaning": "Nomes de golpes e Pokémon ficam em inglês para baterem com a tela do PokeMMO."
+  }
+ ],
+ "doc": "https://docs.google.com/document/d/1s7jx7bImY0VFIcqlPa46bq7N7U5Agw5OY92Qm5s1d2w/edit",
+ "entryPoints": [
+  {
+   "label": "Blastoise",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Charizard",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Emboar",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Espeon",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Excadrill",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Gliscor",
+   "nodeId": "johto"
+  },
+  {
+   "label": "Hydreigon",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Pikachu",
+   "nodeId": "pikachu"
+  },
+  {
+   "label": "Samurott",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Serperior",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Snorlax",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Staraptor",
+   "nodeId": "sinnoh"
+  },
+  {
+   "label": "Swampert",
+   "nodeId": "hoenn"
+  },
+  {
+   "label": "Venusaur",
+   "nodeId": "kanto"
+  }
+ ],
+ "nodes": {
+  "kanto": {
+   "id": "kanto",
+   "title": "Kanto",
+   "steps": [
+    {
+     "id": "kanto_lead",
+     "kind": "note",
+     "text": "Você caiu aqui porque o Red abriu com um mon de Kanto (o lead dele é aleatório). Você lidera com o Crobat."
+    },
+    {
+     "id": "kanto_sack",
+     "kind": "note",
+     "text": "Regra do Sack: um mon que já cumpriu a função vira 'sacrifício' pra trazer o próximo de graça."
+    },
+    {
+     "id": "kanto_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Resposta por mon do Red em campo",
+      "rows": [
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Espeon"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Venusaur"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Brick Break",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Glaceon — HP Rock",
+        "targets": [
+         "Charizard"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Blastoise"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "kanto_venu",
+     "kind": "note",
+     "text": "Venusaur: com sol NÃO é troca segura; sem sol, é."
+    },
+    {
+     "id": "kanto_zard",
+     "kind": "note",
+     "text": "Charizard: sem troca segura — o Glaceon vira sack depois. Se o Charizard for o LEAD do Red: sacrifique o 6º mon, entre com o Glaceon e já pivote pro Conkeldurr (o Red quase sempre troca pro Snorlax)."
+    },
+    {
+     "id": "kanto_safe",
+     "kind": "note",
+     "text": "Segurança: Espeon, Charizard e Pikachu não têm troca segura (o mon usado vira sack). Snorlax é troca segura. Blastoise: o Power Whip do Ferrothorn só falha em range de crítico."
+    }
+   ],
+   "branch": null
+  },
+  "johto": {
+   "id": "johto",
+   "title": "Johto",
+   "steps": [
+    {
+     "id": "johto_lead",
+     "kind": "note",
+     "text": "O Red abriu com o Gliscor — lead fixo de Johto (Stealth Rock). Responda com o Glaceon (Ice Beam). Você segue com o Crobat como líder da party."
+    },
+    {
+     "id": "johto_sack",
+     "kind": "note",
+     "text": "Regra do Sack: um mon que já cumpriu a função vira 'sacrifício' pra trazer o próximo de graça."
+    },
+    {
+     "id": "johto_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Ordem principal (Johto)",
+      "rows": [
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Gliscor"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Typhlosion"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Feraligatr"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Mach Punch",
+        "targets": [
+         "Tyranitar"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Meganium"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "johto_safe",
+     "kind": "note",
+     "text": "Segurança: Gliscor = troca segura. Typhlosion e Feraligatr = sem troca (viram sack). Tyranitar = troca segura, e FAÇA a troca (o Conkeldurr fica em campo)."
+    },
+    {
+     "id": "johto_end",
+     "kind": "note",
+     "text": "Fim de Johto: o Pikachu vai usar Brick Break. Feche com prioridade — Conkeldurr Mach Punch + Glaceon Ice Shard; o Iron Barbs do Ferrothorn cobre rolls baixos. Se o Meganium viver, ele usa Dragon Tail — reaja com prioridade/troca conforme quem sair."
+    }
+   ],
+   "branch": null
+  },
+  "hoenn": {
+   "id": "hoenn",
+   "title": "Hoenn",
+   "steps": [
+    {
+     "id": "hoenn_lead",
+     "kind": "note",
+     "text": "O Red abriu com o Swampert — lead fixo de Hoenn (Stealth Rock). Você segue com o Crobat como líder da party."
+    },
+    {
+     "id": "hoenn_var",
+     "kind": "note",
+     "text": "Hoenn tem a maior variância — o Red pode mandar os mons fora da ordem esperada."
+    },
+    {
+     "id": "hoenn_sack",
+     "kind": "note",
+     "text": "Regra do Sack: um mon que já cumpriu a função vira 'sacrifício' pra trazer o próximo de graça."
+    },
+    {
+     "id": "hoenn_ver",
+     "kind": "note",
+     "text": "Existem 2 versões: (1) o Swampert já troca pro Metagross, (2) o Swampert fica. Se ele trocar, use U-Turn no Crobat pra reagir."
+    },
+    {
+     "id": "hoenn_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Resposta por mon do Red em campo (Hoenn)",
+      "rows": [
+       {
+        "move": "Ferrothorn — Spikes, depois Power Whip / Ferrothorn — Spikes, then Power Whip",
+        "targets": [
+         "Swampert"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Ice Punch",
+        "targets": [
+         "Salamence"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Blaziken"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake / Glaceon — Shadow Ball",
+        "targets": [
+         "Metagross"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison / U-Turn",
+        "targets": [
+         "Sceptile"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "hoenn_swampert",
+     "kind": "note",
+     "text": "Swampert: use o Ferrothorn pra pôr Spikes. NÃO troque Spikes por Stealth Rock — muda o que o Red te manda e trava a luta. Só a Pikachu deste time sobrevive ao Cross Poison; os Spikes resolvem isso."
+    },
+    {
+     "id": "hoenn_meta",
+     "kind": "note",
+     "text": "Metagross: NÃO deixe o Garchomp tomar dano dele antes do Blaziken morrer. Antes do Blaziken: Glaceon Shadow Ball → Garchomp EQ. Depois do Blaziken: Garchomp EQ → Glaceon Shadow Ball."
+    },
+    {
+     "id": "hoenn_scept",
+     "kind": "note",
+     "text": "Sceptile: ele NÃO pode dar dano no Crobat. Se o Metagross ainda não saiu, use U-Turn; se o Metagross já morreu, use Cross Poison."
+    },
+    {
+     "id": "hoenn_blaz",
+     "kind": "note",
+     "text": "Blaziken: a IA usa HP Ice no Garchomp; o Assault Vest faz ela mudar pra Close Combat. Garanta HP no Garchomp se o Blaziken sair em 5º."
+    }
+   ],
+   "branch": null
+  },
+  "sinnoh": {
+   "id": "sinnoh",
+   "title": "Sinnoh",
+   "steps": [
+    {
+     "id": "sinnoh_lead",
+     "kind": "note",
+     "text": "O Red abriu com o Staraptor — lead fixo de Sinnoh. Ele usa Whirlwind e te força a trocar, mas a própria IA do Red contorna isso, então esta luta é das mais consistentes. Você segue com o Crobat como líder da party."
+    },
+    {
+     "id": "sinnoh_sack",
+     "kind": "note",
+     "text": "Regra do Sack: um mon que já cumpriu a função vira 'sacrifício' pra trazer o próximo de graça."
+    },
+    {
+     "id": "sinnoh_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Ordem principal (Sinnoh)",
+      "rows": [
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Staraptor",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Infernape"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Brick Break",
+        "targets": [
+         "Empoleon"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "sinnoh_safe",
+     "kind": "note",
+     "text": "Segurança: só o Empoleon é troca segura (Conkeldurr). Todo o resto vira sack — inclusive sacar o Ferrothorn no Infernape e o 6º mon no Staraptor. Muitos sacks: é o esperado."
+    },
+    {
+     "id": "sinnoh_conk",
+     "kind": "note",
+     "text": "O Conkeldurr é montado pro Empoleon: 1 ponto de Speed a mais e bulk pra sair do range de crítico — por isso dá pra sacar tanto e ainda assim tomar o KO sem levar um de volta."
+    }
+   ],
+   "branch": null
+  },
+  "unova": {
+   "id": "unova",
+   "title": "Unova",
+   "steps": [
+    {
+     "id": "unova_lead",
+     "kind": "note",
+     "text": "Você caiu aqui porque o Red abriu com um mon de Unova (lead aleatório, como Kanto). Você lidera com o Crobat."
+    },
+    {
+     "id": "unova_sack",
+     "kind": "note",
+     "text": "Regra do Sack: um mon que já cumpriu a função vira 'sacrifício' pra trazer o próximo de graça."
+    },
+    {
+     "id": "unova_t1",
+     "kind": "note",
+     "text": "Sacrifique o 6º mon no turno 1 se o Red liderar com Excadrill, Hydreigon ou Emboar (e o Garchomp não tiver entrado)."
+    },
+    {
+     "id": "unova_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Resposta por mon do Red em campo (Unova)",
+      "rows": [
+       {
+        "move": "Conkeldurr — Mach Punch",
+        "targets": [
+         "Excadrill"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Serperior"
+        ]
+       },
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Hydreigon"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Emboar"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Samurott"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "unova_safe",
+     "kind": "note",
+     "text": "Segurança: Serperior e Samurott = troca segura (Samurott com cuidado do Block). Todo o resto vira sack."
+    },
+    {
+     "id": "unova_exca",
+     "kind": "note",
+     "text": "Excadrill: garanta que ele tome um sack-kill ANTES do Conkeldurr entrar — assim, depois do Mach Punch, ele cai no recuo do Life Orb."
+    },
+    {
+     "id": "unova_samu",
+     "kind": "note",
+     "text": "Samurott: o Block pode prender o Crobat antes de pegar Pikachu + Serperior. O Samurott tem Ice Beam e sai cedo se o Crobat usar Cross Poison no Serperior — use Brave Bird pra evitar. Mantenha o 6º mon ≥ nível 50 (senão a IA troca estranho)."
+    }
+   ],
+   "branch": null
+  },
+  "pikachu": {
+   "id": "pikachu",
+   "title": "Pikachu",
+   "steps": [
+    {
+     "id": "pikachu_1",
+     "kind": "action",
+     "text": "Responda ao Pikachu com o Crobat (Cross Poison). O Pikachu só lidera em Kanto ou Unova — a resposta é a mesma; identifique a região pelos próximos mons do Red."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Qual é a região? (veja os próximos mons do Red)",
+    "options": [
+     {
+      "label": "Kanto (ex.: Venusaur, Snorlax, Charizard)",
+      "nodeId": "kanto"
+     },
+     {
+      "label": "Unova (ex.: Serperior, Emboar, Samurott)",
+      "nodeId": "unova"
+     }
+    ]
+   }
+  }
+ }
+}

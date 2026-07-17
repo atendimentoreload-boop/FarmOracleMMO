@@ -1,0 +1,10 @@
+<Window x:Class="PrestreloAjuda.MiniBallWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize"
+        Width="60" Height="60" SizeToContent="Manual"
+        ToolTip="Duplo-clique para abrir · arraste para mover">
+    <Image x:Name="Ball" Stretch="Uniform" Margin="3"
+           MouseLeftButtonDown="OnMouseDown"/>
+</Window>

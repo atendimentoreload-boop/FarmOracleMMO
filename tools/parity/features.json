@@ -1,0 +1,454 @@
+{
+  "_doc": "FONTE DA VERDADE de PARIDADE entre plataformas (FarmOracleMMO). Edite este arquivo e rode `python3 tools/parity/check.py`. Cada feature tem, por plataforma, um `status` e uma `sig` (assinatura: um trecho de codigo REAL que prova a feature). O validador confere a assinatura no codigo-fonte da plataforma. Regra de paridade: se UMA plataforma tem `done`, TODAS as outras precisam ser `done`, `excluded` ou `na` (com `reason`); qualquer `todo` vira pendencia de paridade.",
+  "statuses": {
+    "done": "Implementada e verificada pela assinatura no codigo.",
+    "todo": "Ainda nao feita nesta plataforma (VIRA pendencia de paridade se existir em outra).",
+    "excluded": "Intencionalmente fora desta plataforma. Exige `reason`.",
+    "na": "Nao se aplica a esta plataforma (paradigma diferente). Exige `reason`."
+  },
+  "platforms": {
+    "mac": { "label": "macOS", "root": "mac/Sources/DestruidorDeRed", "exts": [".swift"] },
+    "windows": { "label": "Windows", "root": "windows/PrestreloAjuda", "exts": [".cs", ".xaml"] },
+    "android": { "label": "Android", "root": "android/app/src/main", "exts": [".kt", ".xml"] }
+  },
+  "features": [
+    {
+      "id": "elite4_kanto", "area": "Modos", "name": "Elite 4 Kanto",
+      "mac": { "status": "done", "sig": "elite4_kanto" },
+      "windows": { "status": "done", "sig": "elite4_kanto" },
+      "android": { "status": "done", "sig": "elite4_kanto" }
+    },
+    {
+      "id": "elite4_hoenn", "area": "Modos", "name": "Elite 4 Hoenn",
+      "mac": { "status": "done", "sig": "elite4_hoenn" },
+      "windows": { "status": "done", "sig": "elite4_hoenn" },
+      "android": { "status": "done", "sig": "elite4_hoenn" }
+    },
+    {
+      "id": "elite4_unova", "area": "Modos", "name": "Elite 4 Unova",
+      "mac": { "status": "done", "sig": "elite4_unova" },
+      "windows": { "status": "done", "sig": "elite4_unova" },
+      "android": { "status": "done", "sig": "elite4_unova" }
+    },
+    {
+      "id": "elite4_sinnoh", "area": "Modos", "name": "Elite 4 Sinnoh",
+      "mac": { "status": "done", "sig": "elite4_sinnoh" },
+      "windows": { "status": "done", "sig": "elite4_sinnoh" },
+      "android": { "status": "done", "sig": "elite4_sinnoh" }
+    },
+    {
+      "id": "elite4_johto", "area": "Modos", "name": "Elite 4 Johto",
+      "mac": { "status": "done", "sig": "elite4_johto" },
+      "windows": { "status": "done", "sig": "elite4_johto" },
+      "android": { "status": "done", "sig": "elite4_johto" }
+    },
+    {
+      "id": "farm_veteran", "area": "Modos", "name": "Rota de Farm: Veteran (Six Pillars)",
+      "mac": { "status": "done", "sig": "Six Pillars (Veteran Route)" },
+      "windows": { "status": "done", "sig": "Six Pillars (Veteran Route)" },
+      "android": { "status": "done", "sig": "Six Pillars (Veteran Route)" }
+    },
+    {
+      "id": "farm_6pillars_basic", "area": "Modos", "name": "Rota de Farm: Six Pillars BASIC (27 ginasios, rota alternativa da Veteran)",
+      "mac": { "status": "done", "sig": "6pillars_basic" },
+      "windows": { "status": "done", "sig": "6pillars_basic" },
+      "android": { "status": "done", "sig": "6pillars_basic" }
+    },
+    {
+      "id": "farm_veteran_cm_inject", "area": "Modos", "name": "Rota Veteran segue a estrategia de C&M selecionada (injeta veteran_cadozz no fim)",
+      "mac": { "status": "done", "sig": "veteran_cadozz" },
+      "windows": { "status": "done", "sig": "veteran_cadozz" },
+      "android": { "status": "done", "sig": "veteran_cadozz" }
+    },
+    {
+      "id": "farm_lucky_girl", "area": "Modos", "name": "Rota de Farm: Lucky Girl (Seven Hells)",
+      "mac": { "status": "done", "sig": "Seven Hells (Lucky Girl)" },
+      "android": { "status": "done", "sig": "Seven Hells (Lucky Girl)" },
+      "windows": { "status": "done", "sig": "lucky_girl" }
+    },
+    {
+      "id": "mode_cynthia_morimoto", "area": "Modos", "name": "Cynthia & Morimoto",
+      "mac": { "status": "done", "sig": "cynthia_morimoto" },
+      "windows": { "status": "done", "sig": "cynthia_morimoto" },
+      "android": { "status": "done", "sig": "cynthia_morimoto" }
+    },
+    {
+      "id": "mode_red", "area": "Modos", "name": "Red",
+      "mac": { "status": "done", "sig": "Mode(id: \"red\"" },
+      "windows": { "status": "done", "sig": "new(\"red\", Strings.T(L.ModeRedTitle)" },
+      "android": { "status": "done", "sig": "\"red\", t.redTitle" }
+    },
+    {
+      "id": "red_colored", "area": "Modos", "name": "Red: estrategia Colored (Blissey, por geracao)",
+      "mac": { "status": "done", "sig": "red_colored" },
+      "windows": { "status": "done", "sig": "red_colored" },
+      "android": { "status": "done", "sig": "red_colored" }
+    },
+    {
+      "id": "mode_hooh", "area": "Modos", "name": "Ho-Oh",
+      "mac": { "status": "done", "sig": "Mode(id: \"hooh\"" },
+      "windows": { "status": "done", "sig": "new(\"hooh\", Strings.T(L.ModeHoohTitle)" },
+      "android": { "status": "done", "sig": "\"hooh\", t.hoohTitle" }
+    },
+    {
+      "id": "hooh_trickroom", "area": "Modos", "name": "Ho-Oh: estrategia Trick Room (Chandelure/Rotom-Heat/Lunatone)",
+      "mac": { "status": "done", "sig": "hooh_trickroom" },
+      "windows": { "status": "done", "sig": "hooh_trickroom" },
+      "android": { "status": "done", "sig": "hooh_trickroom" }
+    },
+    {
+      "id": "cynthia_morimoto_cadozz", "area": "Modos", "name": "Cynthia & Morimoto: estrategia cadozz (Torterra/Scyther)",
+      "mac": { "status": "done", "sig": "cynthia_morimoto_cadozz" },
+      "windows": { "status": "done", "sig": "cynthia_morimoto_cadozz" },
+      "android": { "status": "done", "sig": "cynthia_morimoto_cadozz" }
+    },
+
+    {
+      "id": "cooldown_system", "area": "Cooldowns (#33)", "name": "Sistema de cooldowns/alarme: tracker de batalhas e berries por personagem",
+      "mac": { "status": "done", "sig": "CooldownStore" },
+      "windows": { "status": "done", "sig": "class CooldownStore" },
+      "android": { "status": "done", "sig": "CooldownStore" }
+    },
+    {
+      "id": "cooldown_notifications", "area": "Cooldowns (#33)", "name": "Notificacoes/alarme do sistema de cooldown (dispara na hora)",
+      "mac": { "status": "done", "sig": "NotificationScheduler" },
+      "windows": { "status": "done", "sig": "CooldownNotifications" },
+      "android": { "status": "done", "sig": "CooldownNotifications" }
+    },
+
+    {
+      "id": "team_selector", "area": "Seletores", "name": "Seletor de time da Elite 4",
+      "mac": { "status": "done", "sig": "func setTeam(" },
+      "windows": { "status": "done", "sig": "SetTeam(" },
+      "android": { "status": "done", "sig": "onSelectTeam" }
+    },
+    {
+      "id": "emoji_toggle", "area": "Seletores", "name": "Modo Emoji (quando o time tem versao emoji)",
+      "mac": { "status": "done", "sig": "func toggleEmoji(" },
+      "windows": { "status": "done", "sig": "ToggleEmoji(" },
+      "android": { "status": "done", "sig": "toggleEmoji" }
+    },
+    {
+      "id": "farm_route_selector", "area": "Seletores", "name": "Seletor de rota de farm (trocar variantes)",
+      "mac": { "status": "done", "sig": "func setFarmRoute(" },
+      "android": { "status": "done", "sig": "onSelectFarmRoute" },
+      "windows": { "status": "done", "sig": "SetFarmRoute" }
+    },
+    {
+      "id": "farm_team_grouping", "area": "Seletores", "name": "Agrupar rotas de farm por time (submenu: header do time + variantes)",
+      "mac": { "status": "done", "sig": "farmTeamGroupsOrdered" },
+      "android": { "status": "done", "sig": "farmTeamGroupsOrdered" },
+      "windows": { "status": "done", "sig": "FarmTeamGroupsOrdered" }
+    },
+    {
+      "id": "cm_strategy_selector", "area": "Seletores", "name": "Seletor de estrategia do Cynthia & Morimoto",
+      "mac": { "status": "done", "sig": "func setCmStrategy(" },
+      "android": { "status": "done", "sig": "onSelectCmStrategy" },
+      "windows": { "status": "done", "sig": "SetCmStrategy" }
+    },
+    {
+      "id": "red_strategy_selector", "area": "Seletores", "name": "Seletor de estrategia do Red (trocar times)",
+      "mac": { "status": "done", "sig": "func setRedStrategy(" },
+      "android": { "status": "done", "sig": "onSelectRedStrategy" },
+      "windows": { "status": "done", "sig": "SetRedStrategy" }
+    },
+    {
+      "id": "hooh_strategy_selector", "area": "Seletores", "name": "Seletor de estrategia do Ho-Oh (trocar times)",
+      "mac": { "status": "done", "sig": "func setHoohStrategy(" },
+      "android": { "status": "done", "sig": "onSelectHoohStrategy" },
+      "windows": { "status": "done", "sig": "SetHoohStrategy" }
+    },
+    {
+      "id": "language_selector", "area": "Seletores", "name": "Seletor de idioma PT/EN",
+      "mac": { "status": "done", "sig": "func setLanguage(" },
+      "windows": { "status": "done", "sig": "SetLanguage(" },
+      "android": { "status": "done", "sig": "LanguageRow" }
+    },
+    {
+      "id": "first_run_lang_picker", "area": "Seletores", "name": "Escolha de idioma na 1a abertura",
+      "android": { "status": "done", "sig": "LanguagePicker" },
+      "mac": { "status": "done", "sig": "LanguagePicker" },
+      "windows": { "status": "done", "sig": "LanguagePicker" }
+    },
+
+    {
+      "id": "overlay_window", "area": "Overlay/Janela", "name": "Janela de overlay flutuante",
+      "mac": { "status": "done", "sig": "class OverlayWindow" },
+      "windows": { "status": "done", "sig": "MakeOverlay" },
+      "android": { "status": "done", "sig": "TYPE_APPLICATION_OVERLAY" }
+    },
+    {
+      "id": "minimize_to_ball", "area": "Overlay/Janela", "name": "Minimizar para bolinha (Master Ball / bolha)",
+      "mac": { "status": "done", "sig": "class MiniBallView" },
+      "windows": { "status": "done", "sig": "MiniBallWindow" },
+      "android": { "status": "done", "sig": "OverlayBubble" }
+    },
+    {
+      "id": "always_on_top", "area": "Overlay/Janela", "name": "Sempre no topo (always-on-top)",
+      "mac": { "status": "done", "sig": "level = .floating" },
+      "windows": { "status": "done", "sig": "Topmost=\"True\"" },
+      "android": { "status": "done", "sig": "TYPE_APPLICATION_OVERLAY", "note": "Inerente ao tipo de janela de overlay." }
+    },
+    {
+      "id": "drag_window", "area": "Overlay/Janela", "name": "Arrastar a janela/bolha",
+      "mac": { "status": "done", "sig": "isMovableByWindowBackground" },
+      "windows": { "status": "done", "sig": "OnHeaderDrag" },
+      "android": { "status": "done", "sig": "fun moveBy" }
+    },
+    {
+      "id": "resize_panel", "area": "Overlay/Janela", "name": "Redimensionar o painel (alca/grip)",
+      "mac": { "status": "done", "sig": "ResizeGripView" },
+      "windows": { "status": "done", "sig": "CanResizeWithGrip" },
+      "android": { "status": "done", "sig": "ResizeHandle" }
+    },
+    {
+      "id": "opacity_control", "area": "Overlay/Janela", "name": "Controle de opacidade",
+      "mac": { "status": "done", "sig": "func setOpacity" },
+      "windows": { "status": "done", "sig": "OpacityRow" },
+      "android": { "status": "done", "sig": "OpacityController" }
+    },
+    {
+      "id": "next_step_shortcut", "area": "Overlay/Janela", "name": "Atalho global 'Proximo passo' (teclado)",
+      "mac": { "status": "done", "sig": "advanceViaShortcut" },
+      "windows": { "status": "done", "sig": "AdvanceViaShortcut" },
+      "android": { "status": "excluded", "sig": "onKeyDown", "reason": "Android e dispositivo de toque; atalho de teclado fisico tem valor marginal. ACAO: remover o texto 'em breve' (ShortcutComingSoon) do app na proxima atualizacao (anotado no HUB)." }
+    },
+    {
+      "id": "skip_stop_shortcut", "area": "Overlay/Janela", "name": "Atalho global 'Pular parada' (teclado) (#71)",
+      "mac": { "status": "done", "sig": "skipViaShortcut" },
+      "windows": { "status": "done", "sig": "SkipViaShortcut" },
+      "android": { "status": "excluded", "sig": "onKeyDown", "reason": "Android e dispositivo de toque; atalho de teclado fisico tem valor marginal (mesmo caso do next_step_shortcut). O botao 'Pular esta parada' ja existe na tela." }
+    },
+    {
+      "id": "fkey_choice_hotkeys", "area": "Overlay/Janela", "name": "Atalhos F1..F12 para as opcoes de escolha",
+      "mac": { "status": "done", "sig": "syncChoiceHotkeys" },
+      "windows": { "status": "done", "sig": "SyncChoiceHotkeys" },
+      "android": { "status": "na", "reason": "Android e toque: as opcoes sao botoes (ChoiceButton), nao teclas de funcao." }
+    },
+    {
+      "id": "content_scale", "area": "Overlay/Janela", "name": "Escala de conteudo (tamanho de fonte) A-/A/A+",
+      "android": { "status": "done", "sig": "scaleGlyph" },
+      "mac": { "status": "done", "sig": "cycleUiScale" },
+      "windows": { "status": "done", "sig": "CycleUiScale" }
+    },
+    {
+      "id": "search_filter", "area": "Overlay/Janela", "name": "Busca/filtro nas listas da home",
+      "mac": { "status": "done", "sig": "searchField" },
+      "windows": { "status": "done", "sig": "AddSearchableEntries" },
+      "android": { "status": "done", "sig": "filterEntries" }
+    },
+
+    {
+      "id": "next_button", "area": "Ajudas em batalha", "name": "Botao 'Proximo/Continuar' na tela (avanco por clique/toque)",
+      "mac": { "status": "done", "sig": "showNextButton" },
+      "windows": { "status": "done", "sig": "ShowNextButton" },
+      "android": { "status": "done", "sig": "fun next(" }
+    },
+    {
+      "id": "back_nav", "area": "Ajudas em batalha", "name": "Botao Voltar (desfaz o ultimo passo/escolha)",
+      "mac": { "status": "done", "sig": "func back(" },
+      "windows": { "status": "done", "sig": "void Back(" },
+      "android": { "status": "done", "sig": "fun back(" }
+    },
+    {
+      "id": "reset_nav", "area": "Ajudas em batalha", "name": "Botao Reiniciar (reseta a rota/ajuda atual)",
+      "mac": { "status": "done", "sig": "func reset(" },
+      "windows": { "status": "done", "sig": "void Reset(" },
+      "android": { "status": "done", "sig": "fun reset(" }
+    },
+    {
+      "id": "skip_this_stop", "area": "Ajudas em batalha", "name": "Botao 'Pular esta parada' em batalha (skip via skipTo)",
+      "mac": { "status": "done", "sig": "skipThisStop" },
+      "windows": { "status": "done", "sig": "SkipThisStop" },
+      "android": { "status": "done", "sig": "SkipThisStop" }
+    },
+    {
+      "id": "progress_indicator", "area": "Ajudas em batalha", "name": "Indicador de progresso 'passo x/y'",
+      "mac": { "status": "done", "sig": "stepProgress" },
+      "windows": { "status": "done", "sig": "StepProgress" },
+      "android": { "status": "done", "sig": "StepProgress" }
+    },
+    {
+      "id": "see_teams", "area": "Ajudas em batalha", "name": "Ver times (times possiveis do adversario)",
+      "mac": { "status": "done", "sig": "func possibleOpponentTeams" },
+      "windows": { "status": "done", "sig": "PossibleOpponentTeamsNow" },
+      "android": { "status": "done", "sig": "possibleOpponentTeams" }
+    },
+    {
+      "id": "skip_stop", "area": "Ajudas em batalha", "name": "Marcar parada pra pular (skip)",
+      "mac": { "status": "done", "sig": "SkipStore" },
+      "windows": { "status": "done", "sig": "SkipStore" },
+      "android": { "status": "done", "sig": "SkipStore" }
+    },
+    {
+      "id": "skip_persistence", "area": "Ajudas em batalha", "name": "Persistir os skips entre execucoes",
+      "mac": { "status": "done", "sig": "skippedNodes" },
+      "android": { "status": "done", "sig": "getSharedPreferences(\"skips\"" },
+      "windows": { "status": "done", "sig": "skips.json" }
+    },
+    {
+      "id": "legend", "area": "Ajudas em batalha", "name": "Legenda do modo",
+      "mac": { "status": "done", "sig": "struct LegendView" },
+      "windows": { "status": "done", "sig": "LegendCard" },
+      "android": { "status": "done", "sig": "LegendCard" }
+    },
+    {
+      "id": "node_render", "area": "Ajudas em batalha", "name": "Renderizacao de nos/passos",
+      "mac": { "status": "done", "sig": "struct NodeView" },
+      "windows": { "status": "done", "sig": "RenderNode" },
+      "android": { "status": "done", "sig": "fun NodeView" }
+    },
+    {
+      "id": "choice_render", "area": "Ajudas em batalha", "name": "Renderizacao de escolhas",
+      "mac": { "status": "done", "sig": "struct ChoiceView" },
+      "windows": { "status": "done", "sig": "ChoiceGrid" },
+      "android": { "status": "done", "sig": "ChoiceButton" }
+    },
+    {
+      "id": "conditional_table", "area": "Ajudas em batalha", "name": "Tabela condicional (golpe -> alvos)",
+      "mac": { "status": "done", "sig": "ConditionalTableView" },
+      "windows": { "status": "done", "sig": "ConditionalView" },
+      "android": { "status": "done", "sig": "ConditionalTable" }
+    },
+    {
+      "id": "opponent_info", "area": "Ajudas em batalha", "name": "Cabecalho/mon ativo do oponente",
+      "mac": { "status": "done", "sig": "opponentOnField" },
+      "windows": { "status": "done", "sig": "OpponentHeaderFacing" },
+      "android": { "status": "done", "sig": "OpponentHeaderFacing" }
+    },
+    {
+      "id": "next_lead_hint", "area": "Ajudas em batalha", "name": "Dica do proximo lead/ginasio",
+      "mac": { "status": "done", "sig": "upcomingGymLead" },
+      "windows": { "status": "done", "sig": "UpcomingGymLead" },
+      "android": { "status": "done", "sig": "upcomingGymLead" }
+    },
+    {
+      "id": "elite4_sequence", "area": "Ajudas em batalha", "name": "Sequencia da Elite 4 (proximo treinador)",
+      "mac": { "status": "done", "sig": "advanceToNextGroup" },
+      "windows": { "status": "done", "sig": "AddEliteEndControls" },
+      "android": { "status": "done", "sig": "advanceToNextGroup" }
+    },
+    {
+      "id": "colorizer", "area": "Ajudas em batalha", "name": "Colorizacao de texto de batalha",
+      "mac": { "status": "done", "sig": "struct Colorizer" },
+      "windows": { "status": "done", "sig": "Colorizer" },
+      "android": { "status": "done", "sig": "class Colorizer" }
+    },
+    {
+      "id": "colorizer_choice_labels", "area": "Ajudas em batalha", "name": "Colorir tambem os rotulos das opcoes de escolha",
+      "mac": { "status": "done", "manual": true },
+      "android": { "status": "done", "manual": true },
+      "windows": { "status": "done", "sig": "_colorizer.Apply(labelTb" }
+    },
+
+    {
+      "id": "update_checker", "area": "Infra/Meta", "name": "Verificador de atualizacao",
+      "mac": { "status": "done", "sig": "enum UpdateChecker" },
+      "windows": { "status": "done", "sig": "UpdateChecker" },
+      "android": { "status": "done", "sig": "UpdateChecker" }
+    },
+    {
+      "id": "forced_update", "area": "Infra/Meta", "name": "Atualizacao obrigatoria (bloqueia o app)",
+      "mac": { "status": "done", "sig": "forcedUpdate" },
+      "windows": { "status": "done", "sig": "CheckForcedUpdateAsync" },
+      "android": { "status": "done", "sig": "UpdateBlockScreen" }
+    },
+    {
+      "id": "feedback", "area": "Infra/Meta", "name": "Envio de feedback (Funcionou / Nao funcionou)",
+      "mac": { "status": "done", "sig": "FeedbackClient" },
+      "windows": { "status": "done", "sig": "FeedbackClient" },
+      "android": { "status": "done", "sig": "FeedbackClient" }
+    },
+    {
+      "id": "gym_run_feedback", "area": "Infra/Meta", "name": "Feedback 'funcionou/nao' tambem no Gym Rerun, nao so na Elite 4 (#68)",
+      "mac": { "status": "done", "sig": "FeedbackControls" },
+      "windows": { "status": "done", "sig": "FeedbackControls" },
+      "android": { "status": "done", "sig": "FeedbackControls" }
+    },
+    {
+      "id": "overlay_howto_guide", "area": "Overlay/Janela", "name": "Guia 'Como ler o overlay' na ajuda + aviso da 5a vez (#73). Auto-abre 1x no Mac/Windows; no Android abre so pelo '?' (nao auto-exibe aviso da Elite 4 no celular)",
+      "mac": { "status": "done", "sig": "legendHowToTitle" },
+      "windows": { "status": "done", "sig": "LegendHowToTitle" },
+      "android": { "status": "done", "sig": "LegendHowToTitle" }
+    },
+    {
+      "id": "feedback_team", "area": "Infra/Meta", "name": "Feedback registra o TIME ativo (coluna 'time' na planilha; desambigua o node id)",
+      "mac": { "status": "done", "sig": "team: appModel.activeTeamId" },
+      "windows": { "status": "done", "sig": "_model.ActiveTeamId, engine.TopName" },
+      "android": { "status": "done", "sig": "team = teamId, trainer" }
+    },
+    {
+      "id": "credits_footer", "area": "Infra/Meta", "name": "Rodape de creditos",
+      "mac": { "status": "done", "sig": "struct CreditsFooter" },
+      "windows": { "status": "done", "sig": "CreditsFooter" },
+      "android": { "status": "done", "sig": "CreditsFooter" }
+    },
+    {
+      "id": "elite4_warning_shown", "area": "Infra/Meta", "name": "Exibir o aviso 'a partir da 5a vez' na Elite 4",
+      "mac": { "status": "done", "sig": "solve.warning" },
+      "windows": { "status": "done", "sig": "WarningBanner" },
+      "android": { "status": "excluded", "reason": "Regra fixa do usuario (23/06): esconder o aviso da 5a vez da Elite 4 no mobile. Ver memoria elite4-warning-hidden-mobile. O codigo tem WarningBanner mas so para modos !elite4_." }
+    },
+    {
+      "id": "prefs_persistence", "area": "Infra/Meta", "name": "Persistencia de preferencias (time/idioma/opacidade/...)",
+      "mac": { "status": "done", "sig": "enum TeamPrefs" },
+      "windows": { "status": "done", "sig": "TeamPrefs" },
+      "android": { "status": "done", "sig": "team_prefs" }
+    },
+    {
+      "id": "pokepaste_button", "area": "Infra/Meta", "name": "Botao de Pokepaste por time/modo",
+      "mac": { "status": "done", "sig": "pasteButton" },
+      "windows": { "status": "done", "sig": "PasteHelp" },
+      "android": { "status": "done", "sig": "PasteHelp" }
+    },
+    {
+      "id": "strategy_source", "area": "Infra/Meta", "name": "Fonte da estrategia (Doc/Video/Pokeking)",
+      "mac": { "status": "done", "sig": "enum TeamSource" },
+      "windows": { "status": "done", "sig": "TeamSource" },
+      "android": { "status": "done", "sig": "TeamSource" }
+    },
+    {
+      "id": "selftest_ci", "area": "Infra/Meta", "name": "Self-test headless de build (rede de seguranca)",
+      "mac": { "status": "done", "sig": "--selftest" },
+      "windows": { "status": "na", "reason": "Rede de seguranca de build especifica do Mac (SwiftPM headless); os builds diferem por plataforma e o validador de paridade ja cobre parte." },
+      "android": { "status": "na", "reason": "Rede de seguranca de build especifica do Mac (SwiftPM headless); os builds diferem por plataforma e o validador de paridade ja cobre parte." }
+    },
+
+    {
+      "id": "android_open_here", "area": "Exclusivos de plataforma", "name": "Abrir aqui (sem overlay) [Android]",
+      "android": { "status": "done", "sig": "onOpenHere" },
+      "mac": { "status": "na", "reason": "Desktop ja roda em janela normal; nao ha 'modo sem overlay' a oferecer." },
+      "windows": { "status": "na", "reason": "Desktop ja roda em janela normal; nao ha 'modo sem overlay' a oferecer." }
+    },
+    {
+      "id": "android_foreground_service", "area": "Exclusivos de plataforma", "name": "Servico em primeiro plano + notificacao [Android]",
+      "android": { "status": "done", "sig": "startInForeground" },
+      "mac": { "status": "na", "reason": "Desktop nao precisa de foreground service." },
+      "windows": { "status": "na", "reason": "Desktop nao precisa de foreground service." }
+    },
+    {
+      "id": "android_notification_perm", "area": "Exclusivos de plataforma", "name": "Permissao de notificacao [Android]",
+      "android": { "status": "done", "sig": "POST_NOTIFICATIONS" },
+      "mac": { "status": "na", "reason": "Nao se aplica ao desktop." },
+      "windows": { "status": "na", "reason": "Nao se aplica ao desktop." }
+    },
+    {
+      "id": "android_region_starters_icon", "area": "Exclusivos de plataforma", "name": "Icone de regiao com 3 iniciais [Android]",
+      "android": { "status": "done", "sig": "RegionStartersIcon" },
+      "mac": { "status": "na", "reason": "Desktop usa imagens de regiao (Resources/regions)." },
+      "windows": { "status": "na", "reason": "Desktop usa imagens de regiao." }
+    },
+    {
+      "id": "android_width_reactive_layout", "area": "Exclusivos de plataforma", "name": "Layout reativo a largura (colunas) [Android]",
+      "android": { "status": "done", "sig": "gridColumns" },
+      "mac": { "status": "na", "reason": "Desktop redimensiona a janela livremente." },
+      "windows": { "status": "na", "reason": "Desktop redimensiona a janela livremente." }
+    },
+    {
+      "id": "android_search_focus_toggle", "area": "Exclusivos de plataforma", "name": "Foco de janela so durante a busca [Android]",
+      "android": { "status": "done", "sig": "setSearchFocused" },
+      "mac": { "status": "na", "reason": "Gestao de foco especifica do overlay Android." },
+      "windows": { "status": "na", "reason": "Gestao de foco especifica do overlay Android." }
+    }
+  ]
+}

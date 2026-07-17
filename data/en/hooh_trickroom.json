@@ -1,0 +1,129 @@
+{
+ "id": "hooh_trickroom",
+ "title": "Ho-Oh (rematch)",
+ "revealAll": true,
+ "lead": "Trick Room team (Lewis Nield): Chandelure, Rotom-Heat and Lunatone. Boost Rotom-Heat with Nasty Plot, copy the boost to Lunatone (Psych Up) and hammer Ho-Oh with Power Gem (Rock = 4×) under Trick Room. TRIPLE battle.",
+ "pokepaste": "https://pokepast.es/bf35cfea0d1b7356",
+ "homePrompt": "Ho-Oh (rematch) · Trick Room",
+ "legend": [
+  {
+   "term": "Chandelure (Modest) @ Spell Tag",
+   "meaning": "EV 252 Def / 58 SpA / 200 SpD · moves: Safeguard, Shadow Ball, Protect, Psych Up."
+  },
+  {
+   "term": "Rotom-Heat (Quiet) @ Soft Sand",
+   "meaning": "EV 6 HP / 252 SpA / 252 SpD · moves: HP Ground, Thunderbolt, Light Screen, Nasty Plot."
+  },
+  {
+   "term": "Lunatone (Quiet) @ Hard Stone",
+   "meaning": "EV 92 HP / 252 Def / 166 SpA · moves: Trick Room, Power Gem, Protect, Psych Up."
+  }
+ ],
+ "palette": [
+  {
+   "name": "Chandelure",
+   "color": "#A970FF",
+   "moves": ["Safeguard", "Shadow Ball"]
+  },
+  {
+   "name": "Rotom-Heat",
+   "color": "#FF7A4D",
+   "moves": ["Nasty Plot", "Thunderbolt", "HP Ground", "Light Screen"]
+  },
+  {
+   "name": "Lunatone",
+   "color": "#5BC0EB",
+   "moves": ["Trick Room", "Power Gem"]
+  },
+  {
+   "name": "Ho-Oh",
+   "color": "#F2C14E",
+   "moves": []
+  }
+ ],
+ "entryPoints": [
+  {
+   "label": "Ho-Oh",
+   "nodeId": "f1"
+  }
+ ],
+ "nodes": {
+  "f1": {
+   "id": "f1",
+   "title": "Ho-Oh · 1st form",
+   "steps": [
+    {
+     "id": "f1_intro",
+     "kind": "note",
+     "text": "TRIPLE battle (3 vs several). Ho-Oh's allies are the 3 legendary beasts: Suicune, Entei and Raikou. 'Swap position' = a triple-battle maneuver: Chandelure swaps places with Lunatone on the field (NOT a switch to the bench)."
+    },
+    {
+     "id": "t1",
+     "kind": "action",
+     "text": "T1: Chandelure: Safeguard (shields the team from status) + Rotom-Heat: Nasty Plot + Lunatone: {Protect|Lunatone}."
+    },
+    {
+     "id": "t2",
+     "kind": "action",
+     "text": "T2: Chandelure: {Protect|Chandelure} + Rotom-Heat: Nasty Plot (reaches +4 Sp. Atk) + Lunatone: Trick Room (slower mons now move first)."
+    },
+    {
+     "id": "t3",
+     "kind": "action",
+     "text": "T3: Chandelure: swap position with Lunatone + Rotom-Heat: knock out one of the beasts (Thunderbolt on Suicune, HP Ground on Entei/Raikou) + Lunatone: {Psych Up|Lunatone} on Rotom-Heat (copies the +4 Sp. Atk)."
+    },
+    {
+     "id": "t4",
+     "kind": "action",
+     "text": "T4: Chandelure: swap position with Lunatone + Rotom-Heat: knock out another beast + Lunatone: Power Gem on Ho-Oh (Rock = 4× damage)."
+    },
+    {
+     "id": "t5",
+     "kind": "action",
+     "text": "T5: Chandelure: swap position with Lunatone + Rotom-Heat: Thunderbolt on Ho-Oh + Lunatone: Power Gem on Ho-Oh."
+    },
+    {
+     "id": "t6",
+     "kind": "action",
+     "text": "T6: Chandelure: swap position with Lunatone + Rotom-Heat: knock out the last beast + Lunatone: Power Gem on Ho-Oh."
+    },
+    {
+     "id": "t7",
+     "kind": "action",
+     "text": "T7: Chandelure: swap position with Lunatone + Rotom-Heat: Light Screen (cushions the special damage before the rebirth) + Lunatone: Trick Room (refresh — lasts 5 turns)."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "When the 1st form falls:",
+    "options": [
+     {
+      "label": "Phase 2 · Shiny Ho-Oh (Radiant)",
+      "nodeId": "f2"
+     }
+    ]
+   }
+  },
+  "f2": {
+   "id": "f2",
+   "title": "Radiant Ho-Oh · 2nd form",
+   "steps": [
+    {
+     "id": "f2_note",
+     "kind": "note",
+     "text": "The Radiant (shiny) Ho-Oh REVIVES with its stats reset — and your boosts also go back to normal. That's why Rotom-Heat uses Nasty Plot again and Chandelure copies it with Psych Up. The Trick Room refreshed on T7 is still active."
+    },
+    {
+     "id": "f2_t1",
+     "kind": "action",
+     "text": "T1 (rebirth): Chandelure: {Psych Up|Chandelure} on Rotom-Heat (copies the boost) + Rotom-Heat: Nasty Plot + Lunatone: Power Gem on Ho-Oh."
+    },
+    {
+     "id": "f2_t2",
+     "kind": "action",
+     "text": "T2+: Chandelure: Shadow Ball + Rotom-Heat: Thunderbolt + Lunatone: Power Gem — repeat until Ho-Oh faints."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- WinForms habilitado SÓ para o NotifyIcon (balloon tip) do sistema de Cooldown/Alarme (#33).
+         Combinação UseWPF + UseWindowsForms é suportada e não puxa dependência externa. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PrestreloAjuda</RootNamespace>
+    <AssemblyName>FarmOracleMMO</AssemblyName>
+    <!-- Versão sincronizada entre Mac/Windows/Android pela fonte única /VERSION.
+         Use scripts/bump-version.* para alterar (não edite à mão). -->
+    <Version>1.7.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- Se existir Assets\masterball.ico, ele vira o ícone do .exe. -->
+    <ApplicationIcon Condition="Exists('Assets\masterball.ico')">Assets\masterball.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!-- Dados de jogo COMPARTILHADOS (fonte única em /data) copiados para o output.
+       Não duplicamos no código-fonte do Windows; o build puxa de ../../data. -->
+  <ItemGroup>
+    <Content Include="..\..\data\**\*.*">
+      <Link>data\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Com UseWindowsForms=true + ImplicitUsings, o SDK adiciona usings globais de
+       System.Windows.Forms e System.Drawing. Isso colidiria com os tipos WPF já usados no projeto
+       (Color, Brush, FontFamily, Point…). Removemos esses usings globais; o único arquivo que precisa
+       de WinForms (CooldownNotifications) referencia via alias explícito. -->
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\masterball.png" />
+  </ItemGroup>
+
+</Project>

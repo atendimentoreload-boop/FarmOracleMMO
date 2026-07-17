@@ -1,0 +1,1137 @@
+{
+ "id": "red",
+ "title": "Red (Pós Choice Nerf)",
+ "lead": "Sempre lidere com o Infernape!",
+ "pokepaste": "https://pokepast.es/8a207ad044e70c5a",
+ "doc": "https://docs.google.com/document/d/1dXaJNGqA2xjUACgcCshcIktBlCjcZgTT839O-Q1pGoA/edit",
+ "homePrompt": "O que o Red colocou em campo?",
+ "legend": [
+  {
+   "term": "Sacrificar",
+   "meaning": "Deixe o Red nocautear seu Pokémon de propósito (ex.: use um golpe como Swords Dance e leve o ataque)."
+  },
+  {
+   "term": "Trocar",
+   "meaning": "Troque de Pokémon manualmente, ou escolhendo o destino de um Volt Switch/U-Turn."
+  },
+  {
+   "term": "Coloque",
+   "meaning": "Envie o Pokémon para o campo depois de um nocaute."
+  },
+  {
+   "term": "Finalizar",
+   "meaning": "Varra o restante do time do Red com o Pokémon preparado."
+  },
+  {
+   "term": "Golpes em inglês",
+   "meaning": "Nomes de golpes e Pokémon ficam em inglês para baterem com a tela do PokeMMO."
+  }
+ ],
+ "entryPoints": [
+  {
+   "label": "Blastoise",
+   "nodeId": "blastoise"
+  },
+  {
+   "label": "Charizard",
+   "nodeId": "charizard"
+  },
+  {
+   "label": "Emboar",
+   "nodeId": "emboar"
+  },
+  {
+   "label": "Espeon",
+   "nodeId": "espeon"
+  },
+  {
+   "label": "Excadrill",
+   "nodeId": "excadrill"
+  },
+  {
+   "label": "Gliscor",
+   "nodeId": "gliscor"
+  },
+  {
+   "label": "Hydreigon",
+   "nodeId": "hydreigon"
+  },
+  {
+   "label": "Pikachu",
+   "nodeId": "pikachu"
+  },
+  {
+   "label": "Samurott",
+   "nodeId": "samurott"
+  },
+  {
+   "label": "Serperior",
+   "nodeId": "serperior"
+  },
+  {
+   "label": "Snorlax",
+   "nodeId": "snorlax"
+  },
+  {
+   "label": "Staraptor",
+   "nodeId": "staraptor"
+  },
+  {
+   "label": "Swampert",
+   "nodeId": "swampert"
+  },
+  {
+   "label": "Venusaur",
+   "nodeId": "venusaur"
+  }
+ ],
+ "nodes": {
+  "pikachu": {
+   "id": "pikachu",
+   "title": "Pikachu",
+   "steps": [
+    {
+     "id": "pika_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O que o Red colocou em campo?",
+    "options": [
+     {
+      "label": "Venusaur entrou",
+      "nodeId": "pika_venusaur"
+     },
+     {
+      "label": "Charizard entrou",
+      "nodeId": "pika_charizard"
+     },
+     {
+      "label": "Espeon entrou",
+      "nodeId": "espeon"
+     },
+     {
+      "label": "Samurott entrou",
+      "nodeId": "samurott"
+     }
+    ]
+   }
+  },
+  "pika_venusaur": {
+   "id": "pika_venusaur",
+   "title": "Pikachu → Venusaur",
+   "steps": [
+    {
+     "id": "pikave_1",
+     "kind": "action",
+     "text": "Troque para o Weavile e sacrifique-o (deixe o Red nocauteá-lo)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "pika_charizard": {
+   "id": "pika_charizard",
+   "title": "Pikachu → Charizard",
+   "steps": [
+    {
+     "id": "pikach_1",
+     "kind": "action",
+     "text": "Use Close Combat e sacrifique o Infernape"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "charizard_post_sack"
+   }
+  },
+  "venusaur": {
+   "id": "venusaur",
+   "title": "Venusaur",
+   "steps": [
+    {
+     "id": "venu_1",
+     "kind": "action",
+     "text": "Use Encore e sacrifique o Infernape (deixe o Red nocauteá-lo)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "charizard": {
+   "id": "charizard",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "char_1",
+     "kind": "action",
+     "text": "Use Encore e sacrifique o Infernape"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "charizard_post_sack"
+   }
+  },
+  "charizard_post_sack": {
+   "id": "charizard_post_sack",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "charps_1",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "charps_2",
+     "kind": "action",
+     "text": "Use Volt Switch"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O que aconteceu com o Charizard?",
+    "options": [
+     {
+      "label": "Charizard morreu",
+      "nodeId": "charizard_dead"
+     },
+     {
+      "label": "Charizard trocou para o Snorlax",
+      "nodeId": "snorlax"
+     }
+    ]
+   }
+  },
+  "charizard_dead": {
+   "id": "charizard_dead",
+   "title": "Finalizar com o Bisharp",
+   "steps": [
+    {
+     "id": "chard_1",
+     "kind": "action",
+     "text": "Coloque o Breloom e sacrifique-o"
+    },
+    {
+     "id": "chard_2",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "chard_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "chard_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Bisharp para finalizar",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "espeon": {
+   "id": "espeon",
+   "title": "Espeon",
+   "steps": [
+    {
+     "id": "esp_1",
+     "kind": "action",
+     "text": "Troque para o Bisharp"
+    },
+    {
+     "id": "esp_2",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "esp_3",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Bisharp para finalizar",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "blastoise": {
+   "id": "blastoise",
+   "title": "Blastoise",
+   "steps": [
+    {
+     "id": "blas_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "blas_2",
+     "kind": "action",
+     "text": "Coloque o Breloom (após o nocaute)"
+    },
+    {
+     "id": "blas_3",
+     "kind": "action",
+     "text": "Troque para o Jolteon"
+    },
+    {
+     "id": "blas_4",
+     "kind": "action",
+     "text": "Use Volt Switch"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O que aconteceu com o Charizard?",
+    "options": [
+     {
+      "label": "Charizard morreu",
+      "nodeId": "charizard_dead"
+     },
+     {
+      "label": "Charizard trocou para o Snorlax",
+      "nodeId": "snorlax"
+     }
+    ]
+   }
+  },
+  "snorlax": {
+   "id": "snorlax",
+   "title": "Snorlax",
+   "steps": [
+    {
+     "id": "snor_1",
+     "kind": "action",
+     "text": "Troque para o Breloom"
+    },
+    {
+     "id": "snor_2",
+     "kind": "action",
+     "text": "Use Brick Break"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O Snorlax sobreviveu ao Brick Break?",
+    "options": [
+     {
+      "label": "Não, o Snorlax morreu",
+      "nodeId": "snorlax_dead"
+     },
+     {
+      "label": "Sim, o Snorlax está vivo",
+      "nodeId": "snorlax_alive"
+     }
+    ]
+   }
+  },
+  "snorlax_dead": {
+   "id": "snorlax_dead",
+   "title": "Snorlax morto",
+   "steps": [
+    {
+     "id": "snord_1",
+     "kind": "action",
+     "text": "Sacrifique o Breloom"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "snorlax_alive": {
+   "id": "snorlax_alive",
+   "title": "Snorlax vivo",
+   "steps": [
+    {
+     "id": "snora_1",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "snora_2",
+     "kind": "action",
+     "text": "Use Low Kick"
+    },
+    {
+     "id": "snora_3",
+     "kind": "action",
+     "text": "Troque para o Weavile e sacrifique-o"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "jolteon_yawn_branch": {
+   "id": "jolteon_yawn_branch",
+   "title": "Jolteon: Yawn",
+   "steps": [
+    {
+     "id": "jyb_1",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "jyb_2",
+     "kind": "action",
+     "text": "Use Yawn"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O Jolteon sobreviveu?",
+    "options": [
+     {
+      "label": "Não, o Jolteon morreu",
+      "nodeId": "jolteon_dead_bisharp"
+     },
+     {
+      "label": "Sim, o Jolteon está vivo",
+      "nodeId": "jolteon_alive_bisharp"
+     }
+    ]
+   }
+  },
+  "jolteon_dead_bisharp": {
+   "id": "jolteon_dead_bisharp",
+   "title": "Finalizar com o Bisharp",
+   "steps": [
+    {
+     "id": "jdb_1",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "jdb_2",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "jdb_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "jdb_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Bisharp para finalizar",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "jolteon_alive_bisharp": {
+   "id": "jolteon_alive_bisharp",
+   "title": "Finalizar com o Bisharp",
+   "steps": [
+    {
+     "id": "jab_1",
+     "kind": "action",
+     "text": "Use Yawn e sacrifique o Jolteon"
+    },
+    {
+     "id": "jab_2",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "jab_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "jab_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Bisharp para finalizar",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "emboar": {
+   "id": "emboar",
+   "title": "Emboar (Roar)",
+   "steps": [
+    {
+     "id": "emb_0",
+     "kind": "note",
+     "text": "O Roar do Emboar te força a trocar para um Pokémon aleatório."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Para qual Pokémon o Roar te forçou a trocar?",
+    "options": [
+     {
+      "label": "Para o Jolteon",
+      "nodeId": "emboar_jolteon"
+     },
+     {
+      "label": "Para qualquer outro",
+      "nodeId": "emboar_other"
+     }
+    ]
+   }
+  },
+  "emboar_jolteon": {
+   "id": "emboar_jolteon",
+   "title": "Emboar → Jolteon",
+   "steps": [
+    {
+     "id": "embj_1",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "embj_2",
+     "kind": "note",
+     "text": "Se o Jolteon ainda estiver vivo: use Yawn e sacrifique-o, e pule o Protect a seguir."
+    },
+    {
+     "id": "embj_3",
+     "kind": "action",
+     "text": "Coloque o Breloom"
+    },
+    {
+     "id": "embj_4",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "embj_5",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "embj_6",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Breloom para finalizar",
+      "rows": [
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Samurott"
+        ]
+       },
+       {
+        "move": "Mach Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "emboar_other": {
+   "id": "emboar_other",
+   "title": "Emboar → outro",
+   "steps": [
+    {
+     "id": "embo_1",
+     "kind": "action",
+     "text": "Troque para o Weavile e sacrifique-o"
+    },
+    {
+     "id": "embo_2",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "embo_3",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "embo_4",
+     "kind": "note",
+     "text": "Se o Jolteon ainda estiver vivo: use Yawn e sacrifique-o, e pule o Protect a seguir."
+    },
+    {
+     "id": "embo_5",
+     "kind": "action",
+     "text": "Coloque o Breloom"
+    },
+    {
+     "id": "embo_6",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "embo_7",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "embo_8",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Breloom para finalizar",
+      "rows": [
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Samurott"
+        ]
+       },
+       {
+        "move": "Mach Punch",
+        "targets": [
+         "todos os outros"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "serperior": {
+   "id": "serperior",
+   "title": "Serperior",
+   "steps": [
+    {
+     "id": "serp_1",
+     "kind": "action",
+     "text": "Use U-Turn e troque para o Bisharp"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "O que o Serperior fez?",
+    "options": [
+     {
+      "label": "Acertou o Leaf Storm",
+      "nodeId": "serperior_hit"
+     },
+     {
+      "label": "Errou o Leaf Storm ou usou Leech Seed",
+      "nodeId": "serperior_miss"
+     }
+    ]
+   }
+  },
+  "serperior_hit": {
+   "id": "serperior_hit",
+   "title": "Serperior (acertou)",
+   "steps": [
+    {
+     "id": "serph_1",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "serph_2",
+     "kind": "action",
+     "text": "Coloque o Infernape"
+    },
+    {
+     "id": "serph_3",
+     "kind": "action",
+     "text": "Use U-Turn e troque para o Breloom"
+    },
+    {
+     "id": "serph_4",
+     "kind": "note",
+     "text": "O Emboar vai entrar e usar Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "serperior_miss": {
+   "id": "serperior_miss",
+   "title": "Serperior (errou)",
+   "steps": [
+    {
+     "id": "serpm_1",
+     "kind": "action",
+     "text": "Use Sucker Punch duas vezes"
+    },
+    {
+     "id": "serpm_2",
+     "kind": "note",
+     "text": "O Emboar vai entrar e usar Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "hydreigon": {
+   "id": "hydreigon",
+   "title": "Hydreigon",
+   "steps": [
+    {
+     "id": "hyd_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "hyd_2",
+     "kind": "note",
+     "text": "O Samurott vai entrar."
+    },
+    {
+     "id": "hyd_3",
+     "kind": "action",
+     "text": "Use Close Combat e sacrifique o Infernape"
+    },
+    {
+     "id": "hyd_4",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "hyd_5",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "hyd_6",
+     "kind": "note",
+     "text": "O Emboar vai entrar e usar Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "excadrill": {
+   "id": "excadrill",
+   "title": "Excadrill",
+   "steps": [
+    {
+     "id": "exc_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "exc_2",
+     "kind": "note",
+     "text": "O Samurott vai entrar."
+    },
+    {
+     "id": "exc_3",
+     "kind": "action",
+     "text": "Use Close Combat e sacrifique o Infernape"
+    },
+    {
+     "id": "exc_4",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "exc_5",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "exc_6",
+     "kind": "note",
+     "text": "O Emboar vai entrar e usar Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "samurott": {
+   "id": "samurott",
+   "title": "Samurott",
+   "steps": [
+    {
+     "id": "sam_1",
+     "kind": "action",
+     "text": "Use Close Combat e sacrifique o Infernape"
+    },
+    {
+     "id": "sam_2",
+     "kind": "action",
+     "text": "Coloque o Bisharp"
+    },
+    {
+     "id": "sam_3",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "sam_4",
+     "kind": "note",
+     "text": "O Emboar vai entrar e usar Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "staraptor": {
+   "id": "staraptor",
+   "title": "Staraptor (Whirlwind)",
+   "steps": [
+    {
+     "id": "star_0",
+     "kind": "note",
+     "text": "O Whirlwind do Staraptor te força a trocar para um Pokémon aleatório."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Para qual Pokémon o Whirlwind te forçou a trocar?",
+    "options": [
+     {
+      "label": "Para o Jolteon",
+      "nodeId": "staraptor_jolteon"
+     },
+     {
+      "label": "Para qualquer outro",
+      "nodeId": "staraptor_other"
+     }
+    ]
+   }
+  },
+  "staraptor_jolteon": {
+   "id": "staraptor_jolteon",
+   "title": "Staraptor → Jolteon",
+   "steps": [
+    {
+     "id": "starj_1",
+     "kind": "action",
+     "text": "Use Volt Switch e troque para o Bisharp"
+    },
+    {
+     "id": "starj_2",
+     "kind": "action",
+     "text": "Use Sucker Punch e sacrifique o Bisharp"
+    },
+    {
+     "id": "starj_3",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "starj_4",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "starj_5",
+     "kind": "action",
+     "text": "Coloque o Weavile"
+    },
+    {
+     "id": "starj_6",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "starj_7",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "starj_8",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Weavile para finalizar",
+      "rows": [
+       {
+        "move": "Icicle Spear",
+        "targets": [
+         "Pikachu",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Infernape",
+         "Empoleon"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "staraptor_other": {
+   "id": "staraptor_other",
+   "title": "Staraptor → outro",
+   "steps": [
+    {
+     "id": "staro_1",
+     "kind": "action",
+     "text": "Troque o Infernape e sacrifique-o (use Encore se ele estiver vivo)"
+    },
+    {
+     "id": "staro_2",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "staro_3",
+     "kind": "action",
+     "text": "Use Volt Switch e troque para o Bisharp"
+    },
+    {
+     "id": "staro_4",
+     "kind": "action",
+     "text": "Use Sucker Punch e sacrifique o Bisharp"
+    },
+    {
+     "id": "staro_5",
+     "kind": "action",
+     "text": "Coloque o Jolteon"
+    },
+    {
+     "id": "staro_6",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "staro_7",
+     "kind": "action",
+     "text": "Coloque o Weavile"
+    },
+    {
+     "id": "staro_8",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "staro_9",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "staro_10",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Weavile para finalizar",
+      "rows": [
+       {
+        "move": "Icicle Spear",
+        "targets": [
+         "Pikachu",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Infernape",
+         "Empoleon"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gliscor": {
+   "id": "gliscor",
+   "title": "Gliscor",
+   "steps": [
+    {
+     "id": "gli_1",
+     "kind": "action",
+     "text": "Troque para o Jolteon e sacrifique-o"
+    },
+    {
+     "id": "gli_2",
+     "kind": "action",
+     "text": "Coloque o Infernape"
+    },
+    {
+     "id": "gli_3",
+     "kind": "action",
+     "text": "Use Encore"
+    },
+    {
+     "id": "gli_4",
+     "kind": "action",
+     "text": "Coloque o Gliscor"
+    },
+    {
+     "id": "gli_5",
+     "kind": "action",
+     "text": "Use Swords Dance duas vezes"
+    },
+    {
+     "id": "gli_6",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "gli_7",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Gliscor para finalizar",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Gliscor",
+         "Feraligatr",
+         "Meganium"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Pikachu",
+         "Tyranitar",
+         "Typhlosion"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "swampert": {
+   "id": "swampert",
+   "title": "Swampert",
+   "steps": [
+    {
+     "id": "swa_1",
+     "kind": "action",
+     "text": "Troque para o Jolteon e sacrifique-o"
+    },
+    {
+     "id": "swa_2",
+     "kind": "action",
+     "text": "Coloque o Infernape"
+    },
+    {
+     "id": "swa_3",
+     "kind": "action",
+     "text": "Use Encore"
+    },
+    {
+     "id": "swa_4",
+     "kind": "action",
+     "text": "Coloque o Gliscor"
+    },
+    {
+     "id": "swa_5",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "swa_6",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "swa_7",
+     "kind": "conditional",
+     "table": {
+      "title": "Golpe do Gliscor para finalizar",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Swampert",
+         "Salamence",
+         "Sceptile"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Pikachu",
+         "Blaziken",
+         "Metagross"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  }
+ }
+}

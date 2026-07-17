@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# builds
+mac/.build/
+windows/bin/
+windows/obj/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# assinatura (NUNCA versionar no repo público)
+*.keystore
+*.jks
+key.properties
+
+# dumps crus do Pokeking (dados de terceiros — não republicar)
+tools/pokeking_full.json
+tools/pokeking_teams_raw.json
+tools/_raw_*.json
+
+# python
+__pycache__/
+*.pyc
+
+# dumps por time também ficam fora
+tools/teams/*/pokeking_full.json

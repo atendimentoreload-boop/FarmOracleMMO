@@ -1,0 +1,489 @@
+{
+ "id": "red_ribbons",
+ "title": "Red — Karu (Ribbon)",
+ "lead": "Lead your party with Crobat — and always bring a 6th 'sack' mon (≥ level 50) for the Legend Ribbon.",
+ "homePrompt": "What did Red lead with?",
+ "legend": [
+  {
+   "term": "T1M (Turn 1 Move)",
+   "meaning": "Every one of Red's Pokémon uses a free move WHEN it enters (a buff, debuff, disruptor, or weather). Expect it."
+  },
+  {
+   "term": "Sack",
+   "meaning": "Let Red knock out on purpose a mon that has done its job, to bring the next one in safely. The 6th 'sack' mon (≥ level 50) also earns the Legend Ribbon — even if it fainted."
+  },
+  {
+   "term": "U-Turn / Volt Switch",
+   "meaning": "Pivot moves: leave safely and bring the next mon in (also escape Block)."
+  },
+  {
+   "term": "Moves in English",
+   "meaning": "Move and Pokémon names stay in English to match the PokeMMO screen."
+  }
+ ],
+ "doc": "https://docs.google.com/document/d/1s7jx7bImY0VFIcqlPa46bq7N7U5Agw5OY92Qm5s1d2w/edit",
+ "entryPoints": [
+  {
+   "label": "Blastoise",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Charizard",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Emboar",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Espeon",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Excadrill",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Gliscor",
+   "nodeId": "johto"
+  },
+  {
+   "label": "Hydreigon",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Pikachu",
+   "nodeId": "pikachu"
+  },
+  {
+   "label": "Samurott",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Serperior",
+   "nodeId": "unova"
+  },
+  {
+   "label": "Snorlax",
+   "nodeId": "kanto"
+  },
+  {
+   "label": "Staraptor",
+   "nodeId": "sinnoh"
+  },
+  {
+   "label": "Swampert",
+   "nodeId": "hoenn"
+  },
+  {
+   "label": "Venusaur",
+   "nodeId": "kanto"
+  }
+ ],
+ "nodes": {
+  "kanto": {
+   "id": "kanto",
+   "title": "Kanto",
+   "steps": [
+    {
+     "id": "kanto_lead",
+     "kind": "note",
+     "text": "You're here because Red opened with a Kanto mon (his lead is random). You lead with Crobat."
+    },
+    {
+     "id": "kanto_sack",
+     "kind": "note",
+     "text": "Sack rule: a mon that has done its job becomes a free-switch sacrifice to bring the next one in."
+    },
+    {
+     "id": "kanto_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Response to Red's on-field mon",
+      "rows": [
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Espeon"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Venusaur"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Brick Break",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Glaceon — HP Rock",
+        "targets": [
+         "Charizard"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Blastoise"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "kanto_venu",
+     "kind": "note",
+     "text": "Venusaur: in Sun it's not a safe switch; otherwise it is."
+    },
+    {
+     "id": "kanto_zard",
+     "kind": "note",
+     "text": "Charizard: no safe switch — Glaceon becomes sackable after. If Charizard is Red's LEAD: sack mon 6, bring Glaceon, then immediately pivot to Conkeldurr (Red almost always switches to Snorlax)."
+    },
+    {
+     "id": "kanto_safe",
+     "kind": "note",
+     "text": "Safety: Espeon, Charizard and Pikachu have no safe switch (the used mon becomes sackable). Snorlax is a safe switch. Blastoise: Ferrothorn's Power Whip only fails in crit range."
+    }
+   ],
+   "branch": null
+  },
+  "johto": {
+   "id": "johto",
+   "title": "Johto",
+   "steps": [
+    {
+     "id": "johto_lead",
+     "kind": "note",
+     "text": "Red opened with Gliscor — Johto's fixed lead (Stealth Rock). Answer with Glaceon (Ice Beam). You still keep Crobat as your party lead."
+    },
+    {
+     "id": "johto_sack",
+     "kind": "note",
+     "text": "Sack rule: a mon that has done its job becomes a free-switch sacrifice to bring the next one in."
+    },
+    {
+     "id": "johto_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Main order (Johto)",
+      "rows": [
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Gliscor"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Typhlosion"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Feraligatr"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Mach Punch",
+        "targets": [
+         "Tyranitar"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Meganium"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "johto_safe",
+     "kind": "note",
+     "text": "Safety: Gliscor = safe switch. Typhlosion and Feraligatr = no safe switch (they become sacks). Tyranitar = safe switch, and DO switch (Conkeldurr stays on the field)."
+    },
+    {
+     "id": "johto_end",
+     "kind": "note",
+     "text": "End of Johto: Pikachu will use Brick Break. Close it with priority — Conkeldurr Mach Punch + Glaceon Ice Shard; Ferrothorn's Iron Barbs covers low rolls. If Meganium lives, it uses Dragon Tail — react with priority/switch depending on who comes out."
+    }
+   ],
+   "branch": null
+  },
+  "hoenn": {
+   "id": "hoenn",
+   "title": "Hoenn",
+   "steps": [
+    {
+     "id": "hoenn_lead",
+     "kind": "note",
+     "text": "Red opened with Swampert — Hoenn's fixed lead (Stealth Rock). You still keep Crobat as your party lead."
+    },
+    {
+     "id": "hoenn_var",
+     "kind": "note",
+     "text": "Hoenn has the most variance — Red may send his mons out of the expected order."
+    },
+    {
+     "id": "hoenn_sack",
+     "kind": "note",
+     "text": "Sack rule: a mon that has done its job becomes a free-switch sacrifice to bring the next one in."
+    },
+    {
+     "id": "hoenn_ver",
+     "kind": "note",
+     "text": "There are 2 versions: (1) Swampert immediately switches to Metagross, (2) Swampert stays. If it switches, U-Turn on Crobat to react."
+    },
+    {
+     "id": "hoenn_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Response to Red's on-field mon (Hoenn)",
+      "rows": [
+       {
+        "move": "Ferrothorn — Spikes, depois Power Whip / Ferrothorn — Spikes, then Power Whip",
+        "targets": [
+         "Swampert"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Ice Punch",
+        "targets": [
+         "Salamence"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Blaziken"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake / Glaceon — Shadow Ball",
+        "targets": [
+         "Metagross"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison / U-Turn",
+        "targets": [
+         "Sceptile"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "hoenn_swampert",
+     "kind": "note",
+     "text": "Swampert: use Ferrothorn to set Spikes. Do NOT swap Spikes for Stealth Rock — it changes what Red sends and jams the fight. Only this team's Pikachu survives Cross Poison; Spikes fix that."
+    },
+    {
+     "id": "hoenn_meta",
+     "kind": "note",
+     "text": "Metagross: do NOT let Garchomp take damage from it before Blaziken is dead. Before Blaziken: Glaceon Shadow Ball → Garchomp EQ. After Blaziken: Garchomp EQ → Glaceon Shadow Ball."
+    },
+    {
+     "id": "hoenn_scept",
+     "kind": "note",
+     "text": "Sceptile: it must NOT deal damage to Crobat. If Metagross hasn't come out yet, use U-Turn; if Metagross is dead, use Cross Poison."
+    },
+    {
+     "id": "hoenn_blaz",
+     "kind": "note",
+     "text": "Blaziken: the AI uses HP Ice on Garchomp; Assault Vest makes it switch to Close Combat. Keep Garchomp healthy if Blaziken shows up 5th."
+    }
+   ],
+   "branch": null
+  },
+  "sinnoh": {
+   "id": "sinnoh",
+   "title": "Sinnoh",
+   "steps": [
+    {
+     "id": "sinnoh_lead",
+     "kind": "note",
+     "text": "Red opened with Staraptor — Sinnoh's fixed lead. It uses Whirlwind and forces a switch, but Red's own AI works around it, so this fight is one of the most consistent. You still keep Crobat as your party lead."
+    },
+    {
+     "id": "sinnoh_sack",
+     "kind": "note",
+     "text": "Sack rule: a mon that has done its job becomes a free-switch sacrifice to bring the next one in."
+    },
+    {
+     "id": "sinnoh_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Main order (Sinnoh)",
+      "rows": [
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Staraptor",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Infernape"
+        ]
+       },
+       {
+        "move": "Conkeldurr — Brick Break",
+        "targets": [
+         "Empoleon"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "sinnoh_safe",
+     "kind": "note",
+     "text": "Safety: only Empoleon is a safe switch (Conkeldurr). Everything else becomes a sack — including sacking Ferrothorn on Infernape and mon 6 on Staraptor. Lots of sacks: that's expected."
+    },
+    {
+     "id": "sinnoh_conk",
+     "kind": "note",
+     "text": "Conkeldurr is built for Empoleon: 1 Speed point faster and enough bulk to escape crit range — that's why you can sack so much and still take the KO without taking one back."
+    }
+   ],
+   "branch": null
+  },
+  "unova": {
+   "id": "unova",
+   "title": "Unova",
+   "steps": [
+    {
+     "id": "unova_lead",
+     "kind": "note",
+     "text": "You're here because Red opened with a Unova mon (random lead, like Kanto). You lead with Crobat."
+    },
+    {
+     "id": "unova_sack",
+     "kind": "note",
+     "text": "Sack rule: a mon that has done its job becomes a free-switch sacrifice to bring the next one in."
+    },
+    {
+     "id": "unova_t1",
+     "kind": "note",
+     "text": "Sack mon 6 on turn 1 if Red leads with Excadrill, Hydreigon or Emboar (and Garchomp hasn't been brought in)."
+    },
+    {
+     "id": "unova_tbl",
+     "kind": "conditional",
+     "table": {
+      "title": "Response to Red's on-field mon (Unova)",
+      "rows": [
+       {
+        "move": "Conkeldurr — Mach Punch",
+        "targets": [
+         "Excadrill"
+        ]
+       },
+       {
+        "move": "Crobat — Brave Bird",
+        "targets": [
+         "Serperior"
+        ]
+       },
+       {
+        "move": "Glaceon — Ice Beam",
+        "targets": [
+         "Hydreigon"
+        ]
+       },
+       {
+        "move": "Garchomp — Earthquake",
+        "targets": [
+         "Emboar"
+        ]
+       },
+       {
+        "move": "Crobat — Cross Poison",
+        "targets": [
+         "Pikachu"
+        ]
+       },
+       {
+        "move": "Ferrothorn — Power Whip",
+        "targets": [
+         "Samurott"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "unova_safe",
+     "kind": "note",
+     "text": "Safety: Serperior and Samurott = safe switch (mind Samurott's Block). Everything else becomes a sack."
+    },
+    {
+     "id": "unova_exca",
+     "kind": "note",
+     "text": "Excadrill: make sure it takes a sack-kill BEFORE Conkeldurr comes in — that way, after Mach Punch, it falls to Life Orb recoil."
+    },
+    {
+     "id": "unova_samu",
+     "kind": "note",
+     "text": "Samurott: Block can trap Crobat before it gets Pikachu + Serperior. Samurott has Ice Beam and comes out early if Crobat uses Cross Poison on Serperior — use Brave Bird to avoid it. Keep mon 6 ≥ level 50 (otherwise the AI switches weirdly)."
+    }
+   ],
+   "branch": null
+  },
+  "pikachu": {
+   "id": "pikachu",
+   "title": "Pikachu",
+   "steps": [
+    {
+     "id": "pikachu_1",
+     "kind": "action",
+     "text": "Answer Pikachu with Crobat (Cross Poison). Pikachu only leads in Kanto or Unova — the response is the same; identify the region by Red's next mons."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which region is it? (check Red's next mons)",
+    "options": [
+     {
+      "label": "Kanto (e.g. Venusaur, Snorlax, Charizard)",
+      "nodeId": "kanto"
+     },
+     {
+      "label": "Unova (e.g. Serperior, Emboar, Samurott)",
+      "nodeId": "unova"
+     }
+    ]
+   }
+  }
+ }
+}

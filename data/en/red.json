@@ -1,0 +1,1137 @@
+{
+ "id": "red",
+ "title": "Red (Post Choice Nerf)",
+ "lead": "Always lead with Infernape!",
+ "pokepaste": "https://pokepast.es/8a207ad044e70c5a",
+ "doc": "https://docs.google.com/document/d/1dXaJNGqA2xjUACgcCshcIktBlCjcZgTT839O-Q1pGoA/edit",
+ "homePrompt": "What did Red send out?",
+ "legend": [
+  {
+   "term": "Sacrifice",
+   "meaning": "Let Red KO your Pokémon on purpose (e.g. use a move like Swords Dance and take the hit)."
+  },
+  {
+   "term": "Switch",
+   "meaning": "Switch Pokémon manually, or by choosing the target of a Volt Switch/U-Turn."
+  },
+  {
+   "term": "Send out",
+   "meaning": "Send the Pokémon out to the field after a KO."
+  },
+  {
+   "term": "Finish",
+   "meaning": "Sweep the rest of Red's team with the set-up Pokémon."
+  },
+  {
+   "term": "Moves in English",
+   "meaning": "Move and Pokémon names stay in English to match the PokeMMO screen."
+  }
+ ],
+ "entryPoints": [
+  {
+   "label": "Blastoise",
+   "nodeId": "blastoise"
+  },
+  {
+   "label": "Charizard",
+   "nodeId": "charizard"
+  },
+  {
+   "label": "Emboar",
+   "nodeId": "emboar"
+  },
+  {
+   "label": "Espeon",
+   "nodeId": "espeon"
+  },
+  {
+   "label": "Excadrill",
+   "nodeId": "excadrill"
+  },
+  {
+   "label": "Gliscor",
+   "nodeId": "gliscor"
+  },
+  {
+   "label": "Hydreigon",
+   "nodeId": "hydreigon"
+  },
+  {
+   "label": "Pikachu",
+   "nodeId": "pikachu"
+  },
+  {
+   "label": "Samurott",
+   "nodeId": "samurott"
+  },
+  {
+   "label": "Serperior",
+   "nodeId": "serperior"
+  },
+  {
+   "label": "Snorlax",
+   "nodeId": "snorlax"
+  },
+  {
+   "label": "Staraptor",
+   "nodeId": "staraptor"
+  },
+  {
+   "label": "Swampert",
+   "nodeId": "swampert"
+  },
+  {
+   "label": "Venusaur",
+   "nodeId": "venusaur"
+  }
+ ],
+ "nodes": {
+  "pikachu": {
+   "id": "pikachu",
+   "title": "Pikachu",
+   "steps": [
+    {
+     "id": "pika_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What did Red send out?",
+    "options": [
+     {
+      "label": "Venusaur came in",
+      "nodeId": "pika_venusaur"
+     },
+     {
+      "label": "Charizard came in",
+      "nodeId": "pika_charizard"
+     },
+     {
+      "label": "Espeon came in",
+      "nodeId": "espeon"
+     },
+     {
+      "label": "Samurott came in",
+      "nodeId": "samurott"
+     }
+    ]
+   }
+  },
+  "pika_venusaur": {
+   "id": "pika_venusaur",
+   "title": "Pikachu → Venusaur",
+   "steps": [
+    {
+     "id": "pikave_1",
+     "kind": "action",
+     "text": "Switch to Weavile and sacrifice it (let Red KO it)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "pika_charizard": {
+   "id": "pika_charizard",
+   "title": "Pikachu → Charizard",
+   "steps": [
+    {
+     "id": "pikach_1",
+     "kind": "action",
+     "text": "Use Close Combat and sacrifice Infernape"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "charizard_post_sack"
+   }
+  },
+  "venusaur": {
+   "id": "venusaur",
+   "title": "Venusaur",
+   "steps": [
+    {
+     "id": "venu_1",
+     "kind": "action",
+     "text": "Use Encore and sacrifice Infernape (let Red KO it)"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "charizard": {
+   "id": "charizard",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "char_1",
+     "kind": "action",
+     "text": "Use Encore and sacrifice Infernape"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "charizard_post_sack"
+   }
+  },
+  "charizard_post_sack": {
+   "id": "charizard_post_sack",
+   "title": "Charizard",
+   "steps": [
+    {
+     "id": "charps_1",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "charps_2",
+     "kind": "action",
+     "text": "Use Volt Switch"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What happened to Charizard?",
+    "options": [
+     {
+      "label": "Charizard fainted",
+      "nodeId": "charizard_dead"
+     },
+     {
+      "label": "Charizard switched to Snorlax",
+      "nodeId": "snorlax"
+     }
+    ]
+   }
+  },
+  "charizard_dead": {
+   "id": "charizard_dead",
+   "title": "Finish with Bisharp",
+   "steps": [
+    {
+     "id": "chard_1",
+     "kind": "action",
+     "text": "Send out Breloom and sacrifice it"
+    },
+    {
+     "id": "chard_2",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "chard_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "chard_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Bisharp's move to finish",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "espeon": {
+   "id": "espeon",
+   "title": "Espeon",
+   "steps": [
+    {
+     "id": "esp_1",
+     "kind": "action",
+     "text": "Switch to Bisharp"
+    },
+    {
+     "id": "esp_2",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "esp_3",
+     "kind": "conditional",
+     "table": {
+      "title": "Bisharp's move to finish",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "blastoise": {
+   "id": "blastoise",
+   "title": "Blastoise",
+   "steps": [
+    {
+     "id": "blas_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "blas_2",
+     "kind": "action",
+     "text": "Send out Breloom (after the KO)"
+    },
+    {
+     "id": "blas_3",
+     "kind": "action",
+     "text": "Switch to Jolteon"
+    },
+    {
+     "id": "blas_4",
+     "kind": "action",
+     "text": "Use Volt Switch"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What happened to Charizard?",
+    "options": [
+     {
+      "label": "Charizard fainted",
+      "nodeId": "charizard_dead"
+     },
+     {
+      "label": "Charizard switched to Snorlax",
+      "nodeId": "snorlax"
+     }
+    ]
+   }
+  },
+  "snorlax": {
+   "id": "snorlax",
+   "title": "Snorlax",
+   "steps": [
+    {
+     "id": "snor_1",
+     "kind": "action",
+     "text": "Switch to Breloom"
+    },
+    {
+     "id": "snor_2",
+     "kind": "action",
+     "text": "Use Brick Break"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Did Snorlax survive the Brick Break?",
+    "options": [
+     {
+      "label": "No, Snorlax fainted",
+      "nodeId": "snorlax_dead"
+     },
+     {
+      "label": "Yes, Snorlax is alive",
+      "nodeId": "snorlax_alive"
+     }
+    ]
+   }
+  },
+  "snorlax_dead": {
+   "id": "snorlax_dead",
+   "title": "Snorlax fainted",
+   "steps": [
+    {
+     "id": "snord_1",
+     "kind": "action",
+     "text": "Sacrifice Breloom"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "snorlax_alive": {
+   "id": "snorlax_alive",
+   "title": "Snorlax alive",
+   "steps": [
+    {
+     "id": "snora_1",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "snora_2",
+     "kind": "action",
+     "text": "Use Low Kick"
+    },
+    {
+     "id": "snora_3",
+     "kind": "action",
+     "text": "Switch to Weavile and sacrifice it"
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "jolteon_yawn_branch"
+   }
+  },
+  "jolteon_yawn_branch": {
+   "id": "jolteon_yawn_branch",
+   "title": "Jolteon: Yawn",
+   "steps": [
+    {
+     "id": "jyb_1",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "jyb_2",
+     "kind": "action",
+     "text": "Use Yawn"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Did Jolteon survive?",
+    "options": [
+     {
+      "label": "No, Jolteon fainted",
+      "nodeId": "jolteon_dead_bisharp"
+     },
+     {
+      "label": "Yes, Jolteon is alive",
+      "nodeId": "jolteon_alive_bisharp"
+     }
+    ]
+   }
+  },
+  "jolteon_dead_bisharp": {
+   "id": "jolteon_dead_bisharp",
+   "title": "Finish with Bisharp",
+   "steps": [
+    {
+     "id": "jdb_1",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "jdb_2",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "jdb_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "jdb_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Bisharp's move to finish",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "jolteon_alive_bisharp": {
+   "id": "jolteon_alive_bisharp",
+   "title": "Finish with Bisharp",
+   "steps": [
+    {
+     "id": "jab_1",
+     "kind": "action",
+     "text": "Use Yawn and sacrifice Jolteon"
+    },
+    {
+     "id": "jab_2",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "jab_3",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "jab_4",
+     "kind": "conditional",
+     "table": {
+      "title": "Bisharp's move to finish",
+      "rows": [
+       {
+        "move": "Low Kick",
+        "targets": [
+         "Snorlax"
+        ]
+       },
+       {
+        "move": "Sucker Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "emboar": {
+   "id": "emboar",
+   "title": "Emboar (Roar)",
+   "steps": [
+    {
+     "id": "emb_0",
+     "kind": "note",
+     "text": "Emboar's Roar forces you to switch to a random Pokémon."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which Pokémon did Roar force you to switch to?",
+    "options": [
+     {
+      "label": "To Jolteon",
+      "nodeId": "emboar_jolteon"
+     },
+     {
+      "label": "To any other",
+      "nodeId": "emboar_other"
+     }
+    ]
+   }
+  },
+  "emboar_jolteon": {
+   "id": "emboar_jolteon",
+   "title": "Emboar → Jolteon",
+   "steps": [
+    {
+     "id": "embj_1",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "embj_2",
+     "kind": "note",
+     "text": "If Jolteon is still alive: use Yawn and sacrifice it, and skip the Protect next."
+    },
+    {
+     "id": "embj_3",
+     "kind": "action",
+     "text": "Send out Breloom"
+    },
+    {
+     "id": "embj_4",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "embj_5",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "embj_6",
+     "kind": "conditional",
+     "table": {
+      "title": "Breloom's move to finish",
+      "rows": [
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Samurott"
+        ]
+       },
+       {
+        "move": "Mach Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "emboar_other": {
+   "id": "emboar_other",
+   "title": "Emboar → other",
+   "steps": [
+    {
+     "id": "embo_1",
+     "kind": "action",
+     "text": "Switch to Weavile and sacrifice it"
+    },
+    {
+     "id": "embo_2",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "embo_3",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "embo_4",
+     "kind": "note",
+     "text": "If Jolteon is still alive: use Yawn and sacrifice it, and skip the Protect next."
+    },
+    {
+     "id": "embo_5",
+     "kind": "action",
+     "text": "Send out Breloom"
+    },
+    {
+     "id": "embo_6",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "embo_7",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "embo_8",
+     "kind": "conditional",
+     "table": {
+      "title": "Breloom's move to finish",
+      "rows": [
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Samurott"
+        ]
+       },
+       {
+        "move": "Mach Punch",
+        "targets": [
+         "everyone else"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "serperior": {
+   "id": "serperior",
+   "title": "Serperior",
+   "steps": [
+    {
+     "id": "serp_1",
+     "kind": "action",
+     "text": "Use U-Turn and switch to Bisharp"
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "What did Serperior do?",
+    "options": [
+     {
+      "label": "Hit Leaf Storm",
+      "nodeId": "serperior_hit"
+     },
+     {
+      "label": "Missed Leaf Storm or used Leech Seed",
+      "nodeId": "serperior_miss"
+     }
+    ]
+   }
+  },
+  "serperior_hit": {
+   "id": "serperior_hit",
+   "title": "Serperior (hit)",
+   "steps": [
+    {
+     "id": "serph_1",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "serph_2",
+     "kind": "action",
+     "text": "Send out Infernape"
+    },
+    {
+     "id": "serph_3",
+     "kind": "action",
+     "text": "Use U-Turn and switch to Breloom"
+    },
+    {
+     "id": "serph_4",
+     "kind": "note",
+     "text": "Emboar will come in and use Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "serperior_miss": {
+   "id": "serperior_miss",
+   "title": "Serperior (missed)",
+   "steps": [
+    {
+     "id": "serpm_1",
+     "kind": "action",
+     "text": "Use Sucker Punch twice"
+    },
+    {
+     "id": "serpm_2",
+     "kind": "note",
+     "text": "Emboar will come in and use Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "hydreigon": {
+   "id": "hydreigon",
+   "title": "Hydreigon",
+   "steps": [
+    {
+     "id": "hyd_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "hyd_2",
+     "kind": "note",
+     "text": "Samurott will come in."
+    },
+    {
+     "id": "hyd_3",
+     "kind": "action",
+     "text": "Use Close Combat and sacrifice Infernape"
+    },
+    {
+     "id": "hyd_4",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "hyd_5",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "hyd_6",
+     "kind": "note",
+     "text": "Emboar will come in and use Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "excadrill": {
+   "id": "excadrill",
+   "title": "Excadrill",
+   "steps": [
+    {
+     "id": "exc_1",
+     "kind": "action",
+     "text": "Use Close Combat"
+    },
+    {
+     "id": "exc_2",
+     "kind": "note",
+     "text": "Samurott will come in."
+    },
+    {
+     "id": "exc_3",
+     "kind": "action",
+     "text": "Use Close Combat and sacrifice Infernape"
+    },
+    {
+     "id": "exc_4",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "exc_5",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "exc_6",
+     "kind": "note",
+     "text": "Emboar will come in and use Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "samurott": {
+   "id": "samurott",
+   "title": "Samurott",
+   "steps": [
+    {
+     "id": "sam_1",
+     "kind": "action",
+     "text": "Use Close Combat and sacrifice Infernape"
+    },
+    {
+     "id": "sam_2",
+     "kind": "action",
+     "text": "Send out Bisharp"
+    },
+    {
+     "id": "sam_3",
+     "kind": "action",
+     "text": "Use Sucker Punch"
+    },
+    {
+     "id": "sam_4",
+     "kind": "note",
+     "text": "Emboar will come in and use Roar."
+    }
+   ],
+   "branch": {
+    "kind": "goto",
+    "nodeId": "emboar"
+   }
+  },
+  "staraptor": {
+   "id": "staraptor",
+   "title": "Staraptor (Whirlwind)",
+   "steps": [
+    {
+     "id": "star_0",
+     "kind": "note",
+     "text": "Staraptor's Whirlwind forces you to switch to a random Pokémon."
+    }
+   ],
+   "branch": {
+    "kind": "choice",
+    "prompt": "Which Pokémon did Whirlwind force you to switch to?",
+    "options": [
+     {
+      "label": "To Jolteon",
+      "nodeId": "staraptor_jolteon"
+     },
+     {
+      "label": "To any other",
+      "nodeId": "staraptor_other"
+     }
+    ]
+   }
+  },
+  "staraptor_jolteon": {
+   "id": "staraptor_jolteon",
+   "title": "Staraptor → Jolteon",
+   "steps": [
+    {
+     "id": "starj_1",
+     "kind": "action",
+     "text": "Use Volt Switch and switch to Bisharp"
+    },
+    {
+     "id": "starj_2",
+     "kind": "action",
+     "text": "Use Sucker Punch and sacrifice Bisharp"
+    },
+    {
+     "id": "starj_3",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "starj_4",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "starj_5",
+     "kind": "action",
+     "text": "Send out Weavile"
+    },
+    {
+     "id": "starj_6",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "starj_7",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "starj_8",
+     "kind": "conditional",
+     "table": {
+      "title": "Weavile's move to finish",
+      "rows": [
+       {
+        "move": "Icicle Spear",
+        "targets": [
+         "Pikachu",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Infernape",
+         "Empoleon"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "staraptor_other": {
+   "id": "staraptor_other",
+   "title": "Staraptor → other",
+   "steps": [
+    {
+     "id": "staro_1",
+     "kind": "action",
+     "text": "Switch Infernape and sacrifice it (use Encore if it's alive)"
+    },
+    {
+     "id": "staro_2",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "staro_3",
+     "kind": "action",
+     "text": "Use Volt Switch and switch to Bisharp"
+    },
+    {
+     "id": "staro_4",
+     "kind": "action",
+     "text": "Use Sucker Punch and sacrifice Bisharp"
+    },
+    {
+     "id": "staro_5",
+     "kind": "action",
+     "text": "Send out Jolteon"
+    },
+    {
+     "id": "staro_6",
+     "kind": "action",
+     "text": "Use Yawn"
+    },
+    {
+     "id": "staro_7",
+     "kind": "action",
+     "text": "Send out Weavile"
+    },
+    {
+     "id": "staro_8",
+     "kind": "action",
+     "text": "Use Protect"
+    },
+    {
+     "id": "staro_9",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "staro_10",
+     "kind": "conditional",
+     "table": {
+      "title": "Weavile's move to finish",
+      "rows": [
+       {
+        "move": "Icicle Spear",
+        "targets": [
+         "Pikachu",
+         "Garchomp",
+         "Torterra"
+        ]
+       },
+       {
+        "move": "Brick Break",
+        "targets": [
+         "Infernape",
+         "Empoleon"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "gliscor": {
+   "id": "gliscor",
+   "title": "Gliscor",
+   "steps": [
+    {
+     "id": "gli_1",
+     "kind": "action",
+     "text": "Switch to Jolteon and sacrifice it"
+    },
+    {
+     "id": "gli_2",
+     "kind": "action",
+     "text": "Send out Infernape"
+    },
+    {
+     "id": "gli_3",
+     "kind": "action",
+     "text": "Use Encore"
+    },
+    {
+     "id": "gli_4",
+     "kind": "action",
+     "text": "Send out Gliscor"
+    },
+    {
+     "id": "gli_5",
+     "kind": "action",
+     "text": "Use Swords Dance twice"
+    },
+    {
+     "id": "gli_6",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "gli_7",
+     "kind": "conditional",
+     "table": {
+      "title": "Gliscor's move to finish",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Gliscor",
+         "Feraligatr",
+         "Meganium"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Pikachu",
+         "Tyranitar",
+         "Typhlosion"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  },
+  "swampert": {
+   "id": "swampert",
+   "title": "Swampert",
+   "steps": [
+    {
+     "id": "swa_1",
+     "kind": "action",
+     "text": "Switch to Jolteon and sacrifice it"
+    },
+    {
+     "id": "swa_2",
+     "kind": "action",
+     "text": "Send out Infernape"
+    },
+    {
+     "id": "swa_3",
+     "kind": "action",
+     "text": "Use Encore"
+    },
+    {
+     "id": "swa_4",
+     "kind": "action",
+     "text": "Send out Gliscor"
+    },
+    {
+     "id": "swa_5",
+     "kind": "action",
+     "text": "Use Swords Dance"
+    },
+    {
+     "id": "swa_6",
+     "kind": "action",
+     "text": "Use Rock Polish"
+    },
+    {
+     "id": "swa_7",
+     "kind": "conditional",
+     "table": {
+      "title": "Gliscor's move to finish",
+      "rows": [
+       {
+        "move": "Acrobatics",
+        "targets": [
+         "Swampert",
+         "Salamence",
+         "Sceptile"
+        ]
+       },
+       {
+        "move": "Earthquake",
+        "targets": [
+         "Pikachu",
+         "Blaziken",
+         "Metagross"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "branch": null
+  }
+ }
+}

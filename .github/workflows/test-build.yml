@@ -1,0 +1,122 @@
+name: Build de Teste
+
+# Build sob demanda pra VOCÊ testar — NÃO publica nada público, NÃO mexe no version.json.
+# Como usar: GitHub → aba "Actions" → "Build de Teste" → botão "Run workflow".
+# Quando terminar, baixe o .exe/.apk em "Artifacts" no fim da página da execução.
+on:
+  workflow_dispatch:
+    inputs:
+      flavor:
+        description: 'Sabor do build (debug = nunca bloqueia | release = igual ao da comunidade)'
+        type: choice
+        default: debug
+        options:
+          - debug
+          - release
+      android:
+        description: 'Também gerar APK de teste?'
+        type: boolean
+        default: false
+      mac:
+        description: 'Também empacotar o .app do Mac? (testa o passo que quebrou no release)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  # ---------- Portão: valida /data antes de compilar (mesmo do release) ----------
+  verify-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar /data contra o modelo Solve
+        run: python3 tools/validate-data.py
+
+  # ---------- Windows (.exe pra testar) ----------
+  windows:
+    needs: [verify-data]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Definir configuração (.NET)
+        id: cfg
+        shell: pwsh
+        run: |
+          # debug => símbolo DEBUG ativo => bloqueio de versão DESLIGADO (#if DEBUG)
+          $cfg = if ('${{ inputs.flavor }}' -eq 'release') { 'Release' } else { 'Debug' }
+          echo "config=$cfg" >> $env:GITHUB_OUTPUT
+      - name: Publicar .exe (${{ steps.cfg.outputs.config }})
+        shell: pwsh
+        run: >
+          dotnet publish windows/PrestreloAjuda/PrestreloAjuda.csproj
+          -c ${{ steps.cfg.outputs.config }} -r win-x64 --self-contained true
+          -p:PublishSingleFile=true -o dist/win
+      - name: Zipar
+        shell: pwsh
+        run: Compress-Archive -Path dist/win/* -DestinationPath PrestreloAjuda-teste-windows.zip -Force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teste-windows-${{ inputs.flavor }}
+          path: PrestreloAjuda-teste-windows.zip
+          retention-days: 14
+
+  # ---------- Android (.apk de teste) — só se você marcar a caixa ----------
+  android:
+    needs: [verify-data]
+    if: ${{ inputs.android }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Compilar APK
+        run: |
+          chmod +x android/gradlew
+          # Sincroniza /data -> assets (igual ao release). Sem isto o APK sai SEM roteiros.
+          bash android/scripts/sync-data.sh
+          # debug => BuildConfig.DEBUG=true => bloqueio DESLIGADO
+          if [ "${{ inputs.flavor }}" = "release" ]; then
+            (cd android && ./gradlew assembleRelease --no-daemon)
+            cp android/app/build/outputs/apk/release/app-release.apk PrestreloAjuda-teste.apk
+          else
+            (cd android && ./gradlew assembleDebug --no-daemon)
+            cp android/app/build/outputs/apk/debug/app-debug.apk PrestreloAjuda-teste.apk
+          fi
+      - name: Verificar que o APK embarcou os dados
+        run: bash tools/verify-apk-assets.sh PrestreloAjuda-teste.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teste-android-${{ inputs.flavor }}
+          path: PrestreloAjuda-teste.apk
+          retention-days: 14
+
+  # ---------- macOS (.app de teste) — mesmo caminho do release (build-app.sh + zip) ----------
+  mac:
+    needs: [verify-data]
+    if: ${{ inputs.mac }}
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empacotar .app
+        run: bash mac/scripts/build-app.sh
+      - name: Verificar que o .app ABRE de verdade (selftest headless)
+        run: |
+          rm -rf mac/.build
+          "$GITHUB_WORKSPACE/mac/dist/FarmOracleMMO.app/Contents/MacOS/DestruidorDeRed" --selftest
+      - name: Zipar (preserva symlinks do bundle)
+        run: |
+          cd mac/dist
+          zip -r -y "$GITHUB_WORKSPACE/FarmOracleMMO-teste-mac.zip" \
+            "FarmOracleMMO.app" "Abrir FarmOracleMMO (1a vez).command"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teste-mac-${{ inputs.flavor }}
+          path: FarmOracleMMO-teste-mac.zip
+          retention-days: 14

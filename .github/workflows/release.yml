@@ -1,0 +1,180 @@
+name: Release
+
+# Dispara quando você cria uma tag de versão (ex.: v1.2.0).
+# Compila os 3 apps na nuvem e publica a Release + version.json no repositório
+# PÚBLICO de distribuição. Cada build sobe o asset DIRETO na Release (gh release
+# upload) — NÃO usa upload-artifact, pra não esbarrar na cota de storage do Actions.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+env:
+  PUBLIC_REPO: viniciospmarinho-prestrelo/prestrelo-ajuda-download
+
+jobs:
+  # ---------- Portão: valida a fonte única de dados ANTES de compilar nada ----------
+  verify-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar /data contra o modelo Solve
+        run: python3 tools/validate-data.py
+
+  # ---------- Portão: PARIDADE entre plataformas ANTES de compilar nada ----------
+  # Bloqueia a release se uma feature existe numa plataforma e falta em outra sem estar
+  # marcada como exclusão intencional (regra "nunca lançar com uma plataforma atrás").
+  # Roda o modo COMPLETO (sem --gate): pega TODAS as pendências + inconsistências da matriz.
+  # Fonte da verdade: tools/parity/features.json. Detalhes: tools/parity/README.md.
+  verify-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checar paridade (matriz vs código + regra de paridade)
+        run: python3 tools/parity/check.py --no-md
+      - name: Conferir que o PARIDADE.md está em sincronia (sem drift)
+        run: |
+          python3 tools/parity/check.py >/dev/null
+          git diff --exit-code -- PARIDADE.md \
+            || { echo "::error::PARIDADE.md desatualizado — rode 'python3 tools/parity/check.py' e commite."; exit 1; }
+
+  # ---------- Cria a Release (vazia) no repo público ANTES dos builds ----------
+  # Assim cada job de build sobe seu asset direto nela. version.json só é atualizado
+  # no fim (finalize), então o app só oferece update quando TUDO já subiu.
+  create-release:
+    needs: [verify-data, verify-parity]
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.meta.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Versão e notas
+        id: meta
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          # Extrai a seção do CHANGELOG correspondente a esta versão.
+          awk -v v="$VERSION" '
+            $0 ~ ("^## \\[" v "\\]") {f=1; next}
+            f && /^## \[/ {exit}
+            f {print}
+          ' CHANGELOG.md > notes.md
+          if [ ! -s notes.md ]; then echo "Veja o CHANGELOG para detalhes desta versão." > notes.md; fi
+          echo "----- notas -----"; cat notes.md
+      - name: Criar Release no repo público (se ainda não existe)
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          VERSION="${{ steps.meta.outputs.version }}"
+          if gh release view "v$VERSION" --repo "$PUBLIC_REPO" >/dev/null 2>&1; then
+            echo "Release v$VERSION ja existe — reusando (assets serao re-enviados com --clobber)."
+          else
+            gh release create "v$VERSION" \
+              --repo "$PUBLIC_REPO" --target main \
+              --title "FarmOracleMMO v$VERSION" --notes-file notes.md
+          fi
+
+  # ---------- Windows (.exe self-contained) ----------
+  windows:
+    needs: [create-release]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Publicar .exe
+        shell: pwsh
+        run: >
+          dotnet publish windows/PrestreloAjuda/PrestreloAjuda.csproj
+          -c Release -r win-x64 --self-contained true
+          -p:PublishSingleFile=true -o dist/win
+      - name: Verificar que os dados foram pro output (anti ".exe sem roteiros")
+        shell: pwsh
+        run: |
+          $req = @(
+            'dist/win/data/teams.json','dist/win/data/red.json','dist/win/data/veteran.json',
+            'dist/win/data/teams/shadow_scale/elite4_kanto.json',
+            'dist/win/data/teams/reversed_fate/emoji/elite4_kanto.json'
+          )
+          $missing = $req | Where-Object { -not (Test-Path $_) }
+          if ($missing) { $missing | ForEach-Object { Write-Error "FALTA no .exe: $_" }; exit 1 }
+          Write-Host "OK: dados presentes no output do Windows."
+      - name: Zipar
+        shell: pwsh
+        run: Compress-Archive -Path dist/win/* -DestinationPath FarmOracleMMO-windows.zip -Force
+      - name: Subir o .zip na Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: gh release upload "v${{ needs.create-release.outputs.version }}" FarmOracleMMO-windows.zip --repo "$env:PUBLIC_REPO" --clobber
+
+  # ---------- Android (.apk) ----------
+  android:
+    needs: [create-release]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Sincronizar dados (/data -> assets) e compilar APK (release assinado)
+        run: |
+          chmod +x android/gradlew
+          bash android/scripts/sync-data.sh
+          (cd android && ./gradlew assembleRelease --no-daemon)
+          cp android/app/build/outputs/apk/release/app-release.apk FarmOracleMMO.apk
+      - name: Verificar que o APK embarcou os dados (anti "APK sem roteiros")
+        run: bash tools/verify-apk-assets.sh FarmOracleMMO.apk
+      - name: Subir o .apk na Release
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: gh release upload "v${{ needs.create-release.outputs.version }}" FarmOracleMMO.apk --repo "$PUBLIC_REPO" --clobber
+
+  # ---------- macOS (.app) ----------
+  mac:
+    needs: [create-release]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empacotar .app
+        run: bash mac/scripts/build-app.sh
+      - name: Verificar que o .app ABRE de verdade (selftest headless)
+        run: |
+          # Remove o .build pra o Bundle.module NÃO cair no fallback do caminho de build
+          # (existe no runner, mas NÃO na máquina do usuário) e mascarar um .app quebrado.
+          rm -rf mac/.build
+          APP="$GITHUB_WORKSPACE/mac/dist/FarmOracleMMO.app"
+          "$APP/Contents/MacOS/DestruidorDeRed" --selftest
+      - name: Zipar (preserva symlinks do bundle)
+        run: |
+          cd mac/dist
+          zip -r -y "$GITHUB_WORKSPACE/FarmOracleMMO-mac.zip" \
+            "FarmOracleMMO.app" "Abrir FarmOracleMMO (1a vez).command" "LEIA-ME (macOS).txt"
+      - name: Subir o .zip na Release
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: gh release upload "v${{ needs.create-release.outputs.version }}" FarmOracleMMO-mac.zip --repo "$PUBLIC_REPO" --clobber
+
+  # ---------- Finaliza: atualiza version.json (latest) DEPOIS de tudo subir ----------
+  finalize:
+    needs: [windows, android, mac]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Atualizar version.json (latest) no repo público
+        env:
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          git clone "https://x-access-token:${RELEASE_TOKEN}@github.com/${PUBLIC_REPO}.git" pub
+          cd pub
+          jq --arg v "$VERSION" '.latest=$v' version.json > tmp.json && mv tmp.json version.json
+          git config user.name "prestrelo-release-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git commit -am "release v$VERSION (latest)" || echo "version.json ja estava atualizado"
+          git push
